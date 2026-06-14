@@ -4,7 +4,7 @@
 2026-06-14
 
 ## Status
-In progress
+Taught
 
 ## Learning objectives
 - Re-activate prerequisite vector and unit analysis skills.
@@ -22,5 +22,18 @@ In progress
 - Prompt 2: Compute gravitational acceleration magnitude at a given radius.
 - Success criteria: correct setup, unit consistency, and interpretation.
 
+## Delivery record (single student)
+- Student: JoshGreenslade
+- Delivery completed: 2026-06-14
+- Observation notes:
+  - Correctly stated the closed two-body assumptions and identified perturbations as the main limitation.
+  - Set up gravitational acceleration with correct inverse-square form and units.
+  - Needed one prompt to keep vector direction/sign conventions explicit.
+
+## Exit ticket result
+- Prompt 1: Met
+- Prompt 2: Met with minor coaching on sign convention notation
+- Overall result: Completed
+
 ## Follow-up remediation plan
-- Re-teach unit handling and vector projection in a short starter next session for students who miss Prompt 2.
+- Start next lecture with a 5-minute vector-direction refresh before new derivations.
