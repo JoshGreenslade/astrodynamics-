@@ -241,7 +241,7 @@ a=\frac{3.986\times10^{14}}{(8.0\times10^6)^2}\approx6.23\ \text{m/s}^2
 =\left[0,\frac{\mu r}{r^3},0\right]
 =\left[0,\frac{\mu}{r^2},0\right]
 \]
-The \(y\)-component is positive because \(-\mu\) multiplies the vector component \(-r\), and those two negatives cancel to produce \(+\mu r/r^3\).
+The \(y\)-component is positive because \(-\mu\) multiplies the vector component \(-r\), and those two negatives cancel to produce \(+\mu/r^2\).
 This points in \(+\mathbf{y}\), i.e., back toward origin if the spacecraft is at negative \(y\).
 
 ## 10) Exit ticket (5-7 min)
