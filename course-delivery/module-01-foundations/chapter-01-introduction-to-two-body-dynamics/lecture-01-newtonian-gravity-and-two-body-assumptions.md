@@ -226,16 +226,16 @@ and this equals \(\mu/\|\mathbf{r}\|^2\), as expected.
 4. List two assumptions that become weak for long-duration LEO prediction.
 5. Explain in 2-3 sentences why two-body remains useful in mission pre-design.
 
-### Optional debrief answers (for self-check)
-1. \(r=8.0\times10^6\ \text{m}\), so
+### Guided practice solutions (for self-check)
+1. **Acceleration at \(r=8000\ \text{km}\):** \(r=8.0\times10^6\ \text{m}\), so
 \[
 a=\frac{3.986\times10^{14}}{(8.0\times10^6)^2}\approx6.23\ \text{m/s}^2
 \]
-2.
+2. **Ratio of accelerations at different radii:**
 \[
 \frac{a_2}{a_1}=\left(\frac{r_1}{1.5r_1}\right)^2=\frac{1}{2.25}\approx0.444
 \]
-3.
+3. **Vector acceleration for \(\mathbf{r}=[0,-r,0]\):**
 \[
 \mathbf{a}=-\mu\frac{[0,-r,0]}{r^3}
 =\left[0,\frac{-\mu(-r)}{r^3},0\right]
