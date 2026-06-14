@@ -1,34 +1,41 @@
-# Lecture Readiness Standard
+# Chapter Readiness Standard
 
 ## Purpose
-This document defines when a lecture is considered ready for delivery.
+This document defines when a textbook chapter is considered ready for publication in the repository. The standard reflects world-class textbook authorship using the latest evidence-based educational techniques.
 
-## Ready Lecture Checklist (Must Meet All)
+## Ready Chapter Checklist (Must Meet All)
 
 ### 1) Learning Design
-- Clear lesson objective(s) tied to course learning outcomes.
-- Defined prerequisite knowledge and a short activation task.
-- Planned checks for understanding at least every 15-20 minutes.
+- Clear chapter learning objective(s) tied to course outcomes, stated at the opening.
+- Prerequisite knowledge explicitly listed; a short activation problem or recall prompt provided.
+- Spaced retrieval prompts and interleaved practice opportunities embedded throughout the chapter.
+- Each major concept followed by a "Check Your Understanding" question before the next concept is introduced.
 
 ### 2) Technical Accuracy
-- All equations, symbols, and units verified.
-- Example problems solved fully before class.
-- Numerical examples include assumptions and boundary conditions.
+- All equations, symbols, and units verified and consistently typeset.
+- Every worked example fully solved with all intermediate steps shown.
+- Numerical examples state assumptions, boundary conditions, and unit analysis.
+- Derivations annotated with the reasoning behind each algebraic step.
 
-### 3) Student Accessibility
-- Materials include readable notation and stepwise derivations.
-- Key vocabulary and symbols are explicitly introduced.
-- Lecture includes opportunities for guided and independent practice.
+### 3) Exposition and Accessibility
+- Narrative prose motivates each concept before formal development (the "why" precedes the "how").
+- Key vocabulary and symbols are explicitly introduced and bolded on first use.
+- Stepwise derivations broken into digestible chunks with explanatory commentary.
+- At least three fully worked examples per major concept, progressing from foundational to applied.
+- Each chapter includes at least one "Common Misconception" box addressing predictable errors.
+- Figures, diagrams, and plots included wherever they aid conceptual understanding.
 
-### 4) Assessment Alignment
-- Exit ticket or short formative task prepared.
-- Success criteria for the lecture objective documented.
-- Follow-up remediation activity prepared for common misconceptions.
+### 4) Active Learning Integration
+- End-of-section exercises provide both routine practice and stretch problems.
+- At least one open-ended or design-style problem per chapter requiring reasoning beyond calculation.
+- Self-assessment rubric or answer key provided for all exercises.
+- "Further Exploration" section pointing to deeper results, proofs, or applications.
 
-### 5) Logistics
-- Slides/notes uploaded to the repository before class.
-- Any computational tools/datasets tested on teaching hardware.
-- Time plan includes buffer for questions.
+### 5) Editorial Quality
+- Chapter committed to the repository with a version tag and date stamp.
+- All LaTeX renders correctly; inline expressions use `$...$` and display equations use `$$...$$`.
+- Chapter length is at least 1000 lines to ensure sufficient depth and completeness.
+- Consistent structure with all other chapters in the textbook.
 
 ## Definition of Done
-A lecture is "Ready" only when all checklist sections are complete and archived with date/version in the lesson folder used for delivery.
+A chapter is "Ready" only when all checklist sections are complete and the chapter is committed to the repository with a date and version in the lesson folder.

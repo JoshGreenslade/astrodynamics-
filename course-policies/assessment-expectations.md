@@ -1,40 +1,40 @@
 # Assessment Expectations Policy
 
 ## Assessment Principles
-- Assessments must align directly to stated learning outcomes.
-- Students receive frequent low-stakes feedback before high-stakes grading.
-- Rubrics must be provided in advance for every graded task.
-- Mastery is measured using both computational correctness and reasoning quality.
+- Assessments must align directly to stated chapter learning outcomes.
+- The reader receives frequent low-stakes practice before high-stakes self-assessment.
+- Rubrics or answer keys must accompany every exercise set.
+- Mastery is measured using both computational correctness and quality of reasoning.
 
 ## Stage-Based Assessment Plan
 
 ### Stage 1 (Foundations)
-- **Formative**: Weekly problem sets and short concept checks.
-- **Summative**: Closed-notes quiz on two-body and Kepler fundamentals.
+- **Formative**: Chapter-end problem sets and short concept-check questions embedded in the text.
+- **Summative**: Closed-book self-assessment on two-body and Kepler fundamentals.
 - **Expectation**: Correct setup of equations and interpretation of orbital geometry.
 
 ### Stage 2 (Core Orbital Mechanics)
-- **Formative**: Element conversion labs and guided coding/analysis exercises.
-- **Summative**: Midterm exam with multi-step orbital mechanics problems.
+- **Formative**: Element conversion exercises and guided analysis problems within each chapter.
+- **Summative**: Multi-step orbital mechanics problem set covering the full stage.
 - **Expectation**: Accurate state/element conversions and reference-frame reasoning.
 
 ### Stage 3 (Maneuvers and Mission Design)
-- **Formative**: Transfer design assignments with sensitivity analysis.
-- **Summative**: Maneuver planning test with delta-v and timeline justification.
+- **Formative**: Transfer design problems with sensitivity analysis, embedded in chapter text.
+- **Summative**: Maneuver planning exercise set requiring delta-v and timeline justification.
 - **Expectation**: Defensible tradeoffs and technically sound transfer design.
 
 ### Stage 4 (Integration and Professional Practice)
-- **Formative**: Project milestones with peer and instructor feedback.
-- **Summative**: Final project report + technical briefing + oral defense.
+- **Formative**: Milestone exercises with self-review prompts throughout the chapter.
+- **Summative**: Final capstone — mission concept write-up, technical summary, and oral-style Q&A prompts.
 - **Expectation**: End-to-end mission concept with clear assumptions and limits.
 
 ## Grading Composition
 - Problem Sets/Labs: 30%
-- Midterm: 20%
-- Maneuver Planning Assessment: 20%
-- Final Project (report + briefing + defense): 30%
+- Stage 2 Summative Assessment: 20%
+- Stage 3 Maneuver Planning Assessment: 20%
+- Final Capstone (write-up + summary + Q&A): 30%
 
 ## Resubmission and Recovery
 - One revision opportunity is allowed for each major summative deliverable.
 - Revisions require a correction memo explaining the original error and fix.
-- Recovery work prioritizes demonstrated conceptual growth over point recovery alone.
+- Recovery work prioritises demonstrated conceptual growth over point recovery alone.
