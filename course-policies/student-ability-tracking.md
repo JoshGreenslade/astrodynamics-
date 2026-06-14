@@ -1,10 +1,10 @@
-# Student Ability Tracking Policy
+# Reader Ability Tracking Policy
 
 ## Purpose
-Maintain a current and comprehensive view of each student's ability across core astrodynamics competencies.
+Maintain a current and comprehensive view of the reader's ability across core astrodynamics competencies, informing how subsequent chapters are authored and where additional worked examples or remediation content is needed.
 
 ## Competency Areas
-Track each student in the following areas:
+Track the reader in the following areas:
 1. Mathematical Foundations
 2. Two-Body Dynamics
 3. Orbital Elements and Transformations
@@ -15,23 +15,23 @@ Track each student in the following areas:
 ## Rating Scale
 - **4 - Expert**: Can solve novel problems accurately and justify assumptions.
 - **3 - Proficient**: Solves standard problems independently with minor errors.
-- **2 - Developing**: Partial correctness; needs guided support.
-- **1 - Emerging**: Major misconceptions; requires structured intervention.
+- **2 - Developing**: Partial correctness; needs additional worked examples and guided support.
+- **1 - Emerging**: Major misconceptions; requires structured remediation content in the chapter.
 
 ## Update Cadence
-- Update competency ratings weekly after formative work.
+- Update competency ratings after each stage's summative assessment.
 - Perform stage-level summary updates at the end of each curriculum stage.
-- Record intervention actions for any competency rated 1 or 2 for two consecutive weeks.
+- Record planned chapter-level interventions for any competency rated 1 or 2 for two consecutive stages.
 
-## Minimum Tracking Record (Per Student)
+## Minimum Tracking Record (Per Reader)
 - Date of update
-- Evidence source (problem set, quiz, lab, project milestone, oral response)
+- Evidence source (exercise set, self-assessment, capstone milestone)
 - Competency rating(s)
 - Identified misconception(s)
-- Planned intervention
-- Reassessment date
+- Planned textbook intervention (e.g., additional worked example, remediation box, extra practice problems)
+- Reassessment checkpoint
 
 ## Repository Workflow Expectation
 - Maintain an up-to-date tracker table in course delivery materials.
-- Use trends (not single scores) to decide support, pacing, and enrichment.
-- Revisit and adjust instructional sequence when cohort trends indicate common gaps.
+- Use trends (not single scores) to decide pacing, depth, and enrichment in subsequent chapters.
+- Revisit and adjust the authoring plan when tracker trends indicate persistent gaps.

@@ -1,10 +1,10 @@
 # Course Curriculum Policy (Fundamentals of Astrodynamics)
 
 ## Course Purpose
-Students will build mastery in orbital mechanics, mission analysis, and applied astrodynamics problem-solving.
+The reader will build mastery in orbital mechanics, mission analysis, and applied astrodynamics problem-solving through a rigorously authored, world-class textbook grounded in the latest educational science.
 
 ## Learning Outcomes
-By course completion, students will be able to:
+By the end of the textbook, the reader will be able to:
 1. Derive and apply two-body orbital mechanics equations.
 2. Analyze and transform orbital elements and reference frames.
 3. Design impulsive transfer maneuvers (e.g., Hohmann, phasing, plane change).
@@ -36,7 +36,9 @@ By course completion, students will be able to:
 - Technical report and briefing delivery.
 - Reflection on modeling limits, uncertainty, and ethics.
 
-## Instruction Policy
-- Every week includes theory, worked examples, and applied problem-solving.
-- Each stage must include at least one formative assessment and one summative checkpoint.
-- Prerequisite concepts must be reactivated at the start of each stage.
+## Authoring Policy
+- Every chapter balances conceptual narrative, rigorous derivation, worked examples, and applied problem-solving.
+- Each stage must include at least one formative self-assessment and one summative checkpoint exercise set.
+- Prerequisite concepts are reactivated at the opening of each stage through recall prompts and bridging prose.
+- Chapters employ evidence-based techniques: spaced practice, interleaving, retrieval prompts, and worked-example fading.
+- Exposition follows the principle that motivation and intuition precede formalism in every section.
