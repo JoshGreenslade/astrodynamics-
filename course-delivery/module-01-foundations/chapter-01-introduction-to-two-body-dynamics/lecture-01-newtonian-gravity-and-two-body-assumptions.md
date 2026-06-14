@@ -99,7 +99,7 @@ Then gravity must point back toward the central body:
 The negative sign is not optional; it encodes inward direction.
 
 Unit check:
-- \(\mu\): m\(^3\)/s\(^2\)
+- $\(\mu\): m\(^3\)/s\(^2\)$
 - \(\mathbf{r}/\|\mathbf{r}\|^3\): 1/m\(^2\)
 - product: \(\text{m/s}^2\) (correct acceleration unit)
 
