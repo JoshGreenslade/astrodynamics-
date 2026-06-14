@@ -1,5 +1,8 @@
 # Lecture 01: Foundations Kickoff
 
+Canonical lecture content path:
+- `/course-delivery/module-01-foundations/chapter-01-introduction-to-two-body-dynamics/lecture-01-newtonian-gravity-and-two-body-assumptions.md`
+
 ## Date
 2026-06-14
 
