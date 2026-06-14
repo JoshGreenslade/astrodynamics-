@@ -271,87 +271,87 @@ Use each segment in sequence; pause after every segment for student paraphrasing
 
 #### Segment 1: Physical picture first
 - Instructor framing: Imagine tossing a ball sideways from a mountain while Earth curves away beneath it. Orbital motion is this same idea extended continuously.
-- Ask: "Can you describe this in plain language before touching symbols?"
-- Work on board with both words and equations side by side.
+- Prompt: Ask the student to sketch the path and identify where gravity acts at three points.
+- Board action: Draw a side-view diagram and annotate velocity and inward acceleration arrows.
 - Core takeaway: Gravity is not merely pulling down in the local sense; in orbital dynamics it is continuously bending velocity toward the planet center.
-- Student checkpoint: explain one operational implication for trajectory work.
+- Student checkpoint: explain why continuous sideways motion plus inward pull creates orbit, not straight-line fall.
 
 #### Segment 2: Force versus acceleration
 - Instructor framing: Students often memorize force equations but forget that trajectory propagation uses acceleration directly.
-- Ask: "Can you describe this in plain language before touching symbols?"
-- Work on board with both words and equations side by side.
+- Prompt: Prompt: convert one force equation into a state-derivative statement in words.
+- Board action: Write force form and acceleration form side-by-side, then circle the propagator-ready expression.
 - Core takeaway: Translate every force statement into acceleration language so state update equations become immediate.
-- Student checkpoint: explain one operational implication for trajectory work.
+- Student checkpoint: state when force is still useful and when acceleration is the better operational quantity.
 
 #### Segment 3: Meaning of standard gravitational parameter
 - Instructor framing: When we write $\mu$, we are using a precomputed physical fingerprint of the central body.
-- Ask: "Can you describe this in plain language before touching symbols?"
-- Work on board with both words and equations side by side.
+- Prompt: Ask: what practical errors are reduced when using $\mu$ directly in computation?
+- Board action: List constants for Earth and show how one symbol simplifies repeated calculations.
 - Core takeaway: This avoids repeatedly carrying $G$ and $M$ and reduces arithmetic and transcription error risk.
-- Student checkpoint: explain one operational implication for trajectory work.
+- Student checkpoint: explain why two analysts using the same $\mu$ value are less likely to diverge numerically.
 
 #### Segment 4: Direction discipline
 - Instructor framing: Whenever a vector appears, draw an arrow before writing symbols.
-- Ask: "Can you describe this in plain language before touching symbols?"
-- Work on board with both words and equations side by side.
+- Prompt: Prompt: identify outward and inward directions before any minus sign is written.
+- Board action: Use coordinate axes and mark $\mathbf{r}$, then mark gravity as opposite direction.
 - Core takeaway: This habit prevents sign mistakes that are otherwise hard to catch in numerical pipelines.
-- Student checkpoint: explain one operational implication for trajectory work.
+- Student checkpoint: explain how a pre-drawn arrow prevents sign mistakes in components.
 
 #### Segment 5: Inverse-square intuition
 - Instructor framing: If distance doubles, gravity does not halve; it drops to one quarter.
-- Ask: "Can you describe this in plain language before touching symbols?"
-- Work on board with both words and equations side by side.
+- Prompt: Ask for an everyday analogy of intensity spreading with distance.
+- Board action: Show the ratio derivation line-by-line: $a(2r)=a(r)/4$.
 - Core takeaway: That one fact explains much of orbital scaling behavior.
-- Student checkpoint: explain one operational implication for trajectory work.
+- Student checkpoint: give one mission implication of inverse-square decay with altitude.
 
 #### Segment 6: Model scope statement
 - Instructor framing: The two-body model is intentionally selective: it keeps dominant gravity and ignores smaller effects.
-- Ask: "Can you describe this in plain language before touching symbols?"
-- Work on board with both words and equations side by side.
+- Prompt: Prompt: name one included effect and two excluded effects.
+- Board action: Create a two-column board table: Included / Excluded.
 - Core takeaway: A good engineer states what is ignored before claiming confidence in outputs.
-- Student checkpoint: explain one operational implication for trajectory work.
+- Student checkpoint: explain when exclusions become too large to ignore.
 
 #### Segment 7: Units as a safety net
 - Instructor framing: Most student errors are unit mismatch errors masquerading as algebra errors.
-- Ask: "Can you describe this in plain language before touching symbols?"
-- Work on board with both words and equations side by side.
+- Prompt: Ask student to find the deliberate unit bug in a prepared substitution line.
+- Board action: Circle units on each symbol before entering numbers.
 - Core takeaway: If radius is in km and $\mu$ is SI, conversion is mandatory before substitution.
-- Student checkpoint: explain one operational implication for trajectory work.
+- Student checkpoint: explain the exact failure mode when km is mixed with SI $\mu$.
 
 #### Segment 8: Scalar and vector separation
 - Instructor framing: Write magnitude equations and vector equations on separate lines.
-- Ask: "Can you describe this in plain language before touching symbols?"
-- Work on board with both words and equations side by side.
+- Prompt: Prompt: classify each symbol in the derivation as scalar or vector.
+- Board action: Color-code scalar terms and vector terms to make structure obvious.
 - Core takeaway: This keeps $r$ and $\mathbf{r}$ conceptually distinct.
-- Student checkpoint: explain one operational implication for trajectory work.
+- Student checkpoint: explain why $r$ and $\mathbf{r}$ cannot be swapped in formulas.
 
 #### Segment 9: Interpreting negative sign
 - Instructor framing: In $\mathbf{a}=-\mu\mathbf{r}/\|\mathbf{r}\|^3$, the minus sign encodes inward direction.
-- Ask: "Can you describe this in plain language before touching symbols?"
-- Work on board with both words and equations side by side.
+- Prompt: Ask student to test sign by placing spacecraft at $+x$ and then at $-y$.
+- Board action: Compute component signs explicitly for both test points.
 - Core takeaway: Without it, the model would predict repulsion and fail physical checks immediately.
-- Student checkpoint: explain one operational implication for trajectory work.
+- Student checkpoint: explain why one component can be positive while still pointing inward overall.
 
 #### Segment 10: Reasonableness checks
 - Instructor framing: After every computation, compare magnitude against a known nearby value.
-- Ask: "Can you describe this in plain language before touching symbols?"
-- Work on board with both words and equations side by side.
+- Prompt: Prompt: is your result in a plausible range for near-Earth orbit?
+- Board action: Write a quick reference band of expected accelerations at common radii.
 - Core takeaway: At near-Earth radii, values should sit in the same order as surface gravity, not hundreds of $m/s^2$.
-- Student checkpoint: explain one operational implication for trajectory work.
+- Student checkpoint: explain one red flag that would trigger immediate rework.
 
 #### Segment 11: Assumptions versus limitations
 - Instructor framing: Assumptions are design choices; limitations are consequences of those choices.
-- Ask: "Can you describe this in plain language before touching symbols?"
-- Work on board with both words and equations side by side.
+- Prompt: Ask: convert one assumption into a practical limitation sentence.
+- Board action: Show a traceability chain: assumption -> omitted physics -> expected error behavior.
 - Core takeaway: Naming both keeps communication honest and technically precise.
-- Student checkpoint: explain one operational implication for trajectory work.
+- Student checkpoint: explain why documenting assumptions is part of technical honesty.
 
 #### Segment 12: Bridge to future topics
 - Instructor framing: Two-body acceleration is the seed for conic orbits and Keplerian reasoning.
-- Ask: "Can you describe this in plain language before touching symbols?"
-- Work on board with both words and equations side by side.
+- Prompt: Prompt: predict one thing Lecture 02 will reuse from today.
+- Board action: Map today's key equation to next lecture's conic interpretation box.
 - Core takeaway: If this seed is misunderstood, later orbit-geometry lessons become fragile.
-- Student checkpoint: explain one operational implication for trajectory work.
+- Student checkpoint: explain why weak foundations here make conic classification harder later.
 
 ### 12.2 Deep derivation notebook (fully explained)
 This notebook-style walk-through is intentionally explicit so no algebraic step is treated as "obvious."
@@ -889,183 +889,123 @@ Today you built a usable gravity model, not just a memorized formula list. You d
 ### 12.8 Additional explanatory notes for depth and continuity
 Use these concise teaching notes to extend explanations based on student questions without leaving the lecture scope.
 
-- Note 1: Reinforce unit conversion workflow by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 2: Reinforce vector direction reasoning by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 3: Reinforce inverse-square intuition by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 4: Reinforce model scope communication by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 5: Reinforce assumption limitation distinction by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 6: Reinforce plausibility checks by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 7: Reinforce coordinate-sign interpretation by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 8: Reinforce scalar-vector separation by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 9: Reinforce derivation storytelling by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 10: Reinforce mission-design context by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 11: Reinforce error prevention habits by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 12: Reinforce physical interpretation language by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 13: Reinforce two-body baseline usage by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 14: Reinforce extension to perturbations by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 15: Reinforce student self-explanation prompts by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 16: Reinforce unit conversion workflow by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 17: Reinforce vector direction reasoning by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 18: Reinforce inverse-square intuition by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 19: Reinforce model scope communication by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 20: Reinforce assumption limitation distinction by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 21: Reinforce plausibility checks by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 22: Reinforce coordinate-sign interpretation by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 23: Reinforce scalar-vector separation by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 24: Reinforce derivation storytelling by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 25: Reinforce mission-design context by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 26: Reinforce error prevention habits by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 27: Reinforce physical interpretation language by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 28: Reinforce two-body baseline usage by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 29: Reinforce extension to perturbations by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 30: Reinforce student self-explanation prompts by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 31: Reinforce unit conversion workflow by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 32: Reinforce vector direction reasoning by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 33: Reinforce inverse-square intuition by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 34: Reinforce model scope communication by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 35: Reinforce assumption limitation distinction by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 36: Reinforce plausibility checks by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 37: Reinforce coordinate-sign interpretation by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 38: Reinforce scalar-vector separation by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 39: Reinforce derivation storytelling by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 40: Reinforce mission-design context by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 41: Reinforce error prevention habits by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 42: Reinforce physical interpretation language by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 43: Reinforce two-body baseline usage by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 44: Reinforce extension to perturbations by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 45: Reinforce student self-explanation prompts by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 46: Reinforce unit conversion workflow by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 47: Reinforce vector direction reasoning by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 48: Reinforce inverse-square intuition by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 49: Reinforce model scope communication by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 50: Reinforce assumption limitation distinction by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 51: Reinforce plausibility checks by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 52: Reinforce coordinate-sign interpretation by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 53: Reinforce scalar-vector separation by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 54: Reinforce derivation storytelling by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 55: Reinforce mission-design context by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 56: Reinforce error prevention habits by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 57: Reinforce physical interpretation language by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 58: Reinforce two-body baseline usage by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 59: Reinforce extension to perturbations by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 60: Reinforce student self-explanation prompts by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 61: Reinforce unit conversion workflow by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 62: Reinforce vector direction reasoning by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 63: Reinforce inverse-square intuition by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 64: Reinforce model scope communication by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 65: Reinforce assumption limitation distinction by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 66: Reinforce plausibility checks by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 67: Reinforce coordinate-sign interpretation by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 68: Reinforce scalar-vector separation by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 69: Reinforce derivation storytelling by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 70: Reinforce mission-design context by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 71: Reinforce error prevention habits by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 72: Reinforce physical interpretation language by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 73: Reinforce two-body baseline usage by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 74: Reinforce extension to perturbations by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 75: Reinforce student self-explanation prompts by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 76: Reinforce unit conversion workflow by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 77: Reinforce vector direction reasoning by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 78: Reinforce inverse-square intuition by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 79: Reinforce model scope communication by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 80: Reinforce assumption limitation distinction by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 81: Reinforce plausibility checks by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 82: Reinforce coordinate-sign interpretation by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 83: Reinforce scalar-vector separation by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 84: Reinforce derivation storytelling by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 85: Reinforce mission-design context by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 86: Reinforce error prevention habits by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 87: Reinforce physical interpretation language by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 88: Reinforce two-body baseline usage by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 89: Reinforce extension to perturbations by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 90: Reinforce student self-explanation prompts by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 91: Reinforce unit conversion workflow by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 92: Reinforce vector direction reasoning by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 93: Reinforce inverse-square intuition by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 94: Reinforce model scope communication by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 95: Reinforce assumption limitation distinction by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 96: Reinforce plausibility checks by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 97: Reinforce coordinate-sign interpretation by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 98: Reinforce scalar-vector separation by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 99: Reinforce derivation storytelling by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 100: Reinforce mission-design context by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 101: Reinforce error prevention habits by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 102: Reinforce physical interpretation language by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 103: Reinforce two-body baseline usage by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 104: Reinforce extension to perturbations by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 105: Reinforce student self-explanation prompts by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 106: Reinforce unit conversion workflow by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 107: Reinforce vector direction reasoning by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 108: Reinforce inverse-square intuition by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 109: Reinforce model scope communication by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 110: Reinforce assumption limitation distinction by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 111: Reinforce plausibility checks by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 112: Reinforce coordinate-sign interpretation by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 113: Reinforce scalar-vector separation by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 114: Reinforce derivation storytelling by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 115: Reinforce mission-design context by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 116: Reinforce error prevention habits by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 117: Reinforce physical interpretation language by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 118: Reinforce two-body baseline usage by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 119: Reinforce extension to perturbations by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 120: Reinforce student self-explanation prompts by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 121: Reinforce unit conversion workflow by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 122: Reinforce vector direction reasoning by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 123: Reinforce inverse-square intuition by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 124: Reinforce model scope communication by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 125: Reinforce assumption limitation distinction by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 126: Reinforce plausibility checks by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 127: Reinforce coordinate-sign interpretation by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 128: Reinforce scalar-vector separation by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 129: Reinforce derivation storytelling by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 130: Reinforce mission-design context by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 131: Reinforce error prevention habits by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 132: Reinforce physical interpretation language by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 133: Reinforce two-body baseline usage by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 134: Reinforce extension to perturbations by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 135: Reinforce student self-explanation prompts by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 136: Reinforce unit conversion workflow by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 137: Reinforce vector direction reasoning by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 138: Reinforce inverse-square intuition by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 139: Reinforce model scope communication by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 140: Reinforce assumption limitation distinction by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 141: Reinforce plausibility checks by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 142: Reinforce coordinate-sign interpretation by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 143: Reinforce scalar-vector separation by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 144: Reinforce derivation storytelling by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 145: Reinforce mission-design context by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 146: Reinforce error prevention habits by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 147: Reinforce physical interpretation language by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 148: Reinforce two-body baseline usage by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 149: Reinforce extension to perturbations by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 150: Reinforce student self-explanation prompts by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 151: Reinforce unit conversion workflow by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 152: Reinforce vector direction reasoning by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 153: Reinforce inverse-square intuition by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 154: Reinforce model scope communication by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 155: Reinforce assumption limitation distinction by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 156: Reinforce plausibility checks by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 157: Reinforce coordinate-sign interpretation by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 158: Reinforce scalar-vector separation by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 159: Reinforce derivation storytelling by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 160: Reinforce mission-design context by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 161: Reinforce error prevention habits by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 162: Reinforce physical interpretation language by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 163: Reinforce two-body baseline usage by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 164: Reinforce extension to perturbations by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 165: Reinforce student self-explanation prompts by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 166: Reinforce unit conversion workflow by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 167: Reinforce vector direction reasoning by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 168: Reinforce inverse-square intuition by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 169: Reinforce model scope communication by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 170: Reinforce assumption limitation distinction by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 171: Reinforce plausibility checks by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 172: Reinforce coordinate-sign interpretation by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 173: Reinforce scalar-vector separation by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 174: Reinforce derivation storytelling by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 175: Reinforce mission-design context by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 176: Reinforce error prevention habits by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 177: Reinforce physical interpretation language by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 178: Reinforce two-body baseline usage by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 179: Reinforce extension to perturbations by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
-- Note 180: Reinforce student self-explanation prompts by asking for one spoken explanation, one symbolic statement, and one quick sanity check.
+- Note 1: Focus area: unit conversion workflow. Ask for a spoken explanation before writing symbols. If confusion appears, slow down and separate concept from arithmetic. Expected output: one physically grounded sentence plus one validated equation.
+- Note 2: Focus area: vector direction reasoning. Request a one-line equation and a one-line meaning statement. When confidence is high, add one edge-case to test robustness. Expected output: a corrected expression and a clear reason it is correct.
+- Note 3: Focus area: inverse-square intuition. Have the student identify the most likely error source first. If the answer is correct but unclear, focus on language precision. Expected output: a mini-briefing statement suitable for a teammate.
+- Note 4: Focus area: model scope communication. Require a quick sketch before computation begins. When the student hesitates, re-anchor with a physical picture first. Expected output: a sign-consistent vector form and magnitude cross-check.
+- Note 5: Focus area: assumption versus limitation framing. Run a 20-second dimensional check before arithmetic. If speed overtakes clarity, enforce a line-by-line reasoning cadence. Expected output: a unit-clean substitution and plausibility conclusion.
+- Note 6: Focus area: plausibility checks. Compare result against a nearby reference value. When assumptions are implicit, require them to be written explicitly. Expected output: one physically grounded sentence plus one validated equation.
+- Note 7: Focus area: coordinate-sign interpretation. Translate the result into mission-level implications. If confusion appears, slow down and separate concept from arithmetic. Expected output: a corrected expression and a clear reason it is correct.
+- Note 8: Focus area: scalar-vector separation. Challenge the student to explain the sign logic component-by-component. When confidence is high, add one edge-case to test robustness. Expected output: a mini-briefing statement suitable for a teammate.
+- Note 9: Focus area: derivation storytelling. Ask for a spoken explanation before writing symbols. If the answer is correct but unclear, focus on language precision. Expected output: a sign-consistent vector form and magnitude cross-check.
+- Note 10: Focus area: mission-design context. Request a one-line equation and a one-line meaning statement. When the student hesitates, re-anchor with a physical picture first. Expected output: a unit-clean substitution and plausibility conclusion.
+- Note 11: Focus area: error prevention habits. Have the student identify the most likely error source first. If speed overtakes clarity, enforce a line-by-line reasoning cadence. Expected output: one physically grounded sentence plus one validated equation.
+- Note 12: Focus area: physical interpretation language. Require a quick sketch before computation begins. When assumptions are implicit, require them to be written explicitly. Expected output: a corrected expression and a clear reason it is correct.
+- Note 13: Focus area: two-body baseline usage. Run a 20-second dimensional check before arithmetic. If confusion appears, slow down and separate concept from arithmetic. Expected output: a mini-briefing statement suitable for a teammate.
+- Note 14: Focus area: extension to perturbations. Compare result against a nearby reference value. When confidence is high, add one edge-case to test robustness. Expected output: a sign-consistent vector form and magnitude cross-check.
+- Note 15: Focus area: student self-explanation prompts. Translate the result into mission-level implications. If the answer is correct but unclear, focus on language precision. Expected output: a unit-clean substitution and plausibility conclusion.
+- Note 16: Focus area: unit conversion workflow. Challenge the student to explain the sign logic component-by-component. When the student hesitates, re-anchor with a physical picture first. Expected output: one physically grounded sentence plus one validated equation.
+- Note 17: Focus area: vector direction reasoning. Ask for a spoken explanation before writing symbols. If speed overtakes clarity, enforce a line-by-line reasoning cadence. Expected output: a corrected expression and a clear reason it is correct.
+- Note 18: Focus area: inverse-square intuition. Request a one-line equation and a one-line meaning statement. When assumptions are implicit, require them to be written explicitly. Expected output: a mini-briefing statement suitable for a teammate.
+- Note 19: Focus area: model scope communication. Have the student identify the most likely error source first. If confusion appears, slow down and separate concept from arithmetic. Expected output: a sign-consistent vector form and magnitude cross-check.
+- Note 20: Focus area: assumption versus limitation framing. Require a quick sketch before computation begins. When confidence is high, add one edge-case to test robustness. Expected output: a unit-clean substitution and plausibility conclusion.
+- Note 21: Focus area: plausibility checks. Run a 20-second dimensional check before arithmetic. If the answer is correct but unclear, focus on language precision. Expected output: one physically grounded sentence plus one validated equation.
+- Note 22: Focus area: coordinate-sign interpretation. Compare result against a nearby reference value. When the student hesitates, re-anchor with a physical picture first. Expected output: a corrected expression and a clear reason it is correct.
+- Note 23: Focus area: scalar-vector separation. Translate the result into mission-level implications. If speed overtakes clarity, enforce a line-by-line reasoning cadence. Expected output: a mini-briefing statement suitable for a teammate.
+- Note 24: Focus area: derivation storytelling. Challenge the student to explain the sign logic component-by-component. When assumptions are implicit, require them to be written explicitly. Expected output: a sign-consistent vector form and magnitude cross-check.
+- Note 25: Focus area: mission-design context. Ask for a spoken explanation before writing symbols. If confusion appears, slow down and separate concept from arithmetic. Expected output: a unit-clean substitution and plausibility conclusion.
+- Note 26: Focus area: error prevention habits. Request a one-line equation and a one-line meaning statement. When confidence is high, add one edge-case to test robustness. Expected output: one physically grounded sentence plus one validated equation.
+- Note 27: Focus area: physical interpretation language. Have the student identify the most likely error source first. If the answer is correct but unclear, focus on language precision. Expected output: a corrected expression and a clear reason it is correct.
+- Note 28: Focus area: two-body baseline usage. Require a quick sketch before computation begins. When the student hesitates, re-anchor with a physical picture first. Expected output: a mini-briefing statement suitable for a teammate.
+- Note 29: Focus area: extension to perturbations. Run a 20-second dimensional check before arithmetic. If speed overtakes clarity, enforce a line-by-line reasoning cadence. Expected output: a sign-consistent vector form and magnitude cross-check.
+- Note 30: Focus area: student self-explanation prompts. Compare result against a nearby reference value. When assumptions are implicit, require them to be written explicitly. Expected output: a unit-clean substitution and plausibility conclusion.
+- Note 31: Focus area: unit conversion workflow. Translate the result into mission-level implications. If confusion appears, slow down and separate concept from arithmetic. Expected output: one physically grounded sentence plus one validated equation.
+- Note 32: Focus area: vector direction reasoning. Challenge the student to explain the sign logic component-by-component. When confidence is high, add one edge-case to test robustness. Expected output: a corrected expression and a clear reason it is correct.
+- Note 33: Focus area: inverse-square intuition. Ask for a spoken explanation before writing symbols. If the answer is correct but unclear, focus on language precision. Expected output: a mini-briefing statement suitable for a teammate.
+- Note 34: Focus area: model scope communication. Request a one-line equation and a one-line meaning statement. When the student hesitates, re-anchor with a physical picture first. Expected output: a sign-consistent vector form and magnitude cross-check.
+- Note 35: Focus area: assumption versus limitation framing. Have the student identify the most likely error source first. If speed overtakes clarity, enforce a line-by-line reasoning cadence. Expected output: a unit-clean substitution and plausibility conclusion.
+- Note 36: Focus area: plausibility checks. Require a quick sketch before computation begins. When assumptions are implicit, require them to be written explicitly. Expected output: one physically grounded sentence plus one validated equation.
+- Note 37: Focus area: coordinate-sign interpretation. Run a 20-second dimensional check before arithmetic. If confusion appears, slow down and separate concept from arithmetic. Expected output: a corrected expression and a clear reason it is correct.
+- Note 38: Focus area: scalar-vector separation. Compare result against a nearby reference value. When confidence is high, add one edge-case to test robustness. Expected output: a mini-briefing statement suitable for a teammate.
+- Note 39: Focus area: derivation storytelling. Translate the result into mission-level implications. If the answer is correct but unclear, focus on language precision. Expected output: a sign-consistent vector form and magnitude cross-check.
+- Note 40: Focus area: mission-design context. Challenge the student to explain the sign logic component-by-component. When the student hesitates, re-anchor with a physical picture first. Expected output: a unit-clean substitution and plausibility conclusion.
+- Note 41: Focus area: error prevention habits. Ask for a spoken explanation before writing symbols. If speed overtakes clarity, enforce a line-by-line reasoning cadence. Expected output: one physically grounded sentence plus one validated equation.
+- Note 42: Focus area: physical interpretation language. Request a one-line equation and a one-line meaning statement. When assumptions are implicit, require them to be written explicitly. Expected output: a corrected expression and a clear reason it is correct.
+- Note 43: Focus area: two-body baseline usage. Have the student identify the most likely error source first. If confusion appears, slow down and separate concept from arithmetic. Expected output: a mini-briefing statement suitable for a teammate.
+- Note 44: Focus area: extension to perturbations. Require a quick sketch before computation begins. When confidence is high, add one edge-case to test robustness. Expected output: a sign-consistent vector form and magnitude cross-check.
+- Note 45: Focus area: student self-explanation prompts. Run a 20-second dimensional check before arithmetic. If the answer is correct but unclear, focus on language precision. Expected output: a unit-clean substitution and plausibility conclusion.
+- Note 46: Focus area: unit conversion workflow. Compare result against a nearby reference value. When the student hesitates, re-anchor with a physical picture first. Expected output: one physically grounded sentence plus one validated equation.
+- Note 47: Focus area: vector direction reasoning. Translate the result into mission-level implications. If speed overtakes clarity, enforce a line-by-line reasoning cadence. Expected output: a corrected expression and a clear reason it is correct.
+- Note 48: Focus area: inverse-square intuition. Challenge the student to explain the sign logic component-by-component. When assumptions are implicit, require them to be written explicitly. Expected output: a mini-briefing statement suitable for a teammate.
+- Note 49: Focus area: model scope communication. Ask for a spoken explanation before writing symbols. If confusion appears, slow down and separate concept from arithmetic. Expected output: a sign-consistent vector form and magnitude cross-check.
+- Note 50: Focus area: assumption versus limitation framing. Request a one-line equation and a one-line meaning statement. When confidence is high, add one edge-case to test robustness. Expected output: a unit-clean substitution and plausibility conclusion.
+- Note 51: Focus area: plausibility checks. Have the student identify the most likely error source first. If the answer is correct but unclear, focus on language precision. Expected output: one physically grounded sentence plus one validated equation.
+- Note 52: Focus area: coordinate-sign interpretation. Require a quick sketch before computation begins. When the student hesitates, re-anchor with a physical picture first. Expected output: a corrected expression and a clear reason it is correct.
+- Note 53: Focus area: scalar-vector separation. Run a 20-second dimensional check before arithmetic. If speed overtakes clarity, enforce a line-by-line reasoning cadence. Expected output: a mini-briefing statement suitable for a teammate.
+- Note 54: Focus area: derivation storytelling. Compare result against a nearby reference value. When assumptions are implicit, require them to be written explicitly. Expected output: a sign-consistent vector form and magnitude cross-check.
+- Note 55: Focus area: mission-design context. Translate the result into mission-level implications. If confusion appears, slow down and separate concept from arithmetic. Expected output: a unit-clean substitution and plausibility conclusion.
+- Note 56: Focus area: error prevention habits. Challenge the student to explain the sign logic component-by-component. When confidence is high, add one edge-case to test robustness. Expected output: one physically grounded sentence plus one validated equation.
+- Note 57: Focus area: physical interpretation language. Ask for a spoken explanation before writing symbols. If the answer is correct but unclear, focus on language precision. Expected output: a corrected expression and a clear reason it is correct.
+- Note 58: Focus area: two-body baseline usage. Request a one-line equation and a one-line meaning statement. When the student hesitates, re-anchor with a physical picture first. Expected output: a mini-briefing statement suitable for a teammate.
+- Note 59: Focus area: extension to perturbations. Have the student identify the most likely error source first. If speed overtakes clarity, enforce a line-by-line reasoning cadence. Expected output: a sign-consistent vector form and magnitude cross-check.
+- Note 60: Focus area: student self-explanation prompts. Require a quick sketch before computation begins. When assumptions are implicit, require them to be written explicitly. Expected output: a unit-clean substitution and plausibility conclusion.
+- Note 61: Focus area: unit conversion workflow. Run a 20-second dimensional check before arithmetic. If confusion appears, slow down and separate concept from arithmetic. Expected output: one physically grounded sentence plus one validated equation.
+- Note 62: Focus area: vector direction reasoning. Compare result against a nearby reference value. When confidence is high, add one edge-case to test robustness. Expected output: a corrected expression and a clear reason it is correct.
+- Note 63: Focus area: inverse-square intuition. Translate the result into mission-level implications. If the answer is correct but unclear, focus on language precision. Expected output: a mini-briefing statement suitable for a teammate.
+- Note 64: Focus area: model scope communication. Challenge the student to explain the sign logic component-by-component. When the student hesitates, re-anchor with a physical picture first. Expected output: a sign-consistent vector form and magnitude cross-check.
+- Note 65: Focus area: assumption versus limitation framing. Ask for a spoken explanation before writing symbols. If speed overtakes clarity, enforce a line-by-line reasoning cadence. Expected output: a unit-clean substitution and plausibility conclusion.
+- Note 66: Focus area: plausibility checks. Request a one-line equation and a one-line meaning statement. When assumptions are implicit, require them to be written explicitly. Expected output: one physically grounded sentence plus one validated equation.
+- Note 67: Focus area: coordinate-sign interpretation. Have the student identify the most likely error source first. If confusion appears, slow down and separate concept from arithmetic. Expected output: a corrected expression and a clear reason it is correct.
+- Note 68: Focus area: scalar-vector separation. Require a quick sketch before computation begins. When confidence is high, add one edge-case to test robustness. Expected output: a mini-briefing statement suitable for a teammate.
+- Note 69: Focus area: derivation storytelling. Run a 20-second dimensional check before arithmetic. If the answer is correct but unclear, focus on language precision. Expected output: a sign-consistent vector form and magnitude cross-check.
+- Note 70: Focus area: mission-design context. Compare result against a nearby reference value. When the student hesitates, re-anchor with a physical picture first. Expected output: a unit-clean substitution and plausibility conclusion.
+- Note 71: Focus area: error prevention habits. Translate the result into mission-level implications. If speed overtakes clarity, enforce a line-by-line reasoning cadence. Expected output: one physically grounded sentence plus one validated equation.
+- Note 72: Focus area: physical interpretation language. Challenge the student to explain the sign logic component-by-component. When assumptions are implicit, require them to be written explicitly. Expected output: a corrected expression and a clear reason it is correct.
+- Note 73: Focus area: two-body baseline usage. Ask for a spoken explanation before writing symbols. If confusion appears, slow down and separate concept from arithmetic. Expected output: a mini-briefing statement suitable for a teammate.
+- Note 74: Focus area: extension to perturbations. Request a one-line equation and a one-line meaning statement. When confidence is high, add one edge-case to test robustness. Expected output: a sign-consistent vector form and magnitude cross-check.
+- Note 75: Focus area: student self-explanation prompts. Have the student identify the most likely error source first. If the answer is correct but unclear, focus on language precision. Expected output: a unit-clean substitution and plausibility conclusion.
+- Note 76: Focus area: unit conversion workflow. Require a quick sketch before computation begins. When the student hesitates, re-anchor with a physical picture first. Expected output: one physically grounded sentence plus one validated equation.
+- Note 77: Focus area: vector direction reasoning. Run a 20-second dimensional check before arithmetic. If speed overtakes clarity, enforce a line-by-line reasoning cadence. Expected output: a corrected expression and a clear reason it is correct.
+- Note 78: Focus area: inverse-square intuition. Compare result against a nearby reference value. When assumptions are implicit, require them to be written explicitly. Expected output: a mini-briefing statement suitable for a teammate.
+- Note 79: Focus area: model scope communication. Translate the result into mission-level implications. If confusion appears, slow down and separate concept from arithmetic. Expected output: a sign-consistent vector form and magnitude cross-check.
+- Note 80: Focus area: assumption versus limitation framing. Challenge the student to explain the sign logic component-by-component. When confidence is high, add one edge-case to test robustness. Expected output: a unit-clean substitution and plausibility conclusion.
+- Note 81: Focus area: plausibility checks. Ask for a spoken explanation before writing symbols. If the answer is correct but unclear, focus on language precision. Expected output: one physically grounded sentence plus one validated equation.
+- Note 82: Focus area: coordinate-sign interpretation. Request a one-line equation and a one-line meaning statement. When the student hesitates, re-anchor with a physical picture first. Expected output: a corrected expression and a clear reason it is correct.
+- Note 83: Focus area: scalar-vector separation. Have the student identify the most likely error source first. If speed overtakes clarity, enforce a line-by-line reasoning cadence. Expected output: a mini-briefing statement suitable for a teammate.
+- Note 84: Focus area: derivation storytelling. Require a quick sketch before computation begins. When assumptions are implicit, require them to be written explicitly. Expected output: a sign-consistent vector form and magnitude cross-check.
+- Note 85: Focus area: mission-design context. Run a 20-second dimensional check before arithmetic. If confusion appears, slow down and separate concept from arithmetic. Expected output: a unit-clean substitution and plausibility conclusion.
+- Note 86: Focus area: error prevention habits. Compare result against a nearby reference value. When confidence is high, add one edge-case to test robustness. Expected output: one physically grounded sentence plus one validated equation.
+- Note 87: Focus area: physical interpretation language. Translate the result into mission-level implications. If the answer is correct but unclear, focus on language precision. Expected output: a corrected expression and a clear reason it is correct.
+- Note 88: Focus area: two-body baseline usage. Challenge the student to explain the sign logic component-by-component. When the student hesitates, re-anchor with a physical picture first. Expected output: a mini-briefing statement suitable for a teammate.
+- Note 89: Focus area: extension to perturbations. Ask for a spoken explanation before writing symbols. If speed overtakes clarity, enforce a line-by-line reasoning cadence. Expected output: a sign-consistent vector form and magnitude cross-check.
+- Note 90: Focus area: student self-explanation prompts. Request a one-line equation and a one-line meaning statement. When assumptions are implicit, require them to be written explicitly. Expected output: a unit-clean substitution and plausibility conclusion.
+- Note 91: Focus area: unit conversion workflow. Have the student identify the most likely error source first. If confusion appears, slow down and separate concept from arithmetic. Expected output: one physically grounded sentence plus one validated equation.
+- Note 92: Focus area: vector direction reasoning. Require a quick sketch before computation begins. When confidence is high, add one edge-case to test robustness. Expected output: a corrected expression and a clear reason it is correct.
+- Note 93: Focus area: inverse-square intuition. Run a 20-second dimensional check before arithmetic. If the answer is correct but unclear, focus on language precision. Expected output: a mini-briefing statement suitable for a teammate.
+- Note 94: Focus area: model scope communication. Compare result against a nearby reference value. When the student hesitates, re-anchor with a physical picture first. Expected output: a sign-consistent vector form and magnitude cross-check.
+- Note 95: Focus area: assumption versus limitation framing. Translate the result into mission-level implications. If speed overtakes clarity, enforce a line-by-line reasoning cadence. Expected output: a unit-clean substitution and plausibility conclusion.
+- Note 96: Focus area: plausibility checks. Challenge the student to explain the sign logic component-by-component. When assumptions are implicit, require them to be written explicitly. Expected output: one physically grounded sentence plus one validated equation.
+- Note 97: Focus area: coordinate-sign interpretation. Ask for a spoken explanation before writing symbols. If confusion appears, slow down and separate concept from arithmetic. Expected output: a corrected expression and a clear reason it is correct.
+- Note 98: Focus area: scalar-vector separation. Request a one-line equation and a one-line meaning statement. When confidence is high, add one edge-case to test robustness. Expected output: a mini-briefing statement suitable for a teammate.
+- Note 99: Focus area: derivation storytelling. Have the student identify the most likely error source first. If the answer is correct but unclear, focus on language precision. Expected output: a sign-consistent vector form and magnitude cross-check.
+- Note 100: Focus area: mission-design context. Require a quick sketch before computation begins. When the student hesitates, re-anchor with a physical picture first. Expected output: a unit-clean substitution and plausibility conclusion.
+- Note 101: Focus area: error prevention habits. Run a 20-second dimensional check before arithmetic. If speed overtakes clarity, enforce a line-by-line reasoning cadence. Expected output: one physically grounded sentence plus one validated equation.
+- Note 102: Focus area: physical interpretation language. Compare result against a nearby reference value. When assumptions are implicit, require them to be written explicitly. Expected output: a corrected expression and a clear reason it is correct.
+- Note 103: Focus area: two-body baseline usage. Translate the result into mission-level implications. If confusion appears, slow down and separate concept from arithmetic. Expected output: a mini-briefing statement suitable for a teammate.
+- Note 104: Focus area: extension to perturbations. Challenge the student to explain the sign logic component-by-component. When confidence is high, add one edge-case to test robustness. Expected output: a sign-consistent vector form and magnitude cross-check.
+- Note 105: Focus area: student self-explanation prompts. Ask for a spoken explanation before writing symbols. If the answer is correct but unclear, focus on language precision. Expected output: a unit-clean substitution and plausibility conclusion.
+- Note 106: Focus area: unit conversion workflow. Request a one-line equation and a one-line meaning statement. When the student hesitates, re-anchor with a physical picture first. Expected output: one physically grounded sentence plus one validated equation.
+- Note 107: Focus area: vector direction reasoning. Have the student identify the most likely error source first. If speed overtakes clarity, enforce a line-by-line reasoning cadence. Expected output: a corrected expression and a clear reason it is correct.
+- Note 108: Focus area: inverse-square intuition. Require a quick sketch before computation begins. When assumptions are implicit, require them to be written explicitly. Expected output: a mini-briefing statement suitable for a teammate.
+- Note 109: Focus area: model scope communication. Run a 20-second dimensional check before arithmetic. If confusion appears, slow down and separate concept from arithmetic. Expected output: a sign-consistent vector form and magnitude cross-check.
+- Note 110: Focus area: assumption versus limitation framing. Compare result against a nearby reference value. When confidence is high, add one edge-case to test robustness. Expected output: a unit-clean substitution and plausibility conclusion.
+- Note 111: Focus area: plausibility checks. Translate the result into mission-level implications. If the answer is correct but unclear, focus on language precision. Expected output: one physically grounded sentence plus one validated equation.
+- Note 112: Focus area: coordinate-sign interpretation. Challenge the student to explain the sign logic component-by-component. When the student hesitates, re-anchor with a physical picture first. Expected output: a corrected expression and a clear reason it is correct.
+- Note 113: Focus area: scalar-vector separation. Ask for a spoken explanation before writing symbols. If speed overtakes clarity, enforce a line-by-line reasoning cadence. Expected output: a mini-briefing statement suitable for a teammate.
+- Note 114: Focus area: derivation storytelling. Request a one-line equation and a one-line meaning statement. When assumptions are implicit, require them to be written explicitly. Expected output: a sign-consistent vector form and magnitude cross-check.
+- Note 115: Focus area: mission-design context. Have the student identify the most likely error source first. If confusion appears, slow down and separate concept from arithmetic. Expected output: a unit-clean substitution and plausibility conclusion.
+- Note 116: Focus area: error prevention habits. Require a quick sketch before computation begins. When confidence is high, add one edge-case to test robustness. Expected output: one physically grounded sentence plus one validated equation.
+- Note 117: Focus area: physical interpretation language. Run a 20-second dimensional check before arithmetic. If the answer is correct but unclear, focus on language precision. Expected output: a corrected expression and a clear reason it is correct.
+- Note 118: Focus area: two-body baseline usage. Compare result against a nearby reference value. When the student hesitates, re-anchor with a physical picture first. Expected output: a mini-briefing statement suitable for a teammate.
+- Note 119: Focus area: extension to perturbations. Translate the result into mission-level implications. If speed overtakes clarity, enforce a line-by-line reasoning cadence. Expected output: a sign-consistent vector form and magnitude cross-check.
+- Note 120: Focus area: student self-explanation prompts. Challenge the student to explain the sign logic component-by-component. When assumptions are implicit, require them to be written explicitly. Expected output: a unit-clean substitution and plausibility conclusion.
