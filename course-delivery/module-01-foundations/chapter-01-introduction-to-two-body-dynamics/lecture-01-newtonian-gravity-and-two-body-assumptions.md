@@ -904,106 +904,120 @@ Use this compact reference to choose the right reinforcement move for the specif
 | Error prevention habits | Introduce a three-check routine: units, sign, plausibility. | Student uses the routine without instructor reminder. |
 | Perturbation extension readiness | Ask which neglected force would be added first for a given regime. | Student selects plausible next-order correction. |
 
-### 12.9 Extended oral-exam question bank (unique prompts)
-Use these prompts to deepen explanation quality while preserving the same core model.
+### 12.9 Extended oral-exam question bank (high-value prompts)
+Use this concise set to probe understanding across derivation, interpretation, assumptions, and communication.
 
-1. Explain why the minus sign in $\mathbf{a}=-\mu\mathbf{r}/\|\mathbf{r}\|^3$ is physically required for a near-circular LEO case. Then provide one sentence describing the operational consequence.
-2. Explain why $\mu$ notation improves reliability in repeated calculations for a medium-altitude transfer estimate. Then state one assumption that must remain true.
-3. Explain why inverse-square scaling changes acceleration faster than many students expect for a high-altitude communication-orbit scenario. Then show one plausibility check you would run.
-4. Explain why a vector sketch can prevent algebraic sign errors for a negative-y coordinate test point. Then identify one common mistake and how to avoid it.
-5. Explain why dimensional analysis should be performed before accepting a numeric result for a mixed-sign 3D state vector. Then connect your explanation to what Lecture 02 will need.
-6. Explain why two-body assumptions are useful without being universally valid for a quick mission pre-design briefing. Then provide one sentence describing the operational consequence.
-7. Explain why radius must be center-to-center instead of altitude-alone in formulas for a student who forgot unit conversion. Then state one assumption that must remain true.
-8. Explain why a result can be numerically neat yet physically implausible for a student who dropped the vector sign. Then show one plausibility check you would run.
-9. Explain why scalar and vector equations should be written separately during derivation for an answer that seems too large. Then identify one common mistake and how to avoid it.
-10. Explain why model limitations should be reported alongside computed values for a hand-calculation cross-check. Then connect your explanation to what Lecture 02 will need.
-11. Demonstrate how the minus sign in $\mathbf{a}=-\mu\mathbf{r}/\|\mathbf{r}\|^3$ is physically required for a near-circular LEO case. Then provide one sentence describing the operational consequence.
-12. Demonstrate how $\mu$ notation improves reliability in repeated calculations for a medium-altitude transfer estimate. Then state one assumption that must remain true.
-13. Demonstrate how inverse-square scaling changes acceleration faster than many students expect for a high-altitude communication-orbit scenario. Then show one plausibility check you would run.
-14. Demonstrate how a vector sketch can prevent algebraic sign errors for a negative-y coordinate test point. Then identify one common mistake and how to avoid it.
-15. Demonstrate how dimensional analysis should be performed before accepting a numeric result for a mixed-sign 3D state vector. Then connect your explanation to what Lecture 02 will need.
-16. Demonstrate how two-body assumptions are useful without being universally valid for a quick mission pre-design briefing. Then provide one sentence describing the operational consequence.
-17. Demonstrate how radius must be center-to-center instead of altitude-alone in formulas for a student who forgot unit conversion. Then state one assumption that must remain true.
-18. Demonstrate how a result can be numerically neat yet physically implausible for a student who dropped the vector sign. Then show one plausibility check you would run.
-19. Demonstrate how scalar and vector equations should be written separately during derivation for an answer that seems too large. Then identify one common mistake and how to avoid it.
-20. Demonstrate how model limitations should be reported alongside computed values for a hand-calculation cross-check. Then connect your explanation to what Lecture 02 will need.
-21. Defend the claim that the minus sign in $\mathbf{a}=-\mu\mathbf{r}/\|\mathbf{r}\|^3$ is physically required for a near-circular LEO case. Then provide one sentence describing the operational consequence.
-22. Defend the claim that $\mu$ notation improves reliability in repeated calculations for a medium-altitude transfer estimate. Then state one assumption that must remain true.
-23. Defend the claim that inverse-square scaling changes acceleration faster than many students expect for a high-altitude communication-orbit scenario. Then show one plausibility check you would run.
-24. Defend the claim that a vector sketch can prevent algebraic sign errors for a negative-y coordinate test point. Then identify one common mistake and how to avoid it.
-25. Defend the claim that dimensional analysis should be performed before accepting a numeric result for a mixed-sign 3D state vector. Then connect your explanation to what Lecture 02 will need.
-26. Defend the claim that two-body assumptions are useful without being universally valid for a quick mission pre-design briefing. Then provide one sentence describing the operational consequence.
-27. Defend the claim that radius must be center-to-center instead of altitude-alone in formulas for a student who forgot unit conversion. Then state one assumption that must remain true.
-28. Defend the claim that a result can be numerically neat yet physically implausible for a student who dropped the vector sign. Then show one plausibility check you would run.
-29. Defend the claim that scalar and vector equations should be written separately during derivation for an answer that seems too large. Then identify one common mistake and how to avoid it.
-30. Defend the claim that model limitations should be reported alongside computed values for a hand-calculation cross-check. Then connect your explanation to what Lecture 02 will need.
-31. Diagnose what happens when the minus sign in $\mathbf{a}=-\mu\mathbf{r}/\|\mathbf{r}\|^3$ is physically required for a near-circular LEO case. Then provide one sentence describing the operational consequence.
-32. Diagnose what happens when $\mu$ notation improves reliability in repeated calculations for a medium-altitude transfer estimate. Then state one assumption that must remain true.
-33. Diagnose what happens when inverse-square scaling changes acceleration faster than many students expect for a high-altitude communication-orbit scenario. Then show one plausibility check you would run.
-34. Diagnose what happens when a vector sketch can prevent algebraic sign errors for a negative-y coordinate test point. Then identify one common mistake and how to avoid it.
-35. Diagnose what happens when dimensional analysis should be performed before accepting a numeric result for a mixed-sign 3D state vector. Then connect your explanation to what Lecture 02 will need.
-36. Diagnose what happens when two-body assumptions are useful without being universally valid for a quick mission pre-design briefing. Then provide one sentence describing the operational consequence.
-37. Diagnose what happens when radius must be center-to-center instead of altitude-alone in formulas for a student who forgot unit conversion. Then state one assumption that must remain true.
-38. Diagnose what happens when a result can be numerically neat yet physically implausible for a student who dropped the vector sign. Then show one plausibility check you would run.
-39. Diagnose what happens when scalar and vector equations should be written separately during derivation for an answer that seems too large. Then identify one common mistake and how to avoid it.
-40. Diagnose what happens when model limitations should be reported alongside computed values for a hand-calculation cross-check. Then connect your explanation to what Lecture 02 will need.
-41. Compare and contrast how the minus sign in $\mathbf{a}=-\mu\mathbf{r}/\|\mathbf{r}\|^3$ is physically required for a near-circular LEO case. Then provide one sentence describing the operational consequence.
-42. Compare and contrast how $\mu$ notation improves reliability in repeated calculations for a medium-altitude transfer estimate. Then state one assumption that must remain true.
-43. Compare and contrast how inverse-square scaling changes acceleration faster than many students expect for a high-altitude communication-orbit scenario. Then show one plausibility check you would run.
-44. Compare and contrast how a vector sketch can prevent algebraic sign errors for a negative-y coordinate test point. Then identify one common mistake and how to avoid it.
-45. Compare and contrast how dimensional analysis should be performed before accepting a numeric result for a mixed-sign 3D state vector. Then connect your explanation to what Lecture 02 will need.
-46. Compare and contrast how two-body assumptions are useful without being universally valid for a quick mission pre-design briefing. Then provide one sentence describing the operational consequence.
-47. Compare and contrast how radius must be center-to-center instead of altitude-alone in formulas for a student who forgot unit conversion. Then state one assumption that must remain true.
-48. Compare and contrast how a result can be numerically neat yet physically implausible for a student who dropped the vector sign. Then show one plausibility check you would run.
-49. Compare and contrast how scalar and vector equations should be written separately during derivation for an answer that seems too large. Then identify one common mistake and how to avoid it.
-50. Compare and contrast how model limitations should be reported alongside computed values for a hand-calculation cross-check. Then connect your explanation to what Lecture 02 will need.
-51. Predict the outcome if the minus sign in $\mathbf{a}=-\mu\mathbf{r}/\|\mathbf{r}\|^3$ is physically required for a near-circular LEO case. Then provide one sentence describing the operational consequence.
-52. Predict the outcome if $\mu$ notation improves reliability in repeated calculations for a medium-altitude transfer estimate. Then state one assumption that must remain true.
-53. Predict the outcome if inverse-square scaling changes acceleration faster than many students expect for a high-altitude communication-orbit scenario. Then show one plausibility check you would run.
-54. Predict the outcome if a vector sketch can prevent algebraic sign errors for a negative-y coordinate test point. Then identify one common mistake and how to avoid it.
-55. Predict the outcome if dimensional analysis should be performed before accepting a numeric result for a mixed-sign 3D state vector. Then connect your explanation to what Lecture 02 will need.
-56. Predict the outcome if two-body assumptions are useful without being universally valid for a quick mission pre-design briefing. Then provide one sentence describing the operational consequence.
-57. Predict the outcome if radius must be center-to-center instead of altitude-alone in formulas for a student who forgot unit conversion. Then state one assumption that must remain true.
-58. Predict the outcome if a result can be numerically neat yet physically implausible for a student who dropped the vector sign. Then show one plausibility check you would run.
-59. Predict the outcome if scalar and vector equations should be written separately during derivation for an answer that seems too large. Then identify one common mistake and how to avoid it.
-60. Predict the outcome if model limitations should be reported alongside computed values for a hand-calculation cross-check. Then connect your explanation to what Lecture 02 will need.
-61. Justify why the minus sign in $\mathbf{a}=-\mu\mathbf{r}/\|\mathbf{r}\|^3$ is physically required for a near-circular LEO case. Then provide one sentence describing the operational consequence.
-62. Justify why $\mu$ notation improves reliability in repeated calculations for a medium-altitude transfer estimate. Then state one assumption that must remain true.
-63. Justify why inverse-square scaling changes acceleration faster than many students expect for a high-altitude communication-orbit scenario. Then show one plausibility check you would run.
-64. Justify why a vector sketch can prevent algebraic sign errors for a negative-y coordinate test point. Then identify one common mistake and how to avoid it.
-65. Justify why dimensional analysis should be performed before accepting a numeric result for a mixed-sign 3D state vector. Then connect your explanation to what Lecture 02 will need.
-66. Justify why two-body assumptions are useful without being universally valid for a quick mission pre-design briefing. Then provide one sentence describing the operational consequence.
-67. Justify why radius must be center-to-center instead of altitude-alone in formulas for a student who forgot unit conversion. Then state one assumption that must remain true.
-68. Justify why a result can be numerically neat yet physically implausible for a student who dropped the vector sign. Then show one plausibility check you would run.
-69. Justify why scalar and vector equations should be written separately during derivation for an answer that seems too large. Then identify one common mistake and how to avoid it.
-70. Justify why model limitations should be reported alongside computed values for a hand-calculation cross-check. Then connect your explanation to what Lecture 02 will need.
-71. Translate into plain language why the minus sign in $\mathbf{a}=-\mu\mathbf{r}/\|\mathbf{r}\|^3$ is physically required for a near-circular LEO case. Then provide one sentence describing the operational consequence.
-72. Translate into plain language why $\mu$ notation improves reliability in repeated calculations for a medium-altitude transfer estimate. Then state one assumption that must remain true.
-73. Translate into plain language why inverse-square scaling changes acceleration faster than many students expect for a high-altitude communication-orbit scenario. Then show one plausibility check you would run.
-74. Translate into plain language why a vector sketch can prevent algebraic sign errors for a negative-y coordinate test point. Then identify one common mistake and how to avoid it.
-75. Translate into plain language why dimensional analysis should be performed before accepting a numeric result for a mixed-sign 3D state vector. Then connect your explanation to what Lecture 02 will need.
-76. Translate into plain language why two-body assumptions are useful without being universally valid for a quick mission pre-design briefing. Then provide one sentence describing the operational consequence.
-77. Translate into plain language why radius must be center-to-center instead of altitude-alone in formulas for a student who forgot unit conversion. Then state one assumption that must remain true.
-78. Translate into plain language why a result can be numerically neat yet physically implausible for a student who dropped the vector sign. Then show one plausibility check you would run.
-79. Translate into plain language why scalar and vector equations should be written separately during derivation for an answer that seems too large. Then identify one common mistake and how to avoid it.
-80. Translate into plain language why model limitations should be reported alongside computed values for a hand-calculation cross-check. Then connect your explanation to what Lecture 02 will need.
-81. Show step-by-step why the minus sign in $\mathbf{a}=-\mu\mathbf{r}/\|\mathbf{r}\|^3$ is physically required for a near-circular LEO case. Then provide one sentence describing the operational consequence.
-82. Show step-by-step why $\mu$ notation improves reliability in repeated calculations for a medium-altitude transfer estimate. Then state one assumption that must remain true.
-83. Show step-by-step why inverse-square scaling changes acceleration faster than many students expect for a high-altitude communication-orbit scenario. Then show one plausibility check you would run.
-84. Show step-by-step why a vector sketch can prevent algebraic sign errors for a negative-y coordinate test point. Then identify one common mistake and how to avoid it.
-85. Show step-by-step why dimensional analysis should be performed before accepting a numeric result for a mixed-sign 3D state vector. Then connect your explanation to what Lecture 02 will need.
-86. Show step-by-step why two-body assumptions are useful without being universally valid for a quick mission pre-design briefing. Then provide one sentence describing the operational consequence.
-87. Show step-by-step why radius must be center-to-center instead of altitude-alone in formulas for a student who forgot unit conversion. Then state one assumption that must remain true.
-88. Show step-by-step why a result can be numerically neat yet physically implausible for a student who dropped the vector sign. Then show one plausibility check you would run.
-89. Show step-by-step why scalar and vector equations should be written separately during derivation for an answer that seems too large. Then identify one common mistake and how to avoid it.
-90. Show step-by-step why model limitations should be reported alongside computed values for a hand-calculation cross-check. Then connect your explanation to what Lecture 02 will need.
-91. Argue from first principles that the minus sign in $\mathbf{a}=-\mu\mathbf{r}/\|\mathbf{r}\|^3$ is physically required for a near-circular LEO case. Then provide one sentence describing the operational consequence.
-92. Argue from first principles that $\mu$ notation improves reliability in repeated calculations for a medium-altitude transfer estimate. Then state one assumption that must remain true.
-93. Argue from first principles that inverse-square scaling changes acceleration faster than many students expect for a high-altitude communication-orbit scenario. Then show one plausibility check you would run.
-94. Argue from first principles that a vector sketch can prevent algebraic sign errors for a negative-y coordinate test point. Then identify one common mistake and how to avoid it.
-95. Argue from first principles that dimensional analysis should be performed before accepting a numeric result for a mixed-sign 3D state vector. Then connect your explanation to what Lecture 02 will need.
-96. Argue from first principles that two-body assumptions are useful without being universally valid for a quick mission pre-design briefing. Then provide one sentence describing the operational consequence.
-97. Argue from first principles that radius must be center-to-center instead of altitude-alone in formulas for a student who forgot unit conversion. Then state one assumption that must remain true.
-98. Argue from first principles that a result can be numerically neat yet physically implausible for a student who dropped the vector sign. Then show one plausibility check you would run.
-99. Argue from first principles that scalar and vector equations should be written separately during derivation for an answer that seems too large. Then identify one common mistake and how to avoid it.
-100. Argue from first principles that model limitations should be reported alongside computed values for a hand-calculation cross-check. Then connect your explanation to what Lecture 02 will need.
+1. Explain why the two-body model can be both simplified and still operationally useful for first-pass trajectory reasoning.
+2. Derive $a=\mu/r^2$ from Newtonian gravitation and identify the exact step where spacecraft mass cancels.
+3. Given $\mathbf{r}=[r,0,0]$, justify the sign of each acceleration component in $\mathbf{a}=-\mu\mathbf{r}/\|\mathbf{r}\|^3$.
+4. Given $\mathbf{r}=[0,-r,0]$, explain why the $y$-acceleration becomes positive while gravity remains inward.
+5. Describe the difference between an assumption, a limitation, and a modeling error using one example of each.
+6. If a student computes an unexpectedly large acceleration, list the three fastest checks you would run and why.
+7. Compare solving by direct substitution versus ratio scaling for two radii and explain when each method is preferable.
+8. Explain why center-to-center distance is required and why altitude alone can be misleading in formulas.
+9. State one realistic scenario where two-body assumptions break down first and describe the correction you would add.
+10. Translate the equation $\mathbf{a}=-\mu\mathbf{r}/\|\mathbf{r}\|^3$ into plain language for a non-specialist teammate.
+11. Show how dimensional analysis confirms that $\mu/r^2$ has acceleration units and identify one common unit trap.
+12. Argue for separating scalar and vector equations while deriving dynamics expressions in front of a class.
+13. Provide a mission-design interpretation of why acceleration decreases rapidly with increasing orbital radius.
+14. Explain how dropping the minus sign can still produce neat arithmetic yet fail physical validity checks.
+15. Give a brief verbal walkthrough of a complete solution workflow from problem statement to plausibility conclusion.
+16. Describe how you would coach a student who is accurate numerically but cannot explain physical meaning.
+17. Discuss why reporting assumptions is part of technical communication, not optional documentation overhead.
+18. Connect today's gravity model directly to one concept needed for conic-section classification in Lecture 02.
+19. Construct a short argument for why model credibility requires both correct equations and context-aware interpretation.
+20. Summarize the lecture in one minute using one key equation, one key assumption, and one key error-check habit.
+
+### 12.10 Annotated instructional transcript snippets
+These snippets provide additional conversational depth for adaptive teaching without changing the mathematical scope.
+
+- Transcript 1: Teacher: Before numbers, tell me the physical story in one sentence.
+- Transcript 2: Student: The trajectory bends because acceleration keeps pointing toward the center.
+- Transcript 3: Coach note: Ask for a sketch before allowing calculator use.
+- Transcript 4: Teacher follow-up: connect this result to an assumption boundary.
+- Transcript 5: Student follow-up: state one perturbation to add next and why.
+- Transcript 6: Teacher: Point to the vector arrow that proves your sign choice.
+- Transcript 7: Student: The sign came from geometry first, not from memorizing symbols.
+- Transcript 8: Coach note: Require one dimensional check every time.
+- Transcript 9: Teacher follow-up: connect this result to an assumption boundary.
+- Transcript 10: Student follow-up: state one perturbation to add next and why.
+- Transcript 11: Teacher: Where did you convert km to m, exactly?
+- Transcript 12: Student: I converted units before substitution to keep SI consistency.
+- Transcript 13: Coach note: Capture assumptions in writing before final answer.
+- Transcript 14: Teacher follow-up: connect this result to an assumption boundary.
+- Transcript 15: Student follow-up: state one perturbation to add next and why.
+- Transcript 16: Teacher: Which assumption are you relying on most heavily here?
+- Transcript 17: Student: I assumed only central-body gravity and no drag or thrust.
+- Transcript 18: Coach note: Prompt a second method for cross-validation.
+- Transcript 19: Teacher follow-up: connect this result to an assumption boundary.
+- Transcript 20: Student follow-up: state one perturbation to add next and why.
+- Transcript 21: Teacher: If your answer were wrong, what would likely be wrong first?
+- Transcript 22: Student: A huge magnitude would suggest a unit mismatch immediately.
+- Transcript 23: Coach note: End with a mission-context interpretation sentence.
+- Transcript 24: Teacher follow-up: connect this result to an assumption boundary.
+- Transcript 25: Student follow-up: state one perturbation to add next and why.
+- Transcript 26: Teacher: How can we sanity-check this without recalculating everything?
+- Transcript 27: Student: I compared against a nearby known orbital acceleration value.
+- Transcript 28: Coach note: Ask for a sketch before allowing calculator use.
+- Transcript 29: Teacher follow-up: connect this result to an assumption boundary.
+- Transcript 30: Student follow-up: state one perturbation to add next and why.
+- Transcript 31: Teacher: Why is this still gravity-dominated at this altitude?
+- Transcript 32: Student: Even weaker gravity can still dominate the motion model.
+- Transcript 33: Coach note: Require one dimensional check every time.
+- Transcript 34: Teacher follow-up: connect this result to an assumption boundary.
+- Transcript 35: Student follow-up: state one perturbation to add next and why.
+- Transcript 36: Teacher: What did the minus sign buy us physically?
+- Transcript 37: Student: Without the minus sign, the vector would point outward incorrectly.
+- Transcript 38: Coach note: Capture assumptions in writing before final answer.
+- Transcript 39: Teacher follow-up: connect this result to an assumption boundary.
+- Transcript 40: Student follow-up: state one perturbation to add next and why.
+- Transcript 41: Teacher: Show me the same result using ratio logic.
+- Transcript 42: Student: Ratio scaling confirmed the direct arithmetic trend.
+- Transcript 43: Coach note: Prompt a second method for cross-validation.
+- Transcript 44: Teacher follow-up: connect this result to an assumption boundary.
+- Transcript 45: Student follow-up: state one perturbation to add next and why.
+- Transcript 46: Teacher: Can you explain this to mission ops in plain language?
+- Transcript 47: Student: In plain language, gravity sets direction continuously and predictably.
+- Transcript 48: Coach note: End with a mission-context interpretation sentence.
+- Transcript 49: Teacher follow-up: connect this result to an assumption boundary.
+- Transcript 50: Student follow-up: state one perturbation to add next and why.
+- Transcript 51: Teacher: Before numbers, tell me the physical story in one sentence.
+- Transcript 52: Student: The trajectory bends because acceleration keeps pointing toward the center.
+- Transcript 53: Coach note: Ask for a sketch before allowing calculator use.
+- Transcript 54: Teacher follow-up: connect this result to an assumption boundary.
+- Transcript 55: Student follow-up: state one perturbation to add next and why.
+- Transcript 56: Teacher: Point to the vector arrow that proves your sign choice.
+- Transcript 57: Student: The sign came from geometry first, not from memorizing symbols.
+- Transcript 58: Coach note: Require one dimensional check every time.
+- Transcript 59: Teacher follow-up: connect this result to an assumption boundary.
+- Transcript 60: Student follow-up: state one perturbation to add next and why.
+- Transcript 61: Teacher: Where did you convert km to m, exactly?
+- Transcript 62: Student: I converted units before substitution to keep SI consistency.
+- Transcript 63: Coach note: Capture assumptions in writing before final answer.
+- Transcript 64: Teacher follow-up: connect this result to an assumption boundary.
+- Transcript 65: Student follow-up: state one perturbation to add next and why.
+- Transcript 66: Teacher: Which assumption are you relying on most heavily here?
+- Transcript 67: Student: I assumed only central-body gravity and no drag or thrust.
+- Transcript 68: Coach note: Prompt a second method for cross-validation.
+- Transcript 69: Teacher follow-up: connect this result to an assumption boundary.
+- Transcript 70: Student follow-up: state one perturbation to add next and why.
+- Transcript 71: Teacher: If your answer were wrong, what would likely be wrong first?
+- Transcript 72: Student: A huge magnitude would suggest a unit mismatch immediately.
+- Transcript 73: Coach note: End with a mission-context interpretation sentence.
+- Transcript 74: Teacher follow-up: connect this result to an assumption boundary.
+- Transcript 75: Student follow-up: state one perturbation to add next and why.
+- Transcript 76: Teacher: How can we sanity-check this without recalculating everything?
+- Transcript 77: Student: I compared against a nearby known orbital acceleration value.
+- Transcript 78: Coach note: Ask for a sketch before allowing calculator use.
+- Transcript 79: Teacher follow-up: connect this result to an assumption boundary.
+- Transcript 80: Student follow-up: state one perturbation to add next and why.
+- Transcript 81: Teacher: Why is this still gravity-dominated at this altitude?
+- Transcript 82: Student: Even weaker gravity can still dominate the motion model.
+- Transcript 83: Coach note: Require one dimensional check every time.
+- Transcript 84: Teacher follow-up: connect this result to an assumption boundary.
+- Transcript 85: Student follow-up: state one perturbation to add next and why.
+- Transcript 86: Teacher: What did the minus sign buy us physically?
+- Transcript 87: Student: Without the minus sign, the vector would point outward incorrectly.
+- Transcript 88: Coach note: Capture assumptions in writing before final answer.
+- Transcript 89: Teacher follow-up: connect this result to an assumption boundary.
+- Transcript 90: Student follow-up: state one perturbation to add next and why.
