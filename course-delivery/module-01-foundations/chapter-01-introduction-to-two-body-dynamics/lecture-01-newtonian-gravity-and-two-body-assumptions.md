@@ -99,7 +99,7 @@ Then gravity must point back toward the central body:
 The negative sign is not optional; it encodes inward direction.
 
 Unit check:
-- $\(\mu\): m\(^3\)/s\(^2\)$
+- \(\mu\): \(\text{m}^3/\text{s}^2\)
 - \(\mathbf{r}/\|\mathbf{r}\|^3\): 1/m\(^2\)
 - product: \(\text{m/s}^2\) (correct acceleration unit)
 
@@ -241,7 +241,7 @@ a=\frac{3.986\times10^{14}}{(8.0\times10^6)^2}\approx6.23\ \text{m/s}^2
 =\left[0,\frac{\mu r}{r^3},0\right]
 =\left[0,\frac{\mu}{r^2},0\right]
 \]
-The \(y\)-component is positive because the leading negative from \(-\mu\) multiplies the negative \(y\)-position value \((-r)\), and those two negatives cancel.
+The \(y\)-component is positive because \(-\mu\) multiplies the vector component \(-r\), and those two negatives cancel to produce \(+\mu r/r^3\).
 This points in \(+\mathbf{y}\), i.e., back toward origin if the spacecraft is at negative \(y\).
 
 ## 10) Exit ticket (5-7 min)
