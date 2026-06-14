@@ -238,9 +238,10 @@ a=\frac{3.986\times10^{14}}{(8.0\times10^6)^2}\approx6.23\ \text{m/s}^2
 3. **Vector acceleration for \(\mathbf{r}=[0,-r,0]\):**
 \[
 \mathbf{a}=-\mu\frac{[0,-r,0]}{r^3}
-=\left[0,\frac{-\mu(-r)}{r^3},0\right]
+=\left[0,\frac{\mu r}{r^3},0\right]
 =\left[0,\frac{\mu}{r^2},0\right]
 \]
+The \(y\)-component is positive because multiplying two negatives gives a positive.
 which points in \(+\mathbf{y}\), i.e., back toward origin if the spacecraft is at negative \(y\).
 
 ## 10) Exit ticket (5-7 min)
