@@ -41,3 +41,6 @@ By course completion, students will be able to:
 - Each stage must include at least one formative assessment and one summative checkpoint.
 - Prerequisite concepts must be reactivated at the start of each stage.
 - Repository-delivered lectures must follow textbook structure (module → chapter → lecture) with sufficiently comprehensive notes per the Lecture Readiness Standard.
+- Canonical lecture files are lecture-only artifacts; delivery/assessment/student tracking data must be recorded in delivery tracking files, not inside the lecture text.
+- Lecture writing style must be conversational and educational, and equations must be represented in LaTeX.
+- Each canonical lecture should be authored to support an approximately one-hour teaching session unless explicitly scoped otherwise.

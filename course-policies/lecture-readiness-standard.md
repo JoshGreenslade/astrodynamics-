@@ -32,9 +32,13 @@ This document defines when a lecture is considered ready for delivery.
 
 ### 6) Textbook Lecture Completeness (Repository Delivery Standard)
 - Canonical lecture file must be stored using module/chapter/lecture path structure under `/course-delivery/module-*/chapter-*/lecture-*.md`.
-- Lecture must include, at minimum: prerequisites/activation, learning outcomes, core theory with derivations, at least two worked examples, common mistakes, guided practice, and an exit ticket with success criteria.
+- Canonical lecture file must contain lecture teaching content only (no delivery logs, assessment outcomes, or student ability tracking records).
+- Lecture must include, at minimum: prerequisites/activation, learning outcomes, concept vocabulary, core theory with derivations, at least three worked examples, common mistakes, guided practice, and an exit ticket with success criteria.
 - Lecture must include explicit model scope/assumptions and limitations where applicable.
 - Lecture must include a short bridge to the next lecture to preserve continuity.
+- Lecture tone must be conversational and instructional (teacher-to-student voice), not policy/report style.
+- Any mathematical equation in lecture notes must be written in LaTeX form.
+- Lecture notes must be scoped for approximately one hour of teaching (target 50-70 minutes including checks/questions).
 
 ## Definition of Done
 A lecture is "Ready" only when all checklist sections are complete and archived with date/version in the lesson folder used for delivery.

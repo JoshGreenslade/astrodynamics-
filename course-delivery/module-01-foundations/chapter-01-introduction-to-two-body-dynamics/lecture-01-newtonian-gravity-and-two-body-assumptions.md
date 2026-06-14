@@ -2,26 +2,37 @@
 ## Chapter 01 · Introduction to Two-Body Dynamics
 ### Lecture 01 · Newtonian Gravity and Two-Body Assumptions
 
-## 1) Why this lecture matters
-Astrodynamics is built on models. The first model must be both mathematically tractable and physically meaningful. Newtonian gravity with two-body assumptions is that baseline model: it allows closed-form reasoning, supports orbit classification, and creates the reference solution that later perturbation models modify.
+## Estimated teaching time
+60-70 minutes (including live checks, questions, and guided practice).
 
-In practice, this lecture gives you the language and equations used throughout Stage 1:
-- force and acceleration forms of gravity
-- vector direction conventions
-- model assumptions and scope limits
-- unit-safe calculation workflow
+## 1) Opening: what we are doing and why it matters (5-7 min)
+Today we are building the first mental model that makes orbital motion predictable.  
+Think of this as our "clean-room physics" model: simple enough to solve, rich enough to be genuinely useful.
+
+By the end of the hour, you should be comfortable saying:
+- "I can write gravity in force form and acceleration form."
+- "I can keep the sign and direction correct in vector form."
+- "I know exactly what the two-body model includes and what it leaves out."
+- "I can solve a gravitational acceleration problem quickly and safely."
+
+We will move from intuition to equations, then back to interpretation, so the math always has physical meaning.
 
 ## 2) Prerequisites and activation
-Before proceeding, confirm fluency with:
+Before we dive in, quickly confirm fluency with:
 1. SI base and derived units (especially N, kg, m, s).
 2. Vector magnitude and direction notation.
 3. Rearranging algebraic expressions with powers.
 
 ### Activation task
-For each statement, mark valid/invalid and justify:
+For each statement, mark valid/invalid and justify in one sentence:
 1. \(a=\mu/r^2\) produces units of m/s\(^2\).
 2. If \(\mathbf{r}\) points from Earth to spacecraft, then gravitational acceleration is in the \(+\mathbf{r}\) direction.
 3. Using km for \(r\) while keeping \(\mu\) in m\(^3\)/s\(^2\) is acceptable if done consistently in one line.
+
+Quick answers to self-check:
+1. Valid.  
+2. Invalid (gravity is inward, so opposite \(\mathbf{r}\)).  
+3. Invalid unless units are converted before substitution.
 
 ## 3) Learning outcomes
 By the end of this lecture, you should be able to:
@@ -39,7 +50,7 @@ By the end of this lecture, you should be able to:
 - **Two-body model**: system where only mutual gravity of two bodies is considered.
 - **Perturbation**: effect excluded from ideal model (drag, oblateness, third bodies, thrust).
 
-## 5) Core derivation and interpretation
+## 5) Core derivation and interpretation (20-25 min)
 ### 5.1 Newton’s universal gravitation (force magnitude)
 \[
 F = G \frac{m_1 m_2}{r^2}
@@ -57,6 +68,7 @@ Physical interpretation:
 - attraction: force direction is inward along line of centers
 
 ### 5.2 Convert to acceleration form for spacecraft dynamics
+Now let’s make this operational for trajectory work.  
 For spacecraft mass \(m\) near central body mass \(M\):
 \[
 F = ma = G\frac{Mm}{r^2}
@@ -79,7 +91,8 @@ Why this matters:
 - this supports trajectory propagation from state vectors
 
 ### 5.3 Vector form and sign convention
-Let \(\mathbf{r}\) point from central body to spacecraft. Then gravity points toward the central body:
+Let \(\mathbf{r}\) point from central body to spacecraft.  
+Then gravity must point back toward the central body:
 \[
 \mathbf{a} = -\mu\frac{\mathbf{r}}{\|\mathbf{r}\|^3}
 \]
@@ -89,6 +102,28 @@ Unit check:
 - \(\mu\): m\(^3\)/s\(^2\)
 - \(\mathbf{r}/\|\mathbf{r}\|^3\): 1/m\(^2\)
 - product: m/s\(^2\) (correct acceleration unit)
+
+### 5.4 Why the denominator is \(\|\mathbf{r}\|^3\) in vector form
+This is a common sticking point, so let’s unpack it.
+
+Start with:
+\[
+\mathbf{a}=a\hat{\mathbf{r}}_{\text{inward}}
+\]
+The magnitude is:
+\[
+a=\frac{\mu}{r^2}
+\]
+The inward unit vector is:
+\[
+\hat{\mathbf{r}}_{\text{inward}}=-\frac{\mathbf{r}}{\|\mathbf{r}\|}
+\]
+Combine them:
+\[
+\mathbf{a}=\frac{\mu}{r^2}\left(-\frac{\mathbf{r}}{\|\mathbf{r}\|}\right)
+=-\mu\frac{\mathbf{r}}{\|\mathbf{r}\|^3}
+\]
+So \(\|\mathbf{r}\|^3\) is not mysterious; it comes from \(r^2\) in magnitude times another \(r\) from unit-vector normalization.
 
 ## 6) Two-body assumptions and model boundaries
 ### 6.1 Assumptions
@@ -110,7 +145,7 @@ Even with exclusions, two-body dynamics:
 - provides analytical structure for conics and Kepler relations
 - anchors error analysis when perturbations are later added
 
-## 7) Worked examples
+## 7) Worked examples (15-18 min)
 ### Example A — acceleration magnitude at orbital altitude
 Given Earth \(\mu = 3.986\times10^{14}\ \text{m}^3/\text{s}^2\), find \(a\) at \(r=7000\ \text{km}\).
 
@@ -142,6 +177,34 @@ If spacecraft is on +x axis relative to Earth:
 \]
 Direction is toward origin, confirming sign convention.
 
+### Example D — full 2D vector computation
+Let:
+\[
+\mathbf{r}=[7000,\ 7000,\ 0]\ \text{km}
+\]
+Convert to meters:
+\[
+\mathbf{r}=[7.0\times10^6,\ 7.0\times10^6,\ 0]\ \text{m}
+\]
+Compute radius:
+\[
+\|\mathbf{r}\|=\sqrt{(7.0\times10^6)^2+(7.0\times10^6)^2}
+\approx 9.899\times10^6\ \text{m}
+\]
+Then:
+\[
+\mathbf{a}=-\mu\frac{\mathbf{r}}{\|\mathbf{r}\|^3}
+\]
+With \(\mu=3.986\times10^{14}\ \text{m}^3/\text{s}^2\):
+\[
+\mathbf{a}\approx[-2.85,\ -2.85,\ 0]\ \text{m/s}^2
+\]
+Magnitude check:
+\[
+\|\mathbf{a}\|\approx4.03\ \text{m/s}^2
+\]
+and this equals \(\mu/\|\mathbf{r}\|^2\), as expected.
+
 ## 8) Common mistakes and corrections
 1. **Unit mismatch (km vs m)**  
    Correction: convert all distances to meters when using SI \(\mu\).
@@ -151,15 +214,34 @@ Direction is toward origin, confirming sign convention.
    Correction: describe assumptions explicitly and state intended use range.
 4. **Using force formula when acceleration formula is sufficient**  
    Correction: use \(a=\mu/r^2\) unless force on a known mass is specifically needed.
+5. **Forgetting to distinguish \(\mathbf{r}\) from \(\|\mathbf{r}\|\)**  
+   Correction: write scalar and vector equations on separate lines before combining.
+6. **No plausibility check after arithmetic**  
+   Correction: compare against nearby known values (e.g., near-Earth gravity scale, inverse-square trend).
 
-## 9) Guided practice set
+## 9) Guided practice set (10-12 min)
 1. Compute gravitational acceleration at \(r=8000\ \text{km}\) around Earth.
 2. A spacecraft moves from \(r_1\) to \(1.5r_1\). Find \(a_2/a_1\).
 3. Write \(\mathbf{a}\) for \(\mathbf{r}=[0,-r,0]\) and interpret direction.
 4. List two assumptions that become weak for long-duration LEO prediction.
 5. Explain in 2-3 sentences why two-body remains useful in mission pre-design.
 
-## 10) Exit ticket (administered)
+### Optional debrief answers (for self-check)
+1. \(r=8.0\times10^6\ \text{m}\), so
+\[
+a=\frac{3.986\times10^{14}}{(8.0\times10^6)^2}\approx6.23\ \text{m/s}^2
+\]
+2.
+\[
+\frac{a_2}{a_1}=\left(\frac{r_1}{1.5r_1}\right)^2=\frac{1}{2.25}\approx0.444
+\]
+3.
+\[
+\mathbf{a}=-\mu\frac{[0,-r,0]}{r^3}=[0,\mu/r^2,0]
+\]
+which points in \(+\mathbf{y}\), i.e., back toward origin if the spacecraft is at negative \(y\).
+
+## 10) Exit ticket (5-7 min)
 1. Name two two-body assumptions and one practical limitation.
 2. Compute \(a\) at a provided radius with correct units and sign reasoning.
 3. State one check you would run to verify your answer is physically plausible.
@@ -170,13 +252,10 @@ Direction is toward origin, confirming sign convention.
 - direction/sign justified clearly
 - model limitation communicated accurately
 
-## 11) Delivery and assessment record
-- Delivery date: 2026-06-14
-- Student: JoshGreenslade
-- Delivery mode: guided derivation + worked examples + independent checks
-- Assessment result: completed; core outcomes met
-- Observed gap: occasional sign-convention ambiguity in vector setup
-- Intervention for Lecture 02: 5-minute sign/direction refresher before new derivations
-
-## 12) Next lecture bridge
+## 11) Next lecture bridge (2-3 min)
 Lecture 02 uses this acceleration framework to build conic geometry vocabulary (ellipse, parabola, hyperbola) and connect motion state to orbit-shape interpretation.
+
+Before Lecture 02, quickly review:
+- unit consistency workflow
+- inward direction logic in \(\mathbf{a}=-\mu\mathbf{r}/\|\mathbf{r}\|^3\)
+- the difference between a useful model and a complete model
