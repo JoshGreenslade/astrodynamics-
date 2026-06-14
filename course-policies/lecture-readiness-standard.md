@@ -34,10 +34,12 @@ This document defines when a lecture is considered ready for delivery.
 - Canonical lecture file must be stored using module/chapter/lecture path structure under `/course-delivery/module-*/chapter-*/lecture-*.md`.
 - Canonical lecture file must contain lecture teaching content only (no delivery logs, assessment outcomes, or student ability tracking records).
 - Lecture must include, at minimum: prerequisites/activation, learning outcomes, concept vocabulary, core theory with derivations, at least three worked examples, common mistakes, guided practice, and an exit ticket with success criteria.
+- Canonical lecture notes must be at least 1000 lines long to ensure explanatory depth rather than terse result listing.
 - Lecture must include explicit model scope/assumptions and limitations where applicable.
 - Lecture must include a short bridge to the next lecture to preserve continuity.
 - Lecture tone must be conversational and instructional (teacher-to-student voice), not policy/report style.
 - Any mathematical equation in lecture notes must be written in LaTeX form.
+- Inline mathematical expressions must use `$...$` delimiters (not `\(...\)`).
 - Lecture notes must be scoped for approximately one hour of teaching (target 50-70 minutes including checks/questions).
 
 ## Definition of Done
