@@ -25,7 +25,7 @@ Before we dive in, quickly confirm fluency with:
 
 ### Activation task
 For each statement, mark valid/invalid and justify in one sentence:
-1. \(a=\mu/r^2\) produces units of m/s\(^2\).
+1. \(a=\mu/r^2\) produces units of \(\text{m/s}^2\).
 2. If \(\mathbf{r}\) points from Earth to spacecraft, then gravitational acceleration is in the \(+\mathbf{r}\) direction.
 3. Using km for \(r\) while keeping \(\mu\) in m\(^3\)/s\(^2\) is acceptable if done consistently in one line.
 
@@ -101,7 +101,7 @@ The negative sign is not optional; it encodes inward direction.
 Unit check:
 - \(\mu\): m\(^3\)/s\(^2\)
 - \(\mathbf{r}/\|\mathbf{r}\|^3\): 1/m\(^2\)
-- product: m/s\(^2\) (correct acceleration unit)
+- product: \(\text{m/s}^2\) (correct acceleration unit)
 
 ### 5.4 Why the denominator is \(\|\mathbf{r}\|^3\) in vector form
 This is a common sticking point, so let’s unpack it.
@@ -197,11 +197,11 @@ Then:
 \]
 With \(\mu=3.986\times10^{14}\ \text{m}^3/\text{s}^2\):
 \[
-\mathbf{a}\approx[-2.85,\ -2.85,\ 0]\ \text{m/s}^2
+\mathbf{a}\approx[-2.88,\ -2.88,\ 0]\ \text{m/s}^2
 \]
 Magnitude check:
 \[
-\|\mathbf{a}\|\approx4.03\ \text{m/s}^2
+\|\mathbf{a}\|\approx4.07\ \text{m/s}^2
 \]
 and this equals \(\mu/\|\mathbf{r}\|^2\), as expected.
 
@@ -237,7 +237,9 @@ a=\frac{3.986\times10^{14}}{(8.0\times10^6)^2}\approx6.23\ \text{m/s}^2
 \]
 3.
 \[
-\mathbf{a}=-\mu\frac{[0,-r,0]}{r^3}=[0,\mu/r^2,0]
+\mathbf{a}=-\mu\frac{[0,-r,0]}{r^3}
+=\left[0,\frac{-\mu(-r)}{r^3},0\right]
+=\left[0,\frac{\mu}{r^2},0\right]
 \]
 which points in \(+\mathbf{y}\), i.e., back toward origin if the spacecraft is at negative \(y\).
 
