@@ -1,2 +1,9 @@
-readme
+Astrodynamics Course Repository
 
+This repository hosts course policy documents for teaching the fundamentals of astrodynamics.
+
+Policy documents:
+- `/course-policies/course-curriculum.md`
+- `/course-policies/assessment-expectations.md`
+- `/course-policies/lecture-readiness-standard.md`
+- `/course-policies/student-ability-tracking.md`
