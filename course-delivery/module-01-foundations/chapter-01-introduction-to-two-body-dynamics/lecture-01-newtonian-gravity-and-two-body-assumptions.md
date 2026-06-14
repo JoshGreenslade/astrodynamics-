@@ -278,21 +278,21 @@ Use each segment in sequence; pause after every segment for student paraphrasing
 
 #### Segment 2: Force versus acceleration
 - Instructor framing: Students often memorize force equations but forget that trajectory propagation uses acceleration directly.
-- Prompt: Prompt: convert one force equation into a state-derivative statement in words.
+- Prompt: convert one force equation into a state-derivative statement in words.
 - Board action: Write force form and acceleration form side-by-side, then circle the propagator-ready expression.
 - Core takeaway: Translate every force statement into acceleration language so state update equations become immediate.
 - Student checkpoint: state when force is still useful and when acceleration is the better operational quantity.
 
 #### Segment 3: Meaning of standard gravitational parameter
 - Instructor framing: When we write $\mu$, we are using a precomputed physical fingerprint of the central body.
-- Prompt: Ask: what practical errors are reduced when using $\mu$ directly in computation?
+- Prompt: what practical errors are reduced when using $\mu$ directly in computation?
 - Board action: List constants for Earth and show how one symbol simplifies repeated calculations.
 - Core takeaway: This avoids repeatedly carrying $G$ and $M$ and reduces arithmetic and transcription error risk.
 - Student checkpoint: explain why two analysts using the same $\mu$ value are less likely to diverge numerically.
 
 #### Segment 4: Direction discipline
 - Instructor framing: Whenever a vector appears, draw an arrow before writing symbols.
-- Prompt: Prompt: identify outward and inward directions before any minus sign is written.
+- Prompt: identify outward and inward directions before any minus sign is written.
 - Board action: Use coordinate axes and mark $\mathbf{r}$, then mark gravity as opposite direction.
 - Core takeaway: This habit prevents sign mistakes that are otherwise hard to catch in numerical pipelines.
 - Student checkpoint: explain how a pre-drawn arrow prevents sign mistakes in components.
@@ -306,7 +306,7 @@ Use each segment in sequence; pause after every segment for student paraphrasing
 
 #### Segment 6: Model scope statement
 - Instructor framing: The two-body model is intentionally selective: it keeps dominant gravity and ignores smaller effects.
-- Prompt: Prompt: name one included effect and two excluded effects.
+- Prompt: name one included effect and two excluded effects.
 - Board action: Create a two-column board table: Included / Excluded.
 - Core takeaway: A good engineer states what is ignored before claiming confidence in outputs.
 - Student checkpoint: explain when exclusions become too large to ignore.
@@ -320,7 +320,7 @@ Use each segment in sequence; pause after every segment for student paraphrasing
 
 #### Segment 8: Scalar and vector separation
 - Instructor framing: Write magnitude equations and vector equations on separate lines.
-- Prompt: Prompt: classify each symbol in the derivation as scalar or vector.
+- Prompt: classify each symbol in the derivation as scalar or vector.
 - Board action: Color-code scalar terms and vector terms to make structure obvious.
 - Core takeaway: This keeps $r$ and $\mathbf{r}$ conceptually distinct.
 - Student checkpoint: explain why $r$ and $\mathbf{r}$ cannot be swapped in formulas.
@@ -334,21 +334,21 @@ Use each segment in sequence; pause after every segment for student paraphrasing
 
 #### Segment 10: Reasonableness checks
 - Instructor framing: After every computation, compare magnitude against a known nearby value.
-- Prompt: Prompt: is your result in a plausible range for near-Earth orbit?
+- Prompt: is your result in a plausible range for near-Earth orbit?
 - Board action: Write a quick reference band of expected accelerations at common radii.
 - Core takeaway: At near-Earth radii, values should sit in the same order as surface gravity, not hundreds of $m/s^2$.
 - Student checkpoint: explain one red flag that would trigger immediate rework.
 
 #### Segment 11: Assumptions versus limitations
 - Instructor framing: Assumptions are design choices; limitations are consequences of those choices.
-- Prompt: Ask: convert one assumption into a practical limitation sentence.
+- Prompt: convert one assumption into a practical limitation sentence.
 - Board action: Show a traceability chain: assumption -> omitted physics -> expected error behavior.
 - Core takeaway: Naming both keeps communication honest and technically precise.
 - Student checkpoint: explain why documenting assumptions is part of technical honesty.
 
 #### Segment 12: Bridge to future topics
 - Instructor framing: Two-body acceleration is the seed for conic orbits and Keplerian reasoning.
-- Prompt: Prompt: predict one thing Lecture 02 will reuse from today.
+- Prompt: predict one thing Lecture 02 will reuse from today.
 - Board action: Map today's key equation to next lecture's conic interpretation box.
 - Core takeaway: If this seed is misunderstood, later orbit-geometry lessons become fragile.
 - Student checkpoint: explain why weak foundations here make conic classification harder later.
@@ -887,125 +887,123 @@ This minute plan is strictly sequential and maps to a single 60-minute teaching 
 Today you built a usable gravity model, not just a memorized formula list. You derived acceleration from force, tracked direction correctly with vectors, validated dimensions, and practiced realistic checks that engineers use to trust results. You also learned to treat assumptions as explicit model boundaries rather than hidden weaknesses. That combination of mathematics plus interpretation is exactly what we need before stepping into conic geometry in Lecture 02.
 
 ### 12.8 Additional explanatory notes for depth and continuity
-Use these concise teaching notes to extend explanations based on student questions without leaving the lecture scope.
+Use this compact reference to choose the right reinforcement move for the specific learning gap you observe.
 
-- Note 1: Focus area: unit conversion workflow. Ask for a spoken explanation before writing symbols. If confusion appears, slow down and separate concept from arithmetic. Expected output: one physically grounded sentence plus one validated equation.
-- Note 2: Focus area: vector direction reasoning. Request a one-line equation and a one-line meaning statement. When confidence is high, add one edge-case to test robustness. Expected output: a corrected expression and a clear reason it is correct.
-- Note 3: Focus area: inverse-square intuition. Have the student identify the most likely error source first. If the answer is correct but unclear, focus on language precision. Expected output: a mini-briefing statement suitable for a teammate.
-- Note 4: Focus area: model scope communication. Require a quick sketch before computation begins. When the student hesitates, re-anchor with a physical picture first. Expected output: a sign-consistent vector form and magnitude cross-check.
-- Note 5: Focus area: assumption versus limitation framing. Run a 20-second dimensional check before arithmetic. If speed overtakes clarity, enforce a line-by-line reasoning cadence. Expected output: a unit-clean substitution and plausibility conclusion.
-- Note 6: Focus area: plausibility checks. Compare result against a nearby reference value. When assumptions are implicit, require them to be written explicitly. Expected output: one physically grounded sentence plus one validated equation.
-- Note 7: Focus area: coordinate-sign interpretation. Translate the result into mission-level implications. If confusion appears, slow down and separate concept from arithmetic. Expected output: a corrected expression and a clear reason it is correct.
-- Note 8: Focus area: scalar-vector separation. Challenge the student to explain the sign logic component-by-component. When confidence is high, add one edge-case to test robustness. Expected output: a mini-briefing statement suitable for a teammate.
-- Note 9: Focus area: derivation storytelling. Ask for a spoken explanation before writing symbols. If the answer is correct but unclear, focus on language precision. Expected output: a sign-consistent vector form and magnitude cross-check.
-- Note 10: Focus area: mission-design context. Request a one-line equation and a one-line meaning statement. When the student hesitates, re-anchor with a physical picture first. Expected output: a unit-clean substitution and plausibility conclusion.
-- Note 11: Focus area: error prevention habits. Have the student identify the most likely error source first. If speed overtakes clarity, enforce a line-by-line reasoning cadence. Expected output: one physically grounded sentence plus one validated equation.
-- Note 12: Focus area: physical interpretation language. Require a quick sketch before computation begins. When assumptions are implicit, require them to be written explicitly. Expected output: a corrected expression and a clear reason it is correct.
-- Note 13: Focus area: two-body baseline usage. Run a 20-second dimensional check before arithmetic. If confusion appears, slow down and separate concept from arithmetic. Expected output: a mini-briefing statement suitable for a teammate.
-- Note 14: Focus area: extension to perturbations. Compare result against a nearby reference value. When confidence is high, add one edge-case to test robustness. Expected output: a sign-consistent vector form and magnitude cross-check.
-- Note 15: Focus area: student self-explanation prompts. Translate the result into mission-level implications. If the answer is correct but unclear, focus on language precision. Expected output: a unit-clean substitution and plausibility conclusion.
-- Note 16: Focus area: unit conversion workflow. Challenge the student to explain the sign logic component-by-component. When the student hesitates, re-anchor with a physical picture first. Expected output: one physically grounded sentence plus one validated equation.
-- Note 17: Focus area: vector direction reasoning. Ask for a spoken explanation before writing symbols. If speed overtakes clarity, enforce a line-by-line reasoning cadence. Expected output: a corrected expression and a clear reason it is correct.
-- Note 18: Focus area: inverse-square intuition. Request a one-line equation and a one-line meaning statement. When assumptions are implicit, require them to be written explicitly. Expected output: a mini-briefing statement suitable for a teammate.
-- Note 19: Focus area: model scope communication. Have the student identify the most likely error source first. If confusion appears, slow down and separate concept from arithmetic. Expected output: a sign-consistent vector form and magnitude cross-check.
-- Note 20: Focus area: assumption versus limitation framing. Require a quick sketch before computation begins. When confidence is high, add one edge-case to test robustness. Expected output: a unit-clean substitution and plausibility conclusion.
-- Note 21: Focus area: plausibility checks. Run a 20-second dimensional check before arithmetic. If the answer is correct but unclear, focus on language precision. Expected output: one physically grounded sentence plus one validated equation.
-- Note 22: Focus area: coordinate-sign interpretation. Compare result against a nearby reference value. When the student hesitates, re-anchor with a physical picture first. Expected output: a corrected expression and a clear reason it is correct.
-- Note 23: Focus area: scalar-vector separation. Translate the result into mission-level implications. If speed overtakes clarity, enforce a line-by-line reasoning cadence. Expected output: a mini-briefing statement suitable for a teammate.
-- Note 24: Focus area: derivation storytelling. Challenge the student to explain the sign logic component-by-component. When assumptions are implicit, require them to be written explicitly. Expected output: a sign-consistent vector form and magnitude cross-check.
-- Note 25: Focus area: mission-design context. Ask for a spoken explanation before writing symbols. If confusion appears, slow down and separate concept from arithmetic. Expected output: a unit-clean substitution and plausibility conclusion.
-- Note 26: Focus area: error prevention habits. Request a one-line equation and a one-line meaning statement. When confidence is high, add one edge-case to test robustness. Expected output: one physically grounded sentence plus one validated equation.
-- Note 27: Focus area: physical interpretation language. Have the student identify the most likely error source first. If the answer is correct but unclear, focus on language precision. Expected output: a corrected expression and a clear reason it is correct.
-- Note 28: Focus area: two-body baseline usage. Require a quick sketch before computation begins. When the student hesitates, re-anchor with a physical picture first. Expected output: a mini-briefing statement suitable for a teammate.
-- Note 29: Focus area: extension to perturbations. Run a 20-second dimensional check before arithmetic. If speed overtakes clarity, enforce a line-by-line reasoning cadence. Expected output: a sign-consistent vector form and magnitude cross-check.
-- Note 30: Focus area: student self-explanation prompts. Compare result against a nearby reference value. When assumptions are implicit, require them to be written explicitly. Expected output: a unit-clean substitution and plausibility conclusion.
-- Note 31: Focus area: unit conversion workflow. Translate the result into mission-level implications. If confusion appears, slow down and separate concept from arithmetic. Expected output: one physically grounded sentence plus one validated equation.
-- Note 32: Focus area: vector direction reasoning. Challenge the student to explain the sign logic component-by-component. When confidence is high, add one edge-case to test robustness. Expected output: a corrected expression and a clear reason it is correct.
-- Note 33: Focus area: inverse-square intuition. Ask for a spoken explanation before writing symbols. If the answer is correct but unclear, focus on language precision. Expected output: a mini-briefing statement suitable for a teammate.
-- Note 34: Focus area: model scope communication. Request a one-line equation and a one-line meaning statement. When the student hesitates, re-anchor with a physical picture first. Expected output: a sign-consistent vector form and magnitude cross-check.
-- Note 35: Focus area: assumption versus limitation framing. Have the student identify the most likely error source first. If speed overtakes clarity, enforce a line-by-line reasoning cadence. Expected output: a unit-clean substitution and plausibility conclusion.
-- Note 36: Focus area: plausibility checks. Require a quick sketch before computation begins. When assumptions are implicit, require them to be written explicitly. Expected output: one physically grounded sentence plus one validated equation.
-- Note 37: Focus area: coordinate-sign interpretation. Run a 20-second dimensional check before arithmetic. If confusion appears, slow down and separate concept from arithmetic. Expected output: a corrected expression and a clear reason it is correct.
-- Note 38: Focus area: scalar-vector separation. Compare result against a nearby reference value. When confidence is high, add one edge-case to test robustness. Expected output: a mini-briefing statement suitable for a teammate.
-- Note 39: Focus area: derivation storytelling. Translate the result into mission-level implications. If the answer is correct but unclear, focus on language precision. Expected output: a sign-consistent vector form and magnitude cross-check.
-- Note 40: Focus area: mission-design context. Challenge the student to explain the sign logic component-by-component. When the student hesitates, re-anchor with a physical picture first. Expected output: a unit-clean substitution and plausibility conclusion.
-- Note 41: Focus area: error prevention habits. Ask for a spoken explanation before writing symbols. If speed overtakes clarity, enforce a line-by-line reasoning cadence. Expected output: one physically grounded sentence plus one validated equation.
-- Note 42: Focus area: physical interpretation language. Request a one-line equation and a one-line meaning statement. When assumptions are implicit, require them to be written explicitly. Expected output: a corrected expression and a clear reason it is correct.
-- Note 43: Focus area: two-body baseline usage. Have the student identify the most likely error source first. If confusion appears, slow down and separate concept from arithmetic. Expected output: a mini-briefing statement suitable for a teammate.
-- Note 44: Focus area: extension to perturbations. Require a quick sketch before computation begins. When confidence is high, add one edge-case to test robustness. Expected output: a sign-consistent vector form and magnitude cross-check.
-- Note 45: Focus area: student self-explanation prompts. Run a 20-second dimensional check before arithmetic. If the answer is correct but unclear, focus on language precision. Expected output: a unit-clean substitution and plausibility conclusion.
-- Note 46: Focus area: unit conversion workflow. Compare result against a nearby reference value. When the student hesitates, re-anchor with a physical picture first. Expected output: one physically grounded sentence plus one validated equation.
-- Note 47: Focus area: vector direction reasoning. Translate the result into mission-level implications. If speed overtakes clarity, enforce a line-by-line reasoning cadence. Expected output: a corrected expression and a clear reason it is correct.
-- Note 48: Focus area: inverse-square intuition. Challenge the student to explain the sign logic component-by-component. When assumptions are implicit, require them to be written explicitly. Expected output: a mini-briefing statement suitable for a teammate.
-- Note 49: Focus area: model scope communication. Ask for a spoken explanation before writing symbols. If confusion appears, slow down and separate concept from arithmetic. Expected output: a sign-consistent vector form and magnitude cross-check.
-- Note 50: Focus area: assumption versus limitation framing. Request a one-line equation and a one-line meaning statement. When confidence is high, add one edge-case to test robustness. Expected output: a unit-clean substitution and plausibility conclusion.
-- Note 51: Focus area: plausibility checks. Have the student identify the most likely error source first. If the answer is correct but unclear, focus on language precision. Expected output: one physically grounded sentence plus one validated equation.
-- Note 52: Focus area: coordinate-sign interpretation. Require a quick sketch before computation begins. When the student hesitates, re-anchor with a physical picture first. Expected output: a corrected expression and a clear reason it is correct.
-- Note 53: Focus area: scalar-vector separation. Run a 20-second dimensional check before arithmetic. If speed overtakes clarity, enforce a line-by-line reasoning cadence. Expected output: a mini-briefing statement suitable for a teammate.
-- Note 54: Focus area: derivation storytelling. Compare result against a nearby reference value. When assumptions are implicit, require them to be written explicitly. Expected output: a sign-consistent vector form and magnitude cross-check.
-- Note 55: Focus area: mission-design context. Translate the result into mission-level implications. If confusion appears, slow down and separate concept from arithmetic. Expected output: a unit-clean substitution and plausibility conclusion.
-- Note 56: Focus area: error prevention habits. Challenge the student to explain the sign logic component-by-component. When confidence is high, add one edge-case to test robustness. Expected output: one physically grounded sentence plus one validated equation.
-- Note 57: Focus area: physical interpretation language. Ask for a spoken explanation before writing symbols. If the answer is correct but unclear, focus on language precision. Expected output: a corrected expression and a clear reason it is correct.
-- Note 58: Focus area: two-body baseline usage. Request a one-line equation and a one-line meaning statement. When the student hesitates, re-anchor with a physical picture first. Expected output: a mini-briefing statement suitable for a teammate.
-- Note 59: Focus area: extension to perturbations. Have the student identify the most likely error source first. If speed overtakes clarity, enforce a line-by-line reasoning cadence. Expected output: a sign-consistent vector form and magnitude cross-check.
-- Note 60: Focus area: student self-explanation prompts. Require a quick sketch before computation begins. When assumptions are implicit, require them to be written explicitly. Expected output: a unit-clean substitution and plausibility conclusion.
-- Note 61: Focus area: unit conversion workflow. Run a 20-second dimensional check before arithmetic. If confusion appears, slow down and separate concept from arithmetic. Expected output: one physically grounded sentence plus one validated equation.
-- Note 62: Focus area: vector direction reasoning. Compare result against a nearby reference value. When confidence is high, add one edge-case to test robustness. Expected output: a corrected expression and a clear reason it is correct.
-- Note 63: Focus area: inverse-square intuition. Translate the result into mission-level implications. If the answer is correct but unclear, focus on language precision. Expected output: a mini-briefing statement suitable for a teammate.
-- Note 64: Focus area: model scope communication. Challenge the student to explain the sign logic component-by-component. When the student hesitates, re-anchor with a physical picture first. Expected output: a sign-consistent vector form and magnitude cross-check.
-- Note 65: Focus area: assumption versus limitation framing. Ask for a spoken explanation before writing symbols. If speed overtakes clarity, enforce a line-by-line reasoning cadence. Expected output: a unit-clean substitution and plausibility conclusion.
-- Note 66: Focus area: plausibility checks. Request a one-line equation and a one-line meaning statement. When assumptions are implicit, require them to be written explicitly. Expected output: one physically grounded sentence plus one validated equation.
-- Note 67: Focus area: coordinate-sign interpretation. Have the student identify the most likely error source first. If confusion appears, slow down and separate concept from arithmetic. Expected output: a corrected expression and a clear reason it is correct.
-- Note 68: Focus area: scalar-vector separation. Require a quick sketch before computation begins. When confidence is high, add one edge-case to test robustness. Expected output: a mini-briefing statement suitable for a teammate.
-- Note 69: Focus area: derivation storytelling. Run a 20-second dimensional check before arithmetic. If the answer is correct but unclear, focus on language precision. Expected output: a sign-consistent vector form and magnitude cross-check.
-- Note 70: Focus area: mission-design context. Compare result against a nearby reference value. When the student hesitates, re-anchor with a physical picture first. Expected output: a unit-clean substitution and plausibility conclusion.
-- Note 71: Focus area: error prevention habits. Translate the result into mission-level implications. If speed overtakes clarity, enforce a line-by-line reasoning cadence. Expected output: one physically grounded sentence plus one validated equation.
-- Note 72: Focus area: physical interpretation language. Challenge the student to explain the sign logic component-by-component. When assumptions are implicit, require them to be written explicitly. Expected output: a corrected expression and a clear reason it is correct.
-- Note 73: Focus area: two-body baseline usage. Ask for a spoken explanation before writing symbols. If confusion appears, slow down and separate concept from arithmetic. Expected output: a mini-briefing statement suitable for a teammate.
-- Note 74: Focus area: extension to perturbations. Request a one-line equation and a one-line meaning statement. When confidence is high, add one edge-case to test robustness. Expected output: a sign-consistent vector form and magnitude cross-check.
-- Note 75: Focus area: student self-explanation prompts. Have the student identify the most likely error source first. If the answer is correct but unclear, focus on language precision. Expected output: a unit-clean substitution and plausibility conclusion.
-- Note 76: Focus area: unit conversion workflow. Require a quick sketch before computation begins. When the student hesitates, re-anchor with a physical picture first. Expected output: one physically grounded sentence plus one validated equation.
-- Note 77: Focus area: vector direction reasoning. Run a 20-second dimensional check before arithmetic. If speed overtakes clarity, enforce a line-by-line reasoning cadence. Expected output: a corrected expression and a clear reason it is correct.
-- Note 78: Focus area: inverse-square intuition. Compare result against a nearby reference value. When assumptions are implicit, require them to be written explicitly. Expected output: a mini-briefing statement suitable for a teammate.
-- Note 79: Focus area: model scope communication. Translate the result into mission-level implications. If confusion appears, slow down and separate concept from arithmetic. Expected output: a sign-consistent vector form and magnitude cross-check.
-- Note 80: Focus area: assumption versus limitation framing. Challenge the student to explain the sign logic component-by-component. When confidence is high, add one edge-case to test robustness. Expected output: a unit-clean substitution and plausibility conclusion.
-- Note 81: Focus area: plausibility checks. Ask for a spoken explanation before writing symbols. If the answer is correct but unclear, focus on language precision. Expected output: one physically grounded sentence plus one validated equation.
-- Note 82: Focus area: coordinate-sign interpretation. Request a one-line equation and a one-line meaning statement. When the student hesitates, re-anchor with a physical picture first. Expected output: a corrected expression and a clear reason it is correct.
-- Note 83: Focus area: scalar-vector separation. Have the student identify the most likely error source first. If speed overtakes clarity, enforce a line-by-line reasoning cadence. Expected output: a mini-briefing statement suitable for a teammate.
-- Note 84: Focus area: derivation storytelling. Require a quick sketch before computation begins. When assumptions are implicit, require them to be written explicitly. Expected output: a sign-consistent vector form and magnitude cross-check.
-- Note 85: Focus area: mission-design context. Run a 20-second dimensional check before arithmetic. If confusion appears, slow down and separate concept from arithmetic. Expected output: a unit-clean substitution and plausibility conclusion.
-- Note 86: Focus area: error prevention habits. Compare result against a nearby reference value. When confidence is high, add one edge-case to test robustness. Expected output: one physically grounded sentence plus one validated equation.
-- Note 87: Focus area: physical interpretation language. Translate the result into mission-level implications. If the answer is correct but unclear, focus on language precision. Expected output: a corrected expression and a clear reason it is correct.
-- Note 88: Focus area: two-body baseline usage. Challenge the student to explain the sign logic component-by-component. When the student hesitates, re-anchor with a physical picture first. Expected output: a mini-briefing statement suitable for a teammate.
-- Note 89: Focus area: extension to perturbations. Ask for a spoken explanation before writing symbols. If speed overtakes clarity, enforce a line-by-line reasoning cadence. Expected output: a sign-consistent vector form and magnitude cross-check.
-- Note 90: Focus area: student self-explanation prompts. Request a one-line equation and a one-line meaning statement. When assumptions are implicit, require them to be written explicitly. Expected output: a unit-clean substitution and plausibility conclusion.
-- Note 91: Focus area: unit conversion workflow. Have the student identify the most likely error source first. If confusion appears, slow down and separate concept from arithmetic. Expected output: one physically grounded sentence plus one validated equation.
-- Note 92: Focus area: vector direction reasoning. Require a quick sketch before computation begins. When confidence is high, add one edge-case to test robustness. Expected output: a corrected expression and a clear reason it is correct.
-- Note 93: Focus area: inverse-square intuition. Run a 20-second dimensional check before arithmetic. If the answer is correct but unclear, focus on language precision. Expected output: a mini-briefing statement suitable for a teammate.
-- Note 94: Focus area: model scope communication. Compare result against a nearby reference value. When the student hesitates, re-anchor with a physical picture first. Expected output: a sign-consistent vector form and magnitude cross-check.
-- Note 95: Focus area: assumption versus limitation framing. Translate the result into mission-level implications. If speed overtakes clarity, enforce a line-by-line reasoning cadence. Expected output: a unit-clean substitution and plausibility conclusion.
-- Note 96: Focus area: plausibility checks. Challenge the student to explain the sign logic component-by-component. When assumptions are implicit, require them to be written explicitly. Expected output: one physically grounded sentence plus one validated equation.
-- Note 97: Focus area: coordinate-sign interpretation. Ask for a spoken explanation before writing symbols. If confusion appears, slow down and separate concept from arithmetic. Expected output: a corrected expression and a clear reason it is correct.
-- Note 98: Focus area: scalar-vector separation. Request a one-line equation and a one-line meaning statement. When confidence is high, add one edge-case to test robustness. Expected output: a mini-briefing statement suitable for a teammate.
-- Note 99: Focus area: derivation storytelling. Have the student identify the most likely error source first. If the answer is correct but unclear, focus on language precision. Expected output: a sign-consistent vector form and magnitude cross-check.
-- Note 100: Focus area: mission-design context. Require a quick sketch before computation begins. When the student hesitates, re-anchor with a physical picture first. Expected output: a unit-clean substitution and plausibility conclusion.
-- Note 101: Focus area: error prevention habits. Run a 20-second dimensional check before arithmetic. If speed overtakes clarity, enforce a line-by-line reasoning cadence. Expected output: one physically grounded sentence plus one validated equation.
-- Note 102: Focus area: physical interpretation language. Compare result against a nearby reference value. When assumptions are implicit, require them to be written explicitly. Expected output: a corrected expression and a clear reason it is correct.
-- Note 103: Focus area: two-body baseline usage. Translate the result into mission-level implications. If confusion appears, slow down and separate concept from arithmetic. Expected output: a mini-briefing statement suitable for a teammate.
-- Note 104: Focus area: extension to perturbations. Challenge the student to explain the sign logic component-by-component. When confidence is high, add one edge-case to test robustness. Expected output: a sign-consistent vector form and magnitude cross-check.
-- Note 105: Focus area: student self-explanation prompts. Ask for a spoken explanation before writing symbols. If the answer is correct but unclear, focus on language precision. Expected output: a unit-clean substitution and plausibility conclusion.
-- Note 106: Focus area: unit conversion workflow. Request a one-line equation and a one-line meaning statement. When the student hesitates, re-anchor with a physical picture first. Expected output: one physically grounded sentence plus one validated equation.
-- Note 107: Focus area: vector direction reasoning. Have the student identify the most likely error source first. If speed overtakes clarity, enforce a line-by-line reasoning cadence. Expected output: a corrected expression and a clear reason it is correct.
-- Note 108: Focus area: inverse-square intuition. Require a quick sketch before computation begins. When assumptions are implicit, require them to be written explicitly. Expected output: a mini-briefing statement suitable for a teammate.
-- Note 109: Focus area: model scope communication. Run a 20-second dimensional check before arithmetic. If confusion appears, slow down and separate concept from arithmetic. Expected output: a sign-consistent vector form and magnitude cross-check.
-- Note 110: Focus area: assumption versus limitation framing. Compare result against a nearby reference value. When confidence is high, add one edge-case to test robustness. Expected output: a unit-clean substitution and plausibility conclusion.
-- Note 111: Focus area: plausibility checks. Translate the result into mission-level implications. If the answer is correct but unclear, focus on language precision. Expected output: one physically grounded sentence plus one validated equation.
-- Note 112: Focus area: coordinate-sign interpretation. Challenge the student to explain the sign logic component-by-component. When the student hesitates, re-anchor with a physical picture first. Expected output: a corrected expression and a clear reason it is correct.
-- Note 113: Focus area: scalar-vector separation. Ask for a spoken explanation before writing symbols. If speed overtakes clarity, enforce a line-by-line reasoning cadence. Expected output: a mini-briefing statement suitable for a teammate.
-- Note 114: Focus area: derivation storytelling. Request a one-line equation and a one-line meaning statement. When assumptions are implicit, require them to be written explicitly. Expected output: a sign-consistent vector form and magnitude cross-check.
-- Note 115: Focus area: mission-design context. Have the student identify the most likely error source first. If confusion appears, slow down and separate concept from arithmetic. Expected output: a unit-clean substitution and plausibility conclusion.
-- Note 116: Focus area: error prevention habits. Require a quick sketch before computation begins. When confidence is high, add one edge-case to test robustness. Expected output: one physically grounded sentence plus one validated equation.
-- Note 117: Focus area: physical interpretation language. Run a 20-second dimensional check before arithmetic. If the answer is correct but unclear, focus on language precision. Expected output: a corrected expression and a clear reason it is correct.
-- Note 118: Focus area: two-body baseline usage. Compare result against a nearby reference value. When the student hesitates, re-anchor with a physical picture first. Expected output: a mini-briefing statement suitable for a teammate.
-- Note 119: Focus area: extension to perturbations. Translate the result into mission-level implications. If speed overtakes clarity, enforce a line-by-line reasoning cadence. Expected output: a sign-consistent vector form and magnitude cross-check.
-- Note 120: Focus area: student self-explanation prompts. Challenge the student to explain the sign logic component-by-component. When assumptions are implicit, require them to be written explicitly. Expected output: a unit-clean substitution and plausibility conclusion.
+| Focus area | Reinforcement strategy | Evidence of mastery |
+| --- | --- | --- |
+| Unit conversion workflow | Require a full substitution line with units on every symbol before arithmetic. | Student can explain why each unit cancels and where conversion occurs. |
+| Vector direction reasoning | Have the student draw $\mathbf{r}$ and $\mathbf{a}$ arrows before writing signs. | Signs in component form are consistent with the geometry sketch. |
+| Inverse-square intuition | Use ratio reasoning first, then confirm with direct computation. | Student predicts trend correctly before calculator use. |
+| Model scope communication | Ask for one sentence starting with "This result is valid when..." | Student states assumptions without prompting. |
+| Assumption-limitation linkage | Trace one assumption to one likely error source in real flight conditions. | Student can name both assumption and consequence clearly. |
+| Plausibility checks | Compare result against a nearby known orbital acceleration benchmark. | Student flags implausible magnitudes independently. |
+| Coordinate sign interpretation | Evaluate one +x case and one -y case side by side. | Student explains why opposite positions flip component signs. |
+| Scalar-vector separation | Color-code scalar and vector symbols in the derivation. | Student no longer interchanges $r$ and $\mathbf{r}$. |
+| Derivation storytelling | Require each algebra step to be accompanied by a physical statement. | Student can narrate derivation without skipping meaning. |
+| Mission-design context | Ask what the computed acceleration implies for orbit behavior or planning. | Student links numbers to practical mission reasoning. |
+| Error prevention habits | Introduce a three-check routine: units, sign, plausibility. | Student uses the routine without instructor reminder. |
+| Perturbation extension readiness | Ask which neglected force would be added first for a given regime. | Student selects plausible next-order correction. |
+
+### 12.9 Extended oral-exam question bank (unique prompts)
+Use these prompts to deepen explanation quality while preserving the same core model.
+
+1. Explain why the minus sign in $\mathbf{a}=-\mu\mathbf{r}/\|\mathbf{r}\|^3$ is physically required for a near-circular LEO case. Then provide one sentence describing the operational consequence.
+2. Explain why $\mu$ notation improves reliability in repeated calculations for a medium-altitude transfer estimate. Then state one assumption that must remain true.
+3. Explain why inverse-square scaling changes acceleration faster than many students expect for a high-altitude communication-orbit scenario. Then show one plausibility check you would run.
+4. Explain why a vector sketch can prevent algebraic sign errors for a negative-y coordinate test point. Then identify one common mistake and how to avoid it.
+5. Explain why dimensional analysis should be performed before accepting a numeric result for a mixed-sign 3D state vector. Then connect your explanation to what Lecture 02 will need.
+6. Explain why two-body assumptions are useful without being universally valid for a quick mission pre-design briefing. Then provide one sentence describing the operational consequence.
+7. Explain why radius must be center-to-center instead of altitude-alone in formulas for a student who forgot unit conversion. Then state one assumption that must remain true.
+8. Explain why a result can be numerically neat yet physically implausible for a student who dropped the vector sign. Then show one plausibility check you would run.
+9. Explain why scalar and vector equations should be written separately during derivation for an answer that seems too large. Then identify one common mistake and how to avoid it.
+10. Explain why model limitations should be reported alongside computed values for a hand-calculation cross-check. Then connect your explanation to what Lecture 02 will need.
+11. Demonstrate how the minus sign in $\mathbf{a}=-\mu\mathbf{r}/\|\mathbf{r}\|^3$ is physically required for a near-circular LEO case. Then provide one sentence describing the operational consequence.
+12. Demonstrate how $\mu$ notation improves reliability in repeated calculations for a medium-altitude transfer estimate. Then state one assumption that must remain true.
+13. Demonstrate how inverse-square scaling changes acceleration faster than many students expect for a high-altitude communication-orbit scenario. Then show one plausibility check you would run.
+14. Demonstrate how a vector sketch can prevent algebraic sign errors for a negative-y coordinate test point. Then identify one common mistake and how to avoid it.
+15. Demonstrate how dimensional analysis should be performed before accepting a numeric result for a mixed-sign 3D state vector. Then connect your explanation to what Lecture 02 will need.
+16. Demonstrate how two-body assumptions are useful without being universally valid for a quick mission pre-design briefing. Then provide one sentence describing the operational consequence.
+17. Demonstrate how radius must be center-to-center instead of altitude-alone in formulas for a student who forgot unit conversion. Then state one assumption that must remain true.
+18. Demonstrate how a result can be numerically neat yet physically implausible for a student who dropped the vector sign. Then show one plausibility check you would run.
+19. Demonstrate how scalar and vector equations should be written separately during derivation for an answer that seems too large. Then identify one common mistake and how to avoid it.
+20. Demonstrate how model limitations should be reported alongside computed values for a hand-calculation cross-check. Then connect your explanation to what Lecture 02 will need.
+21. Defend the claim that the minus sign in $\mathbf{a}=-\mu\mathbf{r}/\|\mathbf{r}\|^3$ is physically required for a near-circular LEO case. Then provide one sentence describing the operational consequence.
+22. Defend the claim that $\mu$ notation improves reliability in repeated calculations for a medium-altitude transfer estimate. Then state one assumption that must remain true.
+23. Defend the claim that inverse-square scaling changes acceleration faster than many students expect for a high-altitude communication-orbit scenario. Then show one plausibility check you would run.
+24. Defend the claim that a vector sketch can prevent algebraic sign errors for a negative-y coordinate test point. Then identify one common mistake and how to avoid it.
+25. Defend the claim that dimensional analysis should be performed before accepting a numeric result for a mixed-sign 3D state vector. Then connect your explanation to what Lecture 02 will need.
+26. Defend the claim that two-body assumptions are useful without being universally valid for a quick mission pre-design briefing. Then provide one sentence describing the operational consequence.
+27. Defend the claim that radius must be center-to-center instead of altitude-alone in formulas for a student who forgot unit conversion. Then state one assumption that must remain true.
+28. Defend the claim that a result can be numerically neat yet physically implausible for a student who dropped the vector sign. Then show one plausibility check you would run.
+29. Defend the claim that scalar and vector equations should be written separately during derivation for an answer that seems too large. Then identify one common mistake and how to avoid it.
+30. Defend the claim that model limitations should be reported alongside computed values for a hand-calculation cross-check. Then connect your explanation to what Lecture 02 will need.
+31. Diagnose what happens when the minus sign in $\mathbf{a}=-\mu\mathbf{r}/\|\mathbf{r}\|^3$ is physically required for a near-circular LEO case. Then provide one sentence describing the operational consequence.
+32. Diagnose what happens when $\mu$ notation improves reliability in repeated calculations for a medium-altitude transfer estimate. Then state one assumption that must remain true.
+33. Diagnose what happens when inverse-square scaling changes acceleration faster than many students expect for a high-altitude communication-orbit scenario. Then show one plausibility check you would run.
+34. Diagnose what happens when a vector sketch can prevent algebraic sign errors for a negative-y coordinate test point. Then identify one common mistake and how to avoid it.
+35. Diagnose what happens when dimensional analysis should be performed before accepting a numeric result for a mixed-sign 3D state vector. Then connect your explanation to what Lecture 02 will need.
+36. Diagnose what happens when two-body assumptions are useful without being universally valid for a quick mission pre-design briefing. Then provide one sentence describing the operational consequence.
+37. Diagnose what happens when radius must be center-to-center instead of altitude-alone in formulas for a student who forgot unit conversion. Then state one assumption that must remain true.
+38. Diagnose what happens when a result can be numerically neat yet physically implausible for a student who dropped the vector sign. Then show one plausibility check you would run.
+39. Diagnose what happens when scalar and vector equations should be written separately during derivation for an answer that seems too large. Then identify one common mistake and how to avoid it.
+40. Diagnose what happens when model limitations should be reported alongside computed values for a hand-calculation cross-check. Then connect your explanation to what Lecture 02 will need.
+41. Compare and contrast how the minus sign in $\mathbf{a}=-\mu\mathbf{r}/\|\mathbf{r}\|^3$ is physically required for a near-circular LEO case. Then provide one sentence describing the operational consequence.
+42. Compare and contrast how $\mu$ notation improves reliability in repeated calculations for a medium-altitude transfer estimate. Then state one assumption that must remain true.
+43. Compare and contrast how inverse-square scaling changes acceleration faster than many students expect for a high-altitude communication-orbit scenario. Then show one plausibility check you would run.
+44. Compare and contrast how a vector sketch can prevent algebraic sign errors for a negative-y coordinate test point. Then identify one common mistake and how to avoid it.
+45. Compare and contrast how dimensional analysis should be performed before accepting a numeric result for a mixed-sign 3D state vector. Then connect your explanation to what Lecture 02 will need.
+46. Compare and contrast how two-body assumptions are useful without being universally valid for a quick mission pre-design briefing. Then provide one sentence describing the operational consequence.
+47. Compare and contrast how radius must be center-to-center instead of altitude-alone in formulas for a student who forgot unit conversion. Then state one assumption that must remain true.
+48. Compare and contrast how a result can be numerically neat yet physically implausible for a student who dropped the vector sign. Then show one plausibility check you would run.
+49. Compare and contrast how scalar and vector equations should be written separately during derivation for an answer that seems too large. Then identify one common mistake and how to avoid it.
+50. Compare and contrast how model limitations should be reported alongside computed values for a hand-calculation cross-check. Then connect your explanation to what Lecture 02 will need.
+51. Predict the outcome if the minus sign in $\mathbf{a}=-\mu\mathbf{r}/\|\mathbf{r}\|^3$ is physically required for a near-circular LEO case. Then provide one sentence describing the operational consequence.
+52. Predict the outcome if $\mu$ notation improves reliability in repeated calculations for a medium-altitude transfer estimate. Then state one assumption that must remain true.
+53. Predict the outcome if inverse-square scaling changes acceleration faster than many students expect for a high-altitude communication-orbit scenario. Then show one plausibility check you would run.
+54. Predict the outcome if a vector sketch can prevent algebraic sign errors for a negative-y coordinate test point. Then identify one common mistake and how to avoid it.
+55. Predict the outcome if dimensional analysis should be performed before accepting a numeric result for a mixed-sign 3D state vector. Then connect your explanation to what Lecture 02 will need.
+56. Predict the outcome if two-body assumptions are useful without being universally valid for a quick mission pre-design briefing. Then provide one sentence describing the operational consequence.
+57. Predict the outcome if radius must be center-to-center instead of altitude-alone in formulas for a student who forgot unit conversion. Then state one assumption that must remain true.
+58. Predict the outcome if a result can be numerically neat yet physically implausible for a student who dropped the vector sign. Then show one plausibility check you would run.
+59. Predict the outcome if scalar and vector equations should be written separately during derivation for an answer that seems too large. Then identify one common mistake and how to avoid it.
+60. Predict the outcome if model limitations should be reported alongside computed values for a hand-calculation cross-check. Then connect your explanation to what Lecture 02 will need.
+61. Justify why the minus sign in $\mathbf{a}=-\mu\mathbf{r}/\|\mathbf{r}\|^3$ is physically required for a near-circular LEO case. Then provide one sentence describing the operational consequence.
+62. Justify why $\mu$ notation improves reliability in repeated calculations for a medium-altitude transfer estimate. Then state one assumption that must remain true.
+63. Justify why inverse-square scaling changes acceleration faster than many students expect for a high-altitude communication-orbit scenario. Then show one plausibility check you would run.
+64. Justify why a vector sketch can prevent algebraic sign errors for a negative-y coordinate test point. Then identify one common mistake and how to avoid it.
+65. Justify why dimensional analysis should be performed before accepting a numeric result for a mixed-sign 3D state vector. Then connect your explanation to what Lecture 02 will need.
+66. Justify why two-body assumptions are useful without being universally valid for a quick mission pre-design briefing. Then provide one sentence describing the operational consequence.
+67. Justify why radius must be center-to-center instead of altitude-alone in formulas for a student who forgot unit conversion. Then state one assumption that must remain true.
+68. Justify why a result can be numerically neat yet physically implausible for a student who dropped the vector sign. Then show one plausibility check you would run.
+69. Justify why scalar and vector equations should be written separately during derivation for an answer that seems too large. Then identify one common mistake and how to avoid it.
+70. Justify why model limitations should be reported alongside computed values for a hand-calculation cross-check. Then connect your explanation to what Lecture 02 will need.
+71. Translate into plain language why the minus sign in $\mathbf{a}=-\mu\mathbf{r}/\|\mathbf{r}\|^3$ is physically required for a near-circular LEO case. Then provide one sentence describing the operational consequence.
+72. Translate into plain language why $\mu$ notation improves reliability in repeated calculations for a medium-altitude transfer estimate. Then state one assumption that must remain true.
+73. Translate into plain language why inverse-square scaling changes acceleration faster than many students expect for a high-altitude communication-orbit scenario. Then show one plausibility check you would run.
+74. Translate into plain language why a vector sketch can prevent algebraic sign errors for a negative-y coordinate test point. Then identify one common mistake and how to avoid it.
+75. Translate into plain language why dimensional analysis should be performed before accepting a numeric result for a mixed-sign 3D state vector. Then connect your explanation to what Lecture 02 will need.
+76. Translate into plain language why two-body assumptions are useful without being universally valid for a quick mission pre-design briefing. Then provide one sentence describing the operational consequence.
+77. Translate into plain language why radius must be center-to-center instead of altitude-alone in formulas for a student who forgot unit conversion. Then state one assumption that must remain true.
+78. Translate into plain language why a result can be numerically neat yet physically implausible for a student who dropped the vector sign. Then show one plausibility check you would run.
+79. Translate into plain language why scalar and vector equations should be written separately during derivation for an answer that seems too large. Then identify one common mistake and how to avoid it.
+80. Translate into plain language why model limitations should be reported alongside computed values for a hand-calculation cross-check. Then connect your explanation to what Lecture 02 will need.
+81. Show step-by-step why the minus sign in $\mathbf{a}=-\mu\mathbf{r}/\|\mathbf{r}\|^3$ is physically required for a near-circular LEO case. Then provide one sentence describing the operational consequence.
+82. Show step-by-step why $\mu$ notation improves reliability in repeated calculations for a medium-altitude transfer estimate. Then state one assumption that must remain true.
+83. Show step-by-step why inverse-square scaling changes acceleration faster than many students expect for a high-altitude communication-orbit scenario. Then show one plausibility check you would run.
+84. Show step-by-step why a vector sketch can prevent algebraic sign errors for a negative-y coordinate test point. Then identify one common mistake and how to avoid it.
+85. Show step-by-step why dimensional analysis should be performed before accepting a numeric result for a mixed-sign 3D state vector. Then connect your explanation to what Lecture 02 will need.
+86. Show step-by-step why two-body assumptions are useful without being universally valid for a quick mission pre-design briefing. Then provide one sentence describing the operational consequence.
+87. Show step-by-step why radius must be center-to-center instead of altitude-alone in formulas for a student who forgot unit conversion. Then state one assumption that must remain true.
+88. Show step-by-step why a result can be numerically neat yet physically implausible for a student who dropped the vector sign. Then show one plausibility check you would run.
+89. Show step-by-step why scalar and vector equations should be written separately during derivation for an answer that seems too large. Then identify one common mistake and how to avoid it.
+90. Show step-by-step why model limitations should be reported alongside computed values for a hand-calculation cross-check. Then connect your explanation to what Lecture 02 will need.
+91. Argue from first principles that the minus sign in $\mathbf{a}=-\mu\mathbf{r}/\|\mathbf{r}\|^3$ is physically required for a near-circular LEO case. Then provide one sentence describing the operational consequence.
+92. Argue from first principles that $\mu$ notation improves reliability in repeated calculations for a medium-altitude transfer estimate. Then state one assumption that must remain true.
+93. Argue from first principles that inverse-square scaling changes acceleration faster than many students expect for a high-altitude communication-orbit scenario. Then show one plausibility check you would run.
+94. Argue from first principles that a vector sketch can prevent algebraic sign errors for a negative-y coordinate test point. Then identify one common mistake and how to avoid it.
+95. Argue from first principles that dimensional analysis should be performed before accepting a numeric result for a mixed-sign 3D state vector. Then connect your explanation to what Lecture 02 will need.
+96. Argue from first principles that two-body assumptions are useful without being universally valid for a quick mission pre-design briefing. Then provide one sentence describing the operational consequence.
+97. Argue from first principles that radius must be center-to-center instead of altitude-alone in formulas for a student who forgot unit conversion. Then state one assumption that must remain true.
+98. Argue from first principles that a result can be numerically neat yet physically implausible for a student who dropped the vector sign. Then show one plausibility check you would run.
+99. Argue from first principles that scalar and vector equations should be written separately during derivation for an answer that seems too large. Then identify one common mistake and how to avoid it.
+100. Argue from first principles that model limitations should be reported alongside computed values for a hand-calculation cross-check. Then connect your explanation to what Lecture 02 will need.
