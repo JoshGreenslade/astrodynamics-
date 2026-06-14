@@ -40,3 +40,4 @@ By course completion, students will be able to:
 - Every week includes theory, worked examples, and applied problem-solving.
 - Each stage must include at least one formative assessment and one summative checkpoint.
 - Prerequisite concepts must be reactivated at the start of each stage.
+- Repository-delivered lectures must follow textbook structure (module → chapter → lecture) with sufficiently comprehensive notes per the Lecture Readiness Standard.
