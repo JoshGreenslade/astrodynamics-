@@ -1,9 +1,30 @@
 Astrodynamics Course Repository
 
-This repository hosts course policy documents for teaching the fundamentals of astrodynamics.
+This repository hosts the complete course delivery materials for Fundamentals of Astrodynamics — a rigorous, competency-based textbook built on evidence-based educational science.
 
-Policy documents:
-- `/course-policies/course-curriculum.md`
-- `/course-policies/assessment-expectations.md`
-- `/course-policies/lecture-readiness-standard.md`
-- `/course-policies/student-ability-tracking.md`
+## Repository Structure
+
+### Policy Documents
+- `/course-policies/course-curriculum.md` — Competency framework, module map, and authoring policy
+- `/course-policies/assessment-expectations.md` — Stage-based assessment plan and grading
+- `/course-policies/lecture-readiness-standard.md` — Chapter readiness checklist for publication
+- `/course-policies/student-ability-tracking.md` — Competency tracking policy and rating scale
+
+### Course Delivery
+Canonical lecture content is authored under:
+
+```
+/course-delivery/
+  teaching-tracker.md                    ← Operational progress and competency tracker
+  module-01-foundations/
+    chapter-01-introduction-to-two-body-dynamics/
+      lecture-01-newtonian-gravity-and-two-body-assumptions.md
+```
+
+### Module Status
+| Module | Status |
+|--------|--------|
+| Module 01 — Foundations | 🟡 In progress (Lecture 01 published) |
+| Module 02 — Core Orbital Mechanics | ⬜ Not started |
+| Module 03 — Maneuvers and Mission Design | ⬜ Not started |
+| Module 04 — Integration and Professional Practice | ⬜ Not started |
