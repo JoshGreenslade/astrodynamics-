@@ -26,7 +26,7 @@ By the end of this lecture, you will be able to:
 
 Before proceeding, answer from memory:
 
-- What is the difference between `$r$` as a scalar distance and `r` as a position vector symbol?
+- What is the difference between `$r$` as a scalar distance and `$r_vec$` as a position vector?
 - Why can a force that changes with position still conserve total energy?
 - What is the geometric meaning of a cross product?
 - What does taking a time derivative of a vector quantity tell you?
@@ -76,21 +76,21 @@ In simulation work, invariant drift is your first warning signal. If drift grows
 
 For a satellite orbiting a dominant central body:
 
-$$ \ddot{r} = -(\mu / r^3) r $$
+$$ \ddot{r_vec} = -(\mu / r^3) r_vec $$
 
-where `$mu = G M$` and `$r = |r|$`.
+where `$mu = G M$`, `$r_vec$` is the position vector, and `$r = |r_vec|$` is the scalar separation.
 
 ### 2.2 Angular momentum conservation
 
 Define specific angular momentum:
 
-$$ h = r \times v $$
+$$ h = r_vec \times v_vec $$
 
 Differentiate with respect to time:
 
-$$ \dot{h} = v \times v + r \times \ddot{r} $$
+$$ \dot{h} = v_vec \times v_vec + r_vec \times \ddot{r_vec} $$
 
-The first term is zero. The second term is also zero because `$\ddot{r}$` is always parallel to `r` in a central force model. Therefore `$\dot{h} = 0$`, so `h` is constant.
+The first term is zero. The second term is also zero because `$\ddot{r_vec}$` is always parallel to `$r_vec$` in a central force model. Therefore `$\dot{h} = 0$`, so `h` is constant.
 
 ### 2.3 Planarity
 
@@ -100,7 +100,7 @@ A constant angular momentum direction means the orbit remains in a fixed plane.
 
 Take the dot product of equation of motion with velocity `v`:
 
-$$ v \cdot \ddot{r} = -(\mu / r^3) (v \cdot r) $$
+$$ v_vec \cdot \ddot{r_vec} = -(\mu / r^3) (v_vec \cdot r_vec) $$
 
 Left side is the time derivative of `$v^2/2$`. Right side becomes the time derivative of `$-mu/r$`. So:
 
@@ -247,6 +247,8 @@ Answer briefly from memory:
 ## Check Your Understanding Bank
 
 Use this bank for spaced retrieval over multiple sessions.
+
+The prompts intentionally cycle core conservation themes with spaced repetition so the same concepts are revisited after short intervals.
 
 ### Prompt 001
 
