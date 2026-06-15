@@ -33,14 +33,6 @@ If any of these feel uncertain, revisit your calculus and linear algebra foundat
 
 ---
 
-## Common Misconception Box
-
-> **Misconception**: "Gravity disappears in orbit because astronauts are weightless."
->
-> **Correction**: Gravity does not disappear in orbit. At the International Space Station's altitude of approximately 400 km, Earth's gravitational acceleration is still about $8.7\ \text{m/s}^2$ — roughly 88% of its sea-level value. The apparent weightlessness arises because the spacecraft and everything inside it are in free fall together: they all accelerate at the same rate toward Earth. The ISS is not escaping gravity; it is perpetually falling *around* Earth, precisely fast enough that the curved surface keeps receding beneath it. Orbital mechanics is entirely a story told by gravity.
-
----
-
 ## Section 1 — System Architecture: The Mental Model
 
 Before we write a single equation, we build a mental model. This is the most important step in any physical derivation: understand the geometry and the causal chain before you abstract it.
@@ -54,6 +46,28 @@ Each mass exerts a gravitational attraction on the other. By Newton's third law,
 In the full two-body problem, *both* objects move in response to each other's gravity. The Earth moves in response to the Moon just as the Moon moves in response to Earth. The motion is symmetric; it is only our intuition (shaped by living on the larger body) that makes one seem stationary.
 
 However, astrodynamics almost always invokes a powerful simplification: when $m_1 \gg m_2$ — when the central body is vastly more massive than the satellite — the center of mass is so close to $m_1$ that $m_1$ barely moves. We then treat $m_1$ as a **fixed origin** and study only the motion of $m_2$ relative to it. This is the **restricted two-body problem**, and it is the foundation of everything that follows.
+
+> **Figure 1.1 — Restricted two-body geometry.** The central body $m_1$ is fixed at the origin. The satellite $m_2$ is at position $\vec{r}$ from the origin. The gravitational force on $m_2$ acts along $-\hat{r}$ (toward $m_1$), with magnitude $\mu m_2 / r^2$.
+
+```
+        z
+        |
+        |          * m2  (satellite)
+        |         /|
+        |        / |
+        |    r  /  |  F = -(mu/r^3)*r  <-- points toward m1
+        |      /   |
+        |     /    v
+        |    /
+        |   /
+        |  /
+        | /
+        |/
+        *---------------------------> x
+       m1 (central body, fixed at origin)
+
+       y-axis: out of the page
+```
 
 ### 1.2 Physical Scale
 
@@ -75,6 +89,41 @@ Here is the system architecture stated as a causal chain:
 4. **The acceleration, integrated twice, gives the trajectory** $\vec{r}(t)$.
 
 This chain — geometry → force → acceleration → trajectory — is the engine of all orbital mechanics. Every result in this textbook is a consequence of following this chain, sometimes in closed form, sometimes numerically.
+
+> **Figure 1.2 — The causal chain of orbital mechanics.** Each arrow represents a physical law. The chain repeats at every instant: new positions recompute $r$, which updates the force, which updates the acceleration, and so on.
+
+```
+  +--------------------+
+  |  Positions r1, r2  |
+  +--------------------+
+           |
+           |  r = r2 - r1  (geometry)
+           v
+  +--------------------+
+  |  Separation vector |
+  |    r, r = ||r||    |
+  +--------------------+
+           |
+           |  F = -G*m1*m2/r^3 * r  (Newton's Law of Gravitation)
+           v
+  +--------------------+
+  |  Gravitational     |
+  |  force  F          |
+  +--------------------+
+           |
+           |  a = F/m2  (Newton's 2nd Law)
+           v
+  +--------------------+
+  |  Acceleration      |
+  |  a = -mu/r^3 * r   |
+  +--------------------+
+           |
+           |  integrate twice in time
+           v
+  +--------------------+
+  |  Trajectory  r(t)  |
+  +--------------------+
+```
 
 ---
 
@@ -125,6 +174,10 @@ $$\ddot{\vec{r}} = -\frac{G m_1}{r^3} \vec{r}$$
 
 This is the **restricted two-body equation of motion**. It is perhaps the most important equation in orbital mechanics. Notice that $m_2$ has vanished from the equation entirely — the trajectory of a satellite is independent of its own mass. A grain of sand and the ISS placed in identical initial conditions follow identical trajectories under gravity alone.
 
+> **Common Misconception**: "Gravity disappears in orbit because astronauts are weightless."
+>
+> **Correction**: Gravity does not disappear in orbit. At the International Space Station's altitude of approximately 400 km, Earth's gravitational acceleration is still about $8.7\ \text{m/s}^2$ — roughly 88% of its sea-level value. The apparent weightlessness arises because the spacecraft and everything inside it are in free fall together: they all accelerate at the same rate toward Earth. The ISS is not escaping gravity; it is perpetually falling *around* Earth, precisely fast enough that the curved surface keeps receding beneath it. The equation $\ddot{\vec{r}} = -\mu\vec{r}/r^3$ has just told you exactly this: the satellite is continuously accelerated toward Earth's centre.
+
 ### 2.4 The Gravitational Parameter $\mu$
 
 In practice, we never need $G$ and $M$ separately. We always need their product. We define the **gravitational parameter** (also called the **standard gravitational parameter**):
@@ -169,41 +222,17 @@ $$\varepsilon = \frac{v^2}{2} - \frac{\mu}{r}$$
 
 where $v = \|\dot{\vec{r}}\|$ is the orbital speed. This quantity is conserved along any two-body orbit. To verify conservation, compute its time derivative and confirm it equals zero along solutions to $\ddot{\vec{r}} = -\mu\vec{r}/r^3$.
 
-**Derivation sketch**: Take the dot product of the equation of motion with $\dot{\vec{r}}$:
+**Derivation**: Take the dot product of the equation of motion with $\dot{\vec{r}}$:
 
-$$\dot{\vec{r}} \cdot \ddot{\vec{r}} = -\frac{\mu}{r^3} \dot{\vec{r}} \cdot \vec{r}$$
+$$\dot{\vec{r}} \cdot \ddot{\vec{r}} = -\frac{\mu}{r^3}(\vec{r} \cdot \dot{\vec{r}})$$
 
-The left side is $\frac{d}{dt}\left(\frac{v^2}{2}\right)$. The right side simplifies using $\dot{r} = \frac{\vec{r} \cdot \dot{\vec{r}}}{r}$, giving:
+The left side is $\dfrac{d}{dt}\!\left(\dfrac{v^2}{2}\right)$. For the right side, use the identity $\vec{r} \cdot \dot{\vec{r}} = r\dot{r}$, which follows from differentiating $r^2 = \vec{r}\cdot\vec{r}$ to get $2r\dot{r} = 2\vec{r}\cdot\dot{\vec{r}}$:
 
-$$\frac{d}{dt}\left(\frac{v^2}{2}\right) = -\frac{\mu}{r^2} \dot{r} = \frac{d}{dt}\left(\frac{\mu}{r}\right) \cdot (-1) \cdot (-1) = \frac{d}{dt}\left(\frac{\mu}{r}\right)$$
+$$\frac{d}{dt}\!\left(\frac{v^2}{2}\right) = -\frac{\mu\dot{r}}{r^2}$$
 
-Wait — let us be careful. Since $r^{-1}$ differentiates as $-\dot{r}/r^2$:
+The right side is exactly $\dfrac{d}{dt}\!\left(\dfrac{\mu}{r}\right)$, since $\dfrac{d}{dt}(\mu r^{-1}) = -\mu\dot{r}/r^2$. Therefore:
 
-$$\frac{d}{dt}\left(\frac{\mu}{r}\right) = -\frac{\mu \dot{r}}{r^2}$$
-
-Therefore:
-
-$$\frac{d}{dt}\left(\frac{v^2}{2}\right) = \frac{\mu \dot{r}}{r^2} \cdot (-1)$$
-
-Wait, let us redo this carefully. We have:
-
-$$\frac{d}{dt}\left(\frac{\mu}{r}\right) = \mu \cdot \frac{d}{dt}\left(r^{-1}\right) = -\frac{\mu \dot{r}}{r^2}$$
-
-And from the equation of motion dot-producted with $\dot{\vec{r}}$:
-
-$$\frac{d}{dt}\left(\frac{v^2}{2}\right) = -\frac{\mu}{r^3}(\vec{r} \cdot \dot{\vec{r}}) = -\frac{\mu}{r^3}(r \dot{r}) = -\frac{\mu \dot{r}}{r^2}$$
-
-Therefore:
-
-$$\frac{d}{dt}\left(\frac{v^2}{2}\right) = \frac{d}{dt}\left(\frac{\mu}{r}\right) \cdot (-1) \cdot (-1)$$
-
-Hmm — let us write it cleanly:
-
-$$\frac{d}{dt}\left(\frac{v^2}{2}\right) = -\frac{\mu \dot{r}}{r^2} = \frac{d}{dt}\left(\frac{\mu}{r}\right)$$
-
-So:
-
-$$\frac{d}{dt}\left(\frac{v^2}{2} - \frac{\mu}{r}\right) = 0 \implies \varepsilon = \frac{v^2}{2} - \frac{\mu}{r} = \text{constant}$$
+$$\frac{d}{dt}\!\left(\frac{v^2}{2} - \frac{\mu}{r}\right) = 0 \implies \boxed{\varepsilon = \frac{v^2}{2} - \frac{\mu}{r} = \text{constant}}$$
 
 This confirms that $\varepsilon$ is a constant of motion. Its sign determines the type of orbit:
 
@@ -212,6 +241,23 @@ This confirms that $\varepsilon$ is a constant of motion. Its sign determines th
 | $\varepsilon < 0$ | Ellipse (bound orbit) |
 | $\varepsilon = 0$ | Parabola (escape at exactly escape velocity) |
 | $\varepsilon > 0$ | Hyperbola (unbound, excess energy) |
+
+> **Figure 2.1 — Orbit type classification by specific mechanical energy.** All three conic sections share a common focus at $m_1$. The sign of $\varepsilon$ determines which conic the trajectory follows.
+
+```
+  Increasing energy (varepsilon) -->
+  
+  varepsilon < 0          varepsilon = 0        varepsilon > 0
+  
+        * m1                   * m1                  * m1
+       / \                    /|                    /
+      /   \   Ellipse        / |  Parabola         /   Hyperbola
+     |     |                /  |                  /
+      \   /                /   |                 /
+       \ /                /    |              --/
+                              ...           
+  (closed, bound)       (marginally open)   (open, unbound)
+```
 
 ### 2.7 Specific Angular Momentum
 
@@ -230,6 +276,28 @@ $$\vec{r} \times \ddot{\vec{r}} = \vec{r} \times \left(-\frac{\mu}{r^3}\vec{r}\r
 Therefore $\dot{\vec{h}} = \vec{0}$, so $\vec{h}$ is constant.
 
 The magnitude $h = \|\vec{h}\|$ characterizes the orbit's size and shape (along with $\varepsilon$). The direction of $\vec{h}$ is perpendicular to the **orbital plane**, and because it is constant, the orbital plane is fixed in inertial space (under the two-body assumption).
+
+> **Figure 2.2 — The orbital plane and angular momentum.** $\vec{h} = \vec{r} \times \dot{\vec{r}}$ is normal to the plane containing $\vec{r}$ and $\dot{\vec{r}}$. Because $\vec{h}$ is constant, both its direction (the plane's orientation) and its magnitude (related to the orbit's size) are conserved.
+
+```
+              h  (= r x v, constant)
+              ^
+              |
+              |  * * *
+              | *       *
+              |*         *   <-- orbital path (in the shaded plane)
+              *     m1    *
+              |*         *
+              | *       *
+              |  * * *
+              |
+   -----------+-----------> (inertial x-axis)
+             /
+            /
+           v (inertial y-axis, into page)
+  
+  The plane containing r and v is fixed; h is its normal vector.
+```
 
 ---
 
@@ -357,380 +425,44 @@ $$h = 52500\ \text{km}^2/\text{s}$$
 
 ## Section 4 — Computational Model
 
-This section develops a clean, type-annotated Python implementation of the restricted two-body problem. The design follows standard object-oriented principles: each physical concept maps to a class or method, state is encapsulated, and computation is separated from input/output.
+The two-body equation of motion is a second-order ODE: $\ddot{\vec{r}} = -\mu\vec{r}/r^3$. To propagate it numerically, rewrite it as a first-order system by stacking position and velocity into a single 6-element state vector $\mathbf{s} = [r_x,\, r_y,\, r_z,\, v_x,\, v_y,\, v_z]^T$:
 
-### 4.1 Architecture Overview
+$$\dot{\mathbf{s}} = \begin{bmatrix} \dot{\vec{r}} \\ \ddot{\vec{r}} \end{bmatrix} = \begin{bmatrix} \vec{v} \\ -\dfrac{\mu}{r^3}\,\vec{r} \end{bmatrix}$$
 
-The implementation consists of three components:
-
-1. **`CentralBody`** — Encapsulates the gravitational parameter and physical properties of the central body.
-2. **`OrbitalState`** — Encapsulates the position and velocity vectors at a given epoch.
-3. **`TwoBodyPropagator`** — Accepts a `CentralBody` and an `OrbitalState`, and numerically integrates the equation of motion forward in time.
-
-### 4.2 Dependencies
-
-The implementation uses only the Python standard library plus two widely used scientific packages:
-
-- `numpy` — array and linear algebra operations
-- `scipy` — numerical integration of differential equations
-
-```
-numpy>=1.24
-scipy>=1.10
-```
-
-### 4.3 Complete Implementation
+This is exactly the function handed to a numerical integrator. The following minimal implementation encodes this structure directly — all physics is in `equations_of_motion`, in two lines:
 
 ```python
-"""
-two_body.py
-
-Restricted two-body orbital mechanics simulation.
-
-Physical model: ddot_r = -mu / r^3 * r_vec
-where r_vec is the position vector from the central body to the satellite,
-r = ||r_vec|| is its magnitude, and mu is the gravitational parameter.
-
-Units: SI throughout (meters, seconds, kilograms).
-"""
-
-from __future__ import annotations
-
-from dataclasses import dataclass, field
-from typing import Final
-
+"""Core two-body propagation — the essential physics in under 20 lines."""
 import numpy as np
-import numpy.typing as npt
 from scipy.integrate import solve_ivp
-from scipy.integrate._ivp.ivp import OdeResult
 
+MU_EARTH: float = 3.986004418e14   # m³ s⁻²  (standard gravitational parameter)
 
-# ---------------------------------------------------------------------------
-# Physical constants
-# ---------------------------------------------------------------------------
+def equations_of_motion(t: float, state: np.ndarray) -> np.ndarray:
+    """Two-body ODE right-hand side: ds/dt = [v,  -mu/r^3 * r]."""
+    r_vec: np.ndarray = state[:3]
+    v_vec: np.ndarray = state[3:]
+    r: float = float(np.linalg.norm(r_vec))
+    a_vec: np.ndarray = -(MU_EARTH / r**3) * r_vec   # Newton: a = -mu/r^3 * r
+    return np.concatenate([v_vec, a_vec])
 
-G_SI: Final[float] = 6.674e-11  # m^3 kg^-1 s^-2, universal gravitational constant
+# --- Example: circular LEO at 400 km altitude ---
+r0: float = 6.371e6 + 400e3                          # orbital radius, m
+v_c: float = float(np.sqrt(MU_EARTH / r0))           # circular speed, m/s
+T: float = 2.0 * np.pi * np.sqrt(r0**3 / MU_EARTH)  # period, s  (see Section 7.3)
 
-
-# ---------------------------------------------------------------------------
-# Data classes
-# ---------------------------------------------------------------------------
-
-@dataclass(frozen=True)
-class CentralBody:
-    """
-    Immutable representation of a spherically symmetric central body.
-
-    Parameters
-    ----------
-    name : str
-        Human-readable identifier (e.g., "Earth").
-    mu : float
-        Standard gravitational parameter G*M, in m^3 s^-2.
-    radius : float
-        Mean equatorial radius, in meters.  Used only for physical reference
-        (e.g., checking whether an orbit intersects the surface); it does not
-        enter the equation of motion.
-    """
-
-    name: str
-    mu: float       # m^3 s^-2
-    radius: float   # m
-
-    def gravitational_acceleration(
-        self, r_vec: npt.NDArray[np.float64]
-    ) -> npt.NDArray[np.float64]:
-        """
-        Compute the gravitational acceleration vector at position r_vec.
-
-        This implements: a_vec = -mu / r^3 * r_vec
-
-        Parameters
-        ----------
-        r_vec : ndarray, shape (3,)
-            Position vector from the central body center to the satellite, in meters.
-
-        Returns
-        -------
-        ndarray, shape (3,)
-            Acceleration vector in m s^-2.
-        """
-        r: float = float(np.linalg.norm(r_vec))
-        if r == 0.0:
-            raise ValueError(
-                "Position vector has zero magnitude: satellite is at the center of "
-                "the central body. This is a physical singularity."
-            )
-        return -(self.mu / r**3) * r_vec
-
-    def surface_gravity(self) -> float:
-        """
-        Compute the gravitational acceleration at the body's surface.
-
-        Returns
-        -------
-        float
-            Surface gravitational acceleration, in m s^-2.
-        """
-        return self.mu / self.radius**2
-
-    def escape_speed(self, r: float) -> float:
-        """
-        Compute the escape speed from radius r.
-
-        Parameters
-        ----------
-        r : float
-            Radial distance from body center, in meters.
-
-        Returns
-        -------
-        float
-            Escape speed at radius r, in m s^-1.
-        """
-        return float(np.sqrt(2.0 * self.mu / r))
-
-
-@dataclass
-class OrbitalState:
-    """
-    State vector of an orbiting body at a specific epoch.
-
-    Parameters
-    ----------
-    position : ndarray, shape (3,)
-        Position vector in an inertial frame, in meters.
-    velocity : ndarray, shape (3,)
-        Velocity vector in an inertial frame, in m s^-1.
-    epoch : float
-        Time of the state, in seconds past an arbitrary reference epoch.
-    """
-
-    position: npt.NDArray[np.float64]
-    velocity: npt.NDArray[np.float64]
-    epoch: float = 0.0
-
-    def __post_init__(self) -> None:
-        self.position = np.asarray(self.position, dtype=np.float64)
-        self.velocity = np.asarray(self.velocity, dtype=np.float64)
-        if self.position.shape != (3,):
-            raise ValueError(f"position must have shape (3,), got {self.position.shape}")
-        if self.velocity.shape != (3,):
-            raise ValueError(f"velocity must have shape (3,), got {self.velocity.shape}")
-
-    @property
-    def radius(self) -> float:
-        """Scalar distance from the central body center, in meters."""
-        return float(np.linalg.norm(self.position))
-
-    @property
-    def speed(self) -> float:
-        """Scalar orbital speed, in m s^-1."""
-        return float(np.linalg.norm(self.velocity))
-
-    def specific_mechanical_energy(self, mu: float) -> float:
-        """
-        Compute the specific mechanical energy (energy per unit satellite mass).
-
-        epsilon = v^2/2 - mu/r
-
-        Parameters
-        ----------
-        mu : float
-            Gravitational parameter of the central body, in m^3 s^-2.
-
-        Returns
-        -------
-        float
-            Specific mechanical energy, in m^2 s^-2.
-        """
-        return 0.5 * self.speed**2 - mu / self.radius
-
-    def specific_angular_momentum(self) -> npt.NDArray[np.float64]:
-        """
-        Compute the specific angular momentum vector h = r x v.
-
-        Returns
-        -------
-        ndarray, shape (3,)
-            Specific angular momentum vector, in m^2 s^-1.
-        """
-        return np.cross(self.position, self.velocity)
-
-    def to_array(self) -> npt.NDArray[np.float64]:
-        """
-        Flatten position and velocity into a single 6-element state array.
-
-        Returns
-        -------
-        ndarray, shape (6,)
-            [r_x, r_y, r_z, v_x, v_y, v_z]
-        """
-        return np.concatenate([self.position, self.velocity])
-
-    @classmethod
-    def from_array(
-        cls, state: npt.NDArray[np.float64], epoch: float = 0.0
-    ) -> "OrbitalState":
-        """
-        Construct an OrbitalState from a flat 6-element array.
-
-        Parameters
-        ----------
-        state : ndarray, shape (6,)
-            [r_x, r_y, r_z, v_x, v_y, v_z]
-        epoch : float
-            Epoch time, in seconds.
-
-        Returns
-        -------
-        OrbitalState
-        """
-        return cls(
-            position=state[:3].copy(),
-            velocity=state[3:].copy(),
-            epoch=epoch,
-        )
-
-
-# ---------------------------------------------------------------------------
-# Propagator
-# ---------------------------------------------------------------------------
-
-@dataclass
-class TwoBodyPropagator:
-    """
-    Numerically propagates the restricted two-body equation of motion.
-
-    Uses scipy.integrate.solve_ivp with the RK45 adaptive integrator by default.
-
-    Parameters
-    ----------
-    central_body : CentralBody
-        The central attracting body.
-    rtol : float
-        Relative tolerance for the ODE integrator (default 1e-10).
-    atol : float
-        Absolute tolerance for the ODE integrator (default 1e-12).
-    """
-
-    central_body: CentralBody
-    rtol: float = 1e-10
-    atol: float = 1e-12
-
-    def _equations_of_motion(
-        self, t: float, state: npt.NDArray[np.float64]
-    ) -> npt.NDArray[np.float64]:
-        """
-        Right-hand side of the two-body ODE for scipy.integrate.solve_ivp.
-
-        State vector layout: [r_x, r_y, r_z, v_x, v_y, v_z]
-
-        Parameters
-        ----------
-        t : float
-            Current time (unused, but required by solve_ivp signature).
-        state : ndarray, shape (6,)
-            Current state vector.
-
-        Returns
-        -------
-        ndarray, shape (6,)
-            Time derivative: [v_x, v_y, v_z, a_x, a_y, a_z]
-        """
-        r_vec: npt.NDArray[np.float64] = state[:3]
-        v_vec: npt.NDArray[np.float64] = state[3:]
-        a_vec = self.central_body.gravitational_acceleration(r_vec)
-        return np.concatenate([v_vec, a_vec])
-
-    def propagate(
-        self,
-        initial_state: OrbitalState,
-        duration: float,
-        num_points: int = 1000,
-    ) -> tuple[npt.NDArray[np.float64], list[OrbitalState]]:
-        """
-        Integrate the two-body equations of motion forward in time.
-
-        Parameters
-        ----------
-        initial_state : OrbitalState
-            Initial position and velocity at epoch.
-        duration : float
-            Total propagation duration, in seconds.
-        num_points : int
-            Number of output time points (uniformly spaced).
-
-        Returns
-        -------
-        times : ndarray, shape (num_points,)
-            Array of output times, in seconds.
-        states : list of OrbitalState
-            Propagated states at each output time.
-
-        Raises
-        ------
-        RuntimeError
-            If the integrator fails to reach the requested time span.
-        """
-        t_span = (initial_state.epoch, initial_state.epoch + duration)
-        t_eval = np.linspace(t_span[0], t_span[1], num_points)
-        y0 = initial_state.to_array()
-
-        result: OdeResult = solve_ivp(
-            fun=self._equations_of_motion,
-            t_span=t_span,
-            y0=y0,
-            method="RK45",
-            t_eval=t_eval,
-            rtol=self.rtol,
-            atol=self.atol,
-            dense_output=False,
-        )
-
-        if not result.success:
-            raise RuntimeError(
-                f"ODE integration failed: {result.message}"
-            )
-
-        times: npt.NDArray[np.float64] = result.t
-        states = [
-            OrbitalState.from_array(result.y[:, i], epoch=result.t[i])
-            for i in range(result.y.shape[1])
-        ]
-        return times, states
-
-
-# ---------------------------------------------------------------------------
-# Pre-configured central bodies
-# ---------------------------------------------------------------------------
-
-EARTH = CentralBody(
-    name="Earth",
-    mu=3.986004418e14,    # m^3 s^-2
-    radius=6.371e6,       # m
-)
-
-MOON = CentralBody(
-    name="Moon",
-    mu=4.9048695e12,      # m^3 s^-2
-    radius=1.7374e6,      # m
-)
-
-SUN = CentralBody(
-    name="Sun",
-    mu=1.32712440018e20,  # m^3 s^-2
-    radius=6.957e8,       # m
-)
+y0 = np.array([r0, 0.0, 0.0, 0.0, v_c, 0.0])
+result = solve_ivp(equations_of_motion, [0.0, T], y0, rtol=1e-10, atol=1e-12)
+print(f"Integration {'succeeded' if result.success else 'FAILED'} — {result.t.size} points")
 ```
 
-### 4.4 Design Notes
+The `equations_of_motion` function is the *only place where physics lives*. It maps the current state $\mathbf{s}$ to $\dot{\mathbf{s}}$. Everything else — solver tolerance, step size, output density — is numerical bookkeeping.
 
-**Why `frozen=True` on `CentralBody`?** A central body's physical properties never change during a simulation. Making the dataclass frozen (immutable) prevents accidental mutation and communicates intent clearly.
+> **Why tight tolerances?** The default `solve_ivp` tolerances ($\text{rtol}=10^{-3}$, $\text{atol}=10^{-6}$) allow orbit energy to drift visibly over even a single period. Because $\varepsilon$ is theoretically constant, energy drift is a direct measure of accumulated numerical error. Use $\text{rtol}=10^{-10}$, $\text{atol}=10^{-12}$ for all astrodynamics work unless you are prototyping rough estimates.
 
-**Why are tolerances set to $10^{-10}$ and $10^{-12}$?** The default `solve_ivp` tolerances ($10^{-3}$, $10^{-6}$) are adequate for rough engineering estimates but will cause orbit energy to drift noticeably over multiple periods. High-fidelity astrodynamics simulations require tighter tolerances to conserve the energy constant $\varepsilon$.
+> **Energy conservation as a verification test**: Monitor $|\varepsilon(t) - \varepsilon_0| / |\varepsilon_0|$ throughout any propagation as a built-in correctness check. A drifting energy signals either too-loose tolerances or a bug in the force model.
 
-**Energy conservation as a verification test**: Because $\varepsilon$ is theoretically constant, you can monitor its value throughout a numerical propagation and use its drift as a direct measure of numerical error. This is demonstrated in the Application Task below.
+A full production-quality implementation — with encapsulated `CentralBody`, `OrbitalState`, and `TwoBodyPropagator` classes, input validation, and pre-configured planetary bodies — is provided in **Appendix A** at the end of this lecture. The Application Task uses that implementation.
 
 ---
 
@@ -750,7 +482,7 @@ A satellite is placed in a circular orbit at altitude $h = 400\ \text{km}$ above
 
 $$\frac{\mu}{r^2} = \frac{v_c^2}{r} \implies v_c = \sqrt{\frac{\mu}{r}}$$
 
-3. Compute the orbital period $T$ using Kepler's third law (which you have not yet derived — accept it here as a fact to be derived in Lecture 02):
+3. Compute the orbital period $T$. From the dimensional analysis in Section 7.3, the natural timescale of the two-body problem is $\tau = \sqrt{r^3/\mu}$. For a bound orbit, this timescale gives the orbital period $T = 2\pi\tau$. The full derivation via Kepler's second law appears in Lecture 02; dimensional analysis yields the result here in anticipation:
 
 $$T = 2\pi \sqrt{\frac{r^3}{\mu}}$$
 
@@ -758,7 +490,7 @@ $$T = 2\pi \sqrt{\frac{r^3}{\mu}}$$
 
 **Part B — Computational Implementation**
 
-Using the `two_body.py` module above:
+Using the `TwoBodyPropagator` and related classes from **Appendix A**:
 
 1. Construct an `OrbitalState` with the satellite at $\vec{r}_0 = [r, 0, 0]^T\ \text{m}$ and $\vec{v}_0 = [0, v_c, 0]^T\ \text{m/s}$, with `epoch=0.0`.
 2. Construct a `TwoBodyPropagator` with `central_body=EARTH`.
@@ -947,7 +679,7 @@ A score of 80% or above on this set indicates readiness to proceed to Lecture 02
 
 ---
 
-## Answer Key (Selected)
+## Answer Key (Complete)
 
 **Exercise 1.1**:
 $$g_\text{Moon} = \frac{\mu_\text{Moon}}{R_\text{Moon}^2} = \frac{4.9049 \times 10^{12}}{(1.7374 \times 10^6)^2} = \frac{4.9049 \times 10^{12}}{3.0186 \times 10^{12}} \approx 1.625\ \text{m/s}^2$$
@@ -959,10 +691,85 @@ $$g = \frac{\mu}{r^2} = \frac{3.986 \times 10^{14}}{(4.2164 \times 10^7)^2} = \f
 
 This is about 2.3% of surface gravity — a dramatic reduction at geostationary altitude.
 
+**Exercise 1.2 (b)**:
+$$v_e = \sqrt{\frac{2\mu}{r}} = \sqrt{\frac{2 \times 3.986004418 \times 10^{14}}{4.2164 \times 10^7}} = \sqrt{1.890 \times 10^7} \approx 4{,}347\ \text{m/s} = 4.35\ \text{km/s}$$
+
+At GEO altitude, the escape speed is only $\sqrt{2}$ times the circular speed — about 4.35 km/s versus 3.07 km/s. A satellite at GEO is much closer to the escape condition than a satellite in LEO.
+
 **Exercise 1.2 (c)**:
 $$\varepsilon = \frac{(3.075)^2}{2} - \frac{398600.4418}{42164} = \frac{9.456}{2} - 9.452 = 4.728 - 9.452 = -4.724\ \text{km}^2/\text{s}^2$$
 
 The negative energy confirms a bound orbit. The small magnitude (compared to LEO's $\sim -29\ \text{km}^2/\text{s}^2$) reflects that GEO is much closer to the escape condition — a satellite at GEO needs relatively little additional velocity to escape Earth entirely.
+
+**Exercise 1.3**:
+$$\mu = G M_\oplus = (6.674 \times 10^{-11})(5.972 \times 10^{24}) = 39.856 \times 10^{13} = 3.986 \times 10^{14}\ \text{m}^3/\text{s}^2$$
+
+This matches the tabulated value $\mu_\oplus = 3.986004418 \times 10^{14}\ \text{m}^3/\text{s}^2$ to four significant figures. The tabulated value is known with far greater precision because $\mu$ is measured *directly* by tracking spacecraft trajectories (essentially solving for $\mu$ from observed orbital periods using $T = 2\pi\sqrt{r^3/\mu}$). The individual values of $G$ and $M_\oplus$ each carry greater measurement uncertainty — $G$ is known to only about 5 significant figures even today — so computing $\mu$ as their product loses precision unnecessarily. This is why astrodynamics always works with $\mu$ directly.
+
+**Exercise 1.4**:
+
+Orbital radius: $r = \sqrt{5000^2 + 3000^2 + 2000^2} = \sqrt{38{,}000{,}000} = 6{,}164.4\ \text{km} = 6.1644 \times 10^6\ \text{m}$
+
+$$\frac{\mu}{r^3} = \frac{3.986004418 \times 10^{14}}{(6.1644 \times 10^6)^3} = \frac{3.986 \times 10^{14}}{2.343 \times 10^{20}} = 1.702 \times 10^{-6}\ \text{s}^{-2}$$
+
+$$\vec{F} = -m \cdot \frac{\mu}{r^3} \vec{r} = -(800)(1.702 \times 10^{-6}) \times [5{,}000{,}000,\ 3{,}000{,}000,\ 2{,}000{,}000]^T\ \text{N}$$
+
+$$\vec{F} \approx [-6{,}808,\ -4{,}085,\ -2{,}723]^T\ \text{N}$$
+
+Magnitude check: $|\vec{F}| = m \cdot g = 800 \times \mu/r^2 = 800 \times 3.986 \times 10^{14} / (6.1644 \times 10^6)^2 \approx 8{,}392\ \text{N}$. Verify: $\sqrt{6808^2 + 4085^2 + 2723^2} \approx 8{,}392\ \text{N}$ ✓
+
+**Exercise 1.5 (Proof)**:
+
+We must prove that $\vec{h} = \vec{r} \times \dot{\vec{r}}$ is constant, and then explain what this means geometrically.
+
+*Step 1 — $\vec{h}$ is constant.* Differentiate with respect to time:
+
+$$\dot{\vec{h}} = \dot{\vec{r}} \times \dot{\vec{r}} + \vec{r} \times \ddot{\vec{r}}$$
+
+The first term vanishes because a vector crossed with itself is zero: $\dot{\vec{r}} \times \dot{\vec{r}} = \vec{0}$. Substituting the equation of motion $\ddot{\vec{r}} = -\mu\vec{r}/r^3$ into the second term:
+
+$$\vec{r} \times \ddot{\vec{r}} = \vec{r} \times \left(-\frac{\mu}{r^3}\vec{r}\right) = -\frac{\mu}{r^3}(\vec{r} \times \vec{r}) = \vec{0}$$
+
+since any vector crossed with itself is zero. Therefore $\dot{\vec{h}} = \vec{0}$, so $\vec{h}$ is constant. $\square$
+
+*Step 2 — The orbital plane is fixed.* By definition of the cross product, $\vec{h} = \vec{r} \times \dot{\vec{r}}$ is perpendicular to both $\vec{r}$ and $\dot{\vec{r}}$ at all times. This means $\vec{r}$ and $\dot{\vec{r}}$ always lie in the plane whose normal is $\vec{h}$. Since $\vec{h}$ is constant in both magnitude *and direction*, this normal vector never changes orientation in the inertial frame. Therefore the plane containing $\vec{r}$ and $\dot{\vec{r}}$ — the **orbital plane** — is fixed in inertial space for all time.
+
+Geometrically: a satellite cannot spontaneously tilt its orbit under gravity alone. Any change in orbital plane requires an external force (a thruster firing, atmospheric drag, etc.) that breaks the conservation of $\vec{h}$.
+
+**Exercise 1.6 (Design)**:
+
+Required: $T = 90\ \text{min} = 5{,}400\ \text{s}$.
+
+Solving $T = 2\pi\sqrt{r^3/\mu}$ for $r$:
+
+$$r^3 = \frac{\mu T^2}{4\pi^2} = \frac{3.986004418 \times 10^{14} \times (5400)^2}{4\pi^2}$$
+
+$$= \frac{3.986 \times 10^{14} \times 2.916 \times 10^7}{39.478} = \frac{1.162 \times 10^{22}}{39.478} = 2.944 \times 10^{20}\ \text{m}^3$$
+
+$$r = (2.944 \times 10^{20})^{1/3} = 6{,}653\ \text{km}$$
+
+Altitude above Earth's surface:
+$$h = r - R_\oplus = 6{,}653 - 6{,}371 = 282\ \text{km}$$
+
+This is well above the 120 km atmosphere/space boundary ✓. A 90-minute orbit requires an altitude of approximately 282 km — a typical low Earth orbit altitude used for many scientific and observation missions.
+
+**Exercise 1.7 (Computational)**:
+
+The key insight is that periapsis occurs when the *radial velocity* $\dot{r} = \vec{r} \cdot \dot{\vec{r}} / r$ transitions from negative to positive (the satellite is closest to Earth when it stops moving toward it and begins moving away). The event function for `scipy.integrate.solve_ivp`:
+
+```python
+def periapsis_event(t: float, state: np.ndarray) -> float:
+    """Returns radial velocity; event triggers when this passes through zero."""
+    r_vec = state[:3]
+    v_vec = state[3:]
+    r = float(np.linalg.norm(r_vec))
+    return float(np.dot(r_vec, v_vec) / r)   # = dr/dt
+
+periapsis_event.terminal = False   # do not stop; just record
+periapsis_event.direction = 1.0    # only detect zero-crossings going positive
+```
+
+Pass `events=periapsis_event` to `solve_ivp`. The detected event times appear in `result.t_events[0]` and the corresponding states in `result.y_events[0]`. For a valid elliptical orbit, you should detect periapsis once per orbital period.
 
 ---
 
@@ -996,7 +803,327 @@ The negative energy confirms a bound orbit. The small magnitude (compared to LEO
 
 ---
 
-> **Version tag**: v1.0 | **Date**: 2026-06-14
+> **Version tag**: v1.1 | **Date**: 2026-06-15
 > **Competency domains assessed**: C1 (Mathematical Foundations), C2 (Two-Body Dynamics)
 > **Prerequisites satisfied**: Newton's second law, vector algebra, basic differential calculus
 > **Estimated reading time**: 60–75 minutes for active reading with worked examples
+
+---
+
+## Appendix A — Full Two-Body Implementation
+
+This appendix contains the complete, production-quality Python implementation referenced by the Application Task. It is separated from the main lecture body to keep the narrative focused on physics. Read it after completing the conceptual material; implement it when working on the Application Task.
+
+**Dependencies**: `numpy>=1.24`, `scipy>=1.10`
+
+```python
+"""
+two_body.py
+
+Restricted two-body orbital mechanics simulation.
+
+Physical model: ddot_r = -mu / r^3 * r_vec
+where r_vec is the position vector from the central body to the satellite,
+r = ||r_vec|| is its magnitude, and mu is the gravitational parameter.
+
+Units: SI throughout (meters, seconds, kilograms).
+"""
+
+from __future__ import annotations
+
+from dataclasses import dataclass
+from typing import Final
+
+import numpy as np
+import numpy.typing as npt
+from scipy.integrate import solve_ivp
+
+
+# ---------------------------------------------------------------------------
+# Physical constants
+# ---------------------------------------------------------------------------
+
+G_SI: Final[float] = 6.674e-11  # m^3 kg^-1 s^-2, universal gravitational constant
+
+
+# ---------------------------------------------------------------------------
+# Data classes
+# ---------------------------------------------------------------------------
+
+@dataclass(frozen=True)
+class CentralBody:
+    """
+    Immutable representation of a spherically symmetric central body.
+
+    Parameters
+    ----------
+    name : str
+        Human-readable identifier (e.g., "Earth").
+    mu : float
+        Standard gravitational parameter G*M, in m^3 s^-2.
+    radius : float
+        Mean equatorial radius, in meters.  Used only for physical reference
+        (e.g., checking whether an orbit intersects the surface); it does not
+        enter the equation of motion.
+    """
+
+    name: str
+    mu: float       # m^3 s^-2
+    radius: float   # m
+
+    def gravitational_acceleration(
+        self, r_vec: npt.NDArray[np.float64]
+    ) -> npt.NDArray[np.float64]:
+        """
+        Compute the gravitational acceleration vector at position r_vec.
+
+        Implements: a_vec = -mu / r^3 * r_vec
+
+        Parameters
+        ----------
+        r_vec : ndarray, shape (3,)
+            Position vector from the central body center to the satellite, in meters.
+
+        Returns
+        -------
+        ndarray, shape (3,)
+            Acceleration vector in m s^-2.
+        """
+        r: float = float(np.linalg.norm(r_vec))
+        if r == 0.0:
+            raise ValueError(
+                "Position vector has zero magnitude: satellite is at the center of "
+                "the central body. This is a physical singularity."
+            )
+        return -(self.mu / r**3) * r_vec
+
+    def surface_gravity(self) -> float:
+        """Return gravitational acceleration at the body's surface, in m s^-2."""
+        return self.mu / self.radius**2
+
+    def escape_speed(self, r: float) -> float:
+        """
+        Return escape speed from radius r, in m s^-1.
+
+        Parameters
+        ----------
+        r : float
+            Radial distance from body center, in meters.
+        """
+        return float(np.sqrt(2.0 * self.mu / r))
+
+
+@dataclass
+class OrbitalState:
+    """
+    State vector of an orbiting body at a specific epoch.
+
+    Parameters
+    ----------
+    position : ndarray, shape (3,)
+        Position vector in an inertial frame, in meters.
+    velocity : ndarray, shape (3,)
+        Velocity vector in an inertial frame, in m s^-1.
+    epoch : float
+        Time of the state, in seconds past an arbitrary reference epoch.
+    """
+
+    position: npt.NDArray[np.float64]
+    velocity: npt.NDArray[np.float64]
+    epoch: float = 0.0
+
+    def __post_init__(self) -> None:
+        self.position = np.asarray(self.position, dtype=np.float64)
+        self.velocity = np.asarray(self.velocity, dtype=np.float64)
+        if self.position.shape != (3,):
+            raise ValueError(f"position must have shape (3,), got {self.position.shape}")
+        if self.velocity.shape != (3,):
+            raise ValueError(f"velocity must have shape (3,), got {self.velocity.shape}")
+
+    @property
+    def radius(self) -> float:
+        """Scalar distance from the central body center, in meters."""
+        return float(np.linalg.norm(self.position))
+
+    @property
+    def speed(self) -> float:
+        """Scalar orbital speed, in m s^-1."""
+        return float(np.linalg.norm(self.velocity))
+
+    def specific_mechanical_energy(self, mu: float) -> float:
+        """
+        Compute the specific mechanical energy epsilon = v^2/2 - mu/r.
+
+        Parameters
+        ----------
+        mu : float
+            Gravitational parameter of the central body, in m^3 s^-2.
+
+        Returns
+        -------
+        float
+            Specific mechanical energy, in m^2 s^-2.
+        """
+        return 0.5 * self.speed**2 - mu / self.radius
+
+    def specific_angular_momentum(self) -> npt.NDArray[np.float64]:
+        """
+        Compute the specific angular momentum vector h = r x v.
+
+        Returns
+        -------
+        ndarray, shape (3,)
+            Specific angular momentum vector, in m^2 s^-1.
+        """
+        return np.cross(self.position, self.velocity)
+
+    def to_array(self) -> npt.NDArray[np.float64]:
+        """Return [r_x, r_y, r_z, v_x, v_y, v_z] as a shape-(6,) array."""
+        return np.concatenate([self.position, self.velocity])
+
+    @classmethod
+    def from_array(
+        cls, state: npt.NDArray[np.float64], epoch: float = 0.0
+    ) -> "OrbitalState":
+        """Construct an OrbitalState from a flat 6-element array."""
+        return cls(
+            position=state[:3].copy(),
+            velocity=state[3:].copy(),
+            epoch=epoch,
+        )
+
+
+# ---------------------------------------------------------------------------
+# Propagator
+# ---------------------------------------------------------------------------
+
+@dataclass
+class TwoBodyPropagator:
+    """
+    Numerically propagates the restricted two-body equation of motion.
+
+    Uses scipy.integrate.solve_ivp with the RK45 adaptive integrator by default.
+
+    Parameters
+    ----------
+    central_body : CentralBody
+        The central attracting body.
+    rtol : float
+        Relative tolerance for the ODE integrator (default 1e-10).
+    atol : float
+        Absolute tolerance for the ODE integrator (default 1e-12).
+    """
+
+    central_body: CentralBody
+    rtol: float = 1e-10
+    atol: float = 1e-12
+
+    def _equations_of_motion(
+        self, t: float, state: npt.NDArray[np.float64]
+    ) -> npt.NDArray[np.float64]:
+        """
+        Right-hand side of the two-body ODE.
+
+        State vector layout: [r_x, r_y, r_z, v_x, v_y, v_z]
+
+        Parameters
+        ----------
+        t : float
+            Current time (unused; required by solve_ivp API).
+        state : ndarray, shape (6,)
+            Current state vector.
+
+        Returns
+        -------
+        ndarray, shape (6,)
+            Time derivative: [v_x, v_y, v_z, a_x, a_y, a_z]
+        """
+        r_vec: npt.NDArray[np.float64] = state[:3]
+        v_vec: npt.NDArray[np.float64] = state[3:]
+        a_vec = self.central_body.gravitational_acceleration(r_vec)
+        return np.concatenate([v_vec, a_vec])
+
+    def propagate(
+        self,
+        initial_state: OrbitalState,
+        duration: float,
+        num_points: int = 1000,
+    ) -> tuple[npt.NDArray[np.float64], list[OrbitalState]]:
+        """
+        Integrate the two-body equations of motion forward in time.
+
+        Parameters
+        ----------
+        initial_state : OrbitalState
+            Initial position and velocity at epoch.
+        duration : float
+            Total propagation duration, in seconds.
+        num_points : int
+            Number of uniformly spaced output time points.
+
+        Returns
+        -------
+        times : ndarray, shape (num_points,)
+            Array of output times, in seconds.
+        states : list of OrbitalState
+            Propagated states at each output time.
+
+        Raises
+        ------
+        RuntimeError
+            If the integrator fails to reach the requested time span.
+        """
+        t_span = (initial_state.epoch, initial_state.epoch + duration)
+        t_eval = np.linspace(t_span[0], t_span[1], num_points)
+        y0 = initial_state.to_array()
+
+        result = solve_ivp(
+            fun=self._equations_of_motion,
+            t_span=t_span,
+            y0=y0,
+            method="RK45",
+            t_eval=t_eval,
+            rtol=self.rtol,
+            atol=self.atol,
+            dense_output=False,
+        )
+
+        if not result.success:
+            raise RuntimeError(f"ODE integration failed: {result.message}")
+
+        times: npt.NDArray[np.float64] = result.t
+        states = [
+            OrbitalState.from_array(result.y[:, i], epoch=result.t[i])
+            for i in range(result.y.shape[1])
+        ]
+        return times, states
+
+
+# ---------------------------------------------------------------------------
+# Pre-configured central bodies
+# ---------------------------------------------------------------------------
+
+EARTH = CentralBody(
+    name="Earth",
+    mu=3.986004418e14,    # m^3 s^-2
+    radius=6.371e6,       # m
+)
+
+MOON = CentralBody(
+    name="Moon",
+    mu=4.9048695e12,      # m^3 s^-2
+    radius=1.7374e6,      # m
+)
+
+SUN = CentralBody(
+    name="Sun",
+    mu=1.32712440018e20,  # m^3 s^-2
+    radius=6.957e8,       # m
+)
+```
+
+**Design notes**
+
+- **`frozen=True` on `CentralBody`**: Physical properties of a central body never change during a simulation. Frozen dataclasses are immutable by construction, preventing accidental mutation and communicating design intent clearly.
+- **Why not import `OdeResult`?**: `scipy.integrate.OdeResult` is the return type of `solve_ivp`. Earlier scipy versions exposed it only through a private submodule (`scipy.integrate._ivp.ivp.OdeResult`), making that import brittle across versions. The cleanest approach is to rely on duck typing — access `result.t`, `result.y`, `result.success`, and `result.message` directly without importing the type.
+- **Tolerance choice**: `rtol=1e-10`, `atol=1e-12` are appropriate for all astrodynamics propagation tasks. See the main lecture body for discussion of energy conservation as a numerical verification criterion.
