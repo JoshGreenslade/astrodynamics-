@@ -23,12 +23,12 @@ Every concept is derived from foundational physical laws. No equation is present
 The learning progression relies entirely on clear competency objectives, rigorous assessment standards, and the intrinsic satisfaction of achieving measurable mastery. There are no points, badges, streaks, or motivational scaffolding beyond the material itself.
 
 ## Module Structure
-Every lecture module follows this exact canonical sequence:
+Every lecture module must include the following elements. The order and relative weight of sections may vary based on the nature of the content — a primarily geometric lecture will emphasise diagrams and spatial reasoning over code; a primarily algorithmic lecture may reverse the ratio of derivation to computation. What must not vary is the *presence* of each element:
 
 1. **System Architecture** — A high-level mental model of the physical mechanic being introduced.
 2. **First-Principles Derivation** — The rigorous mathematical and physical foundation, derived from axioms.
 3. **Scaffolded Worked Example** — A step-by-step solution to a complex problem, managing cognitive load before independent practice.
-4. **Computational Model** — A software architecture that programmatically simulates the physical system, using explicit typing and clean object-oriented design.
+4. **Computational Model** — A software illustration that makes the physical system executable. In the lecture body, this is a concise (~15–20 line) function demonstrating the core physics. A full production-quality implementation belongs in a code appendix at the end of the lecture file.
 5. **Tangible Application Task** — An independent engineering problem requiring the reader to construct a complete solution.
 6. **Retrieval Integration** — A brief challenge combining the new concept with a mechanic from a previous module (interleaved practice).
 
@@ -65,25 +65,30 @@ Reader progress is tracked across six competency domains. Every module maps to a
 | 04 | 02 | State-to-Element and Element-to-State Algorithms | C3 |
 | 05 | 01 | Reference Frames: ECI, ECEF, Perifocal | C1, C3 |
 | 05 | 02 | Frame Transformations and Rotation Matrices | C1, C3 |
-| 06 | 01 | Perturbation Awareness: J2 and Atmospheric Drag | C6 |
 
 ### Module 03 — Maneuvers and Mission Design
 
 | Chapter | Lecture | Title | Primary Domain |
 |---------|---------|-------|----------------|
-| 07 | 01 | Impulsive Maneuvers and the Rocket Equation | C5 |
-| 07 | 02 | Hohmann Transfer and Bi-Elliptic Transfer | C5 |
-| 08 | 01 | Orbital Plane Changes | C5 |
-| 08 | 02 | Combined Maneuvers and Delta-v Optimization | C5 |
-| 09 | 01 | Phasing and Rendezvous Fundamentals | C5 |
-| 09 | 02 | Mission Trade Studies and Delta-v Budgets | C5, C6 |
+| 06 | 01 | Impulsive Maneuvers and the Rocket Equation | C5 |
+| 06 | 02 | Hohmann Transfer and Bi-Elliptic Transfer | C5 |
+| 07 | 01 | Orbital Plane Changes | C5 |
+| 07 | 02 | Combined Maneuvers and Delta-v Optimization | C5 |
+| 08 | 01 | Lambert's Problem: Theory and Algorithm | C4, C5 |
+| 08 | 02 | Lambert's Problem: Applications and Mission Planning | C5, C6 |
+| 09 | 01 | Relative Motion and the Clohessy–Wiltshire Equations | C5 |
+| 09 | 02 | Phasing, Rendezvous, and Proximity Operations | C5 |
+| 10 | 01 | Mission Trade Studies and Delta-v Budgets | C5, C6 |
 
-### Module 04 — Integration and Professional Practice
+### Module 04 — Advanced Topics and Integration
 
 | Chapter | Lecture | Title | Primary Domain |
 |---------|---------|-------|----------------|
-| 10 | 01 | End-to-End Mission Concept Design | C6 |
-| 10 | 02 | Modeling Limits, Uncertainty, and Engineering Ethics | C6 |
+| 11 | 01 | Perturbation Awareness: J2 and Atmospheric Drag | C6 |
+| 11 | 02 | Secular and Long-Term Orbital Evolution Under Perturbations | C6 |
+| 12 | 01 | Orbit Determination Fundamentals | C1, C3 |
+| 13 | 01 | End-to-End Mission Concept Design | C6 |
+| 13 | 02 | Modeling Limits, Uncertainty, and Mission Constraints | C6 |
 
 ## Authoring Policy
 - Every chapter balances conceptual narrative, rigorous derivation, worked examples, and applied problem-solving.
@@ -92,5 +97,5 @@ Reader progress is tracked across six competency domains. Every module maps to a
 - All chapters employ evidence-based techniques: spaced practice, interleaving, retrieval prompts, and worked-example fading.
 - Exposition strictly follows: motivation and intuition precede formalism in every section.
 - Terminology is precise: **orbital motion** (revolution around a central body) is never conflated with **spacecraft attitude** (rotation of the vehicle's own hull about its center of mass).
-- All code examples use explicit type annotations, clean object-oriented design, and standard dependency management.
+- All code examples in the lecture body are concise (~15–20 lines) and illustrate the core physics only. Full production-quality implementations are placed in a clearly labelled code appendix at the end of the chapter. All code uses explicit type annotations and standard dependency management.
 - Chapters are considered ready only when they satisfy all criteria in `lecture-readiness-standard.md`.

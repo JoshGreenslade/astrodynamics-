@@ -4,13 +4,18 @@
 Maintain a current and comprehensive view of the reader's ability across core astrodynamics competencies, informing how subsequent chapters are authored and where additional worked examples or remediation content is needed.
 
 ## Competency Areas
-Track the reader in the following areas:
-1. Mathematical Foundations
-2. Two-Body Dynamics
-3. Orbital Elements and Transformations
-4. Maneuver Design and Delta-v Budgeting
-5. Mission Analysis and Trade Studies
-6. Technical Communication
+Track the reader across the six domains defined in `course-curriculum.md`. Use the exact domain codes and titles below to ensure consistency across all course documents:
+
+| Code | Domain |
+|------|--------|
+| **C1** | Mathematical Foundations |
+| **C2** | Two-Body Dynamics |
+| **C3** | Orbital Elements and Geometry |
+| **C4** | Time and Anomaly |
+| **C5** | Maneuver Design |
+| **C6** | Mission Analysis |
+
+*Note: Technical communication quality is assessed informally through the Stage 4 capstone write-up and oral-style Q&A prompts. It does not carry a separate competency code but is noted in the Assessment Log when it influences a reader's demonstrated mastery.*
 
 ## Rating Scale
 - **4 - Expert**: Can solve novel problems accurately and justify assumptions.
