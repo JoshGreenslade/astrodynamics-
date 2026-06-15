@@ -33,15 +33,20 @@ This tracker records current competency ratings across all six domains, updated 
 | 02 | 04 | 02 | State-to-Element and Element-to-State Algorithms | ⬜ Not started |
 | 02 | 05 | 01 | Reference Frames: ECI, ECEF, Perifocal | ⬜ Not started |
 | 02 | 05 | 02 | Frame Transformations and Rotation Matrices | ⬜ Not started |
-| 02 | 06 | 01 | Perturbation Awareness: J2 and Atmospheric Drag | ⬜ Not started |
-| 03 | 07 | 01 | Impulsive Maneuvers and the Rocket Equation | ⬜ Not started |
-| 03 | 07 | 02 | Hohmann Transfer and Bi-Elliptic Transfer | ⬜ Not started |
-| 03 | 08 | 01 | Orbital Plane Changes | ⬜ Not started |
-| 03 | 08 | 02 | Combined Maneuvers and Delta-v Optimization | ⬜ Not started |
-| 03 | 09 | 01 | Phasing and Rendezvous Fundamentals | ⬜ Not started |
-| 03 | 09 | 02 | Mission Trade Studies and Delta-v Budgets | ⬜ Not started |
-| 04 | 10 | 01 | End-to-End Mission Concept Design | ⬜ Not started |
-| 04 | 10 | 02 | Modeling Limits, Uncertainty, and Engineering Ethics | ⬜ Not started |
+| 03 | 06 | 01 | Impulsive Maneuvers and the Rocket Equation | ⬜ Not started |
+| 03 | 06 | 02 | Hohmann Transfer and Bi-Elliptic Transfer | ⬜ Not started |
+| 03 | 07 | 01 | Orbital Plane Changes | ⬜ Not started |
+| 03 | 07 | 02 | Combined Maneuvers and Delta-v Optimization | ⬜ Not started |
+| 03 | 08 | 01 | Lambert's Problem: Theory and Algorithm | ⬜ Not started |
+| 03 | 08 | 02 | Lambert's Problem: Applications and Mission Planning | ⬜ Not started |
+| 03 | 09 | 01 | Relative Motion and the Clohessy–Wiltshire Equations | ⬜ Not started |
+| 03 | 09 | 02 | Phasing, Rendezvous, and Proximity Operations | ⬜ Not started |
+| 03 | 10 | 01 | Mission Trade Studies and Delta-v Budgets | ⬜ Not started |
+| 04 | 11 | 01 | Perturbation Awareness: J2 and Atmospheric Drag | ⬜ Not started |
+| 04 | 11 | 02 | Secular and Long-Term Orbital Evolution Under Perturbations | ⬜ Not started |
+| 04 | 12 | 01 | Orbit Determination Fundamentals | ⬜ Not started |
+| 04 | 13 | 01 | End-to-End Mission Concept Design | ⬜ Not started |
+| 04 | 13 | 02 | Modeling Limits, Uncertainty, and Mission Constraints | ⬜ Not started |
 
 ---
 

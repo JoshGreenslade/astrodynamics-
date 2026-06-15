@@ -23,7 +23,7 @@ This document defines when a textbook chapter is considered ready for publicatio
 - Stepwise derivations broken into digestible chunks with explanatory commentary.
 - At least three fully worked examples per major concept, progressing from foundational to applied.
 - Each chapter includes at least one "Common Misconception" box addressing predictable errors.
-- Figures, diagrams, and plots included wherever they aid conceptual understanding.
+- Figures, diagrams, and plots included wherever they aid conceptual understanding. For any concept involving geometry, coordinate frames, or vector relationships, at least one diagram is required. A chapter with no figures does not satisfy this criterion regardless of prose quality.
 
 ### 4) Active Learning Integration
 - End-of-section exercises provide both routine practice and stretch problems.

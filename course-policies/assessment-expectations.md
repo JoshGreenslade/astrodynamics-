@@ -29,10 +29,14 @@
 - **Expectation**: End-to-end mission concept with clear assumptions and limits.
 
 ## Grading Composition
-- Problem Sets/Labs: 30%
-- Stage 2 Summative Assessment: 20%
+- Problem Sets/Labs: 20%
+- Stage 1 Summative Assessment (Foundations): 10%
+- Stage 2 Summative Assessment (Core Orbital Mechanics): 20%
 - Stage 3 Maneuver Planning Assessment: 20%
 - Final Capstone (write-up + summary + Q&A): 30%
+
+## Module Advancement Threshold
+A reader must achieve a minimum competency rating of **2 (Developing)** across all primary competency domains of a module before advancing to the next module. A rating of **1 (Emerging)** in any primary domain after a summative assessment triggers mandatory remediation: additional worked examples and a targeted re-assessment must be completed before proceeding. The author must record the planned remediation intervention in the teaching tracker and confirm it is satisfied before authoring the next module's content.
 
 ## Resubmission and Recovery
 - One revision opportunity is allowed for each major summative deliverable.
