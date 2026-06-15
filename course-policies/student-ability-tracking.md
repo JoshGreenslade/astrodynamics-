@@ -5,12 +5,12 @@ Maintain a current and comprehensive view of the reader's ability across core as
 
 ## Competency Areas
 Track the reader in the following areas:
-1. C1 — Mathematical Foundations
-2. C2 — Two-Body Dynamics
-3. C3 — Orbital Elements and Geometry
-4. C4 — Time and Anomaly
-5. C5 — Maneuver Design
-6. C6 — Mission Analysis
+- C1 — Mathematical Foundations
+- C2 — Two-Body Dynamics
+- C3 — Orbital Elements and Geometry (including state/element transformations)
+- C4 — Time and Anomaly
+- C5 — Maneuver Design
+- C6 — Mission Analysis
 
 ## Rating Scale
 - **4 - Expert**: Can solve novel problems accurately and justify assumptions.

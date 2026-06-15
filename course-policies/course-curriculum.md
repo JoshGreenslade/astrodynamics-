@@ -23,7 +23,7 @@ Every concept is derived from foundational physical laws. No equation is present
 The learning progression relies entirely on clear competency objectives, rigorous assessment standards, and the intrinsic satisfaction of achieving measurable mastery. There are no points, badges, streaks, or motivational scaffolding beyond the material itself.
 
 ## Module Structure
-Every lecture module follows the **Lecture 01 canonical blueprint** in this exact order and heading structure:
+Every lecture module follows the **canonical lecture blueprint** in this exact order and heading structure:
 
 1. **Learning Objectives**
 2. **Prerequisites**
