@@ -24,7 +24,7 @@ This tracker records current competency ratings across all six domains, updated 
 | Module | Chapter | Lecture | Title | Status |
 |--------|---------|---------|-------|--------|
 | 01 | 01 | 01 | Newtonian Gravity and Two-Body Assumptions | ✅ Published |
-| 01 | 01 | 02 | The Equation of Motion and Conservation Laws | ✅ Published |
+| 01 | 01 | 02 | The Equation of Motion and Conservation Laws | ⬜ Not started |
 | 01 | 02 | 01 | Conic Sections and Orbital Geometry | ⬜ Not started |
 | 01 | 02 | 02 | Vis-Viva Equation and Orbital Energy | ⬜ Not started |
 | 01 | 03 | 01 | Kepler's Laws from First Principles | ⬜ Not started |
@@ -55,14 +55,6 @@ This tracker records current competency ratings across all six domains, updated 
 - **Planned Intervention**: Lecture 01 provides foundational derivations and three worked examples to establish baseline schema for C2 (Two-Body Dynamics) and C1 (Mathematical Foundations).
 - **Next Reassessment Checkpoint**: End-of-chapter self-assessment embedded in Lecture 01 (Application Task and Retrieval Integration sections).
 
-### Entry 002 — Lecture 02 Publication Checkpoint
-- **Date**: 2026-06-15
-- **Evidence Source**: Lecture 02 published; no new graded summative evidence submitted yet.
-- **Competency Ratings**: No change (all domains remain baseline unrated until summative checkpoint evidence is collected).
-- **Identified Gaps**: Pending learner submission quality on derivation accuracy, invariant interpretation, and computational validation rigor.
-- **Planned Intervention**: Use Lecture 02 retrieval bank and extended practice set to reinforce C2 transfer before advancing to conic geometry in Module 01 Chapter 02.
-- **Next Reassessment Checkpoint**: End-of-chapter summative checkpoint after completion of Module 01 Chapter 01 sequence.
-
 ---
 
 ## Authoring Notes
@@ -70,4 +62,3 @@ This tracker records current competency ratings across all six domains, updated 
 _This section records decisions made about depth, pacing, and intervention based on tracker trends._
 
 - **2026-06-14**: Course initialized. Module 01 content generation begun. No tracker trends available yet; authoring proceeds at standard depth. Will adjust after first checkpoint responses are submitted.
-- **2026-06-15**: Lecture 02 published for Module 01 Chapter 01. Tracker status advanced while competency ratings remain unchanged pending first summative evidence.

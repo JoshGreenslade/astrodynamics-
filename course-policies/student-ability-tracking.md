@@ -5,12 +5,12 @@ Maintain a current and comprehensive view of the reader's ability across core as
 
 ## Competency Areas
 Track the reader in the following areas:
-1. Mathematical Foundations
-2. Two-Body Dynamics
-3. Orbital Elements and Transformations
-4. Maneuver Design and Delta-v Budgeting
-5. Mission Analysis and Trade Studies
-6. Technical Communication
+1. C1 — Mathematical Foundations
+2. C2 — Two-Body Dynamics
+3. C3 — Orbital Elements and Geometry
+4. C4 — Time and Anomaly
+5. C5 — Maneuver Design
+6. C6 — Mission Analysis
 
 ## Rating Scale
 - **4 - Expert**: Can solve novel problems accurately and justify assumptions.
@@ -22,6 +22,8 @@ Track the reader in the following areas:
 - Update competency ratings after each stage's summative assessment.
 - Perform stage-level summary updates at the end of each curriculum stage.
 - Record planned chapter-level interventions for any competency rated 1 or 2 for two consecutive stages.
+- Do not mark a lecture as published in `teaching-tracker.md` unless competency targets for that lecture are explicitly identified.
+- Module 01 Chapter 01 tracking must include evidence planning for both C1 and C2.
 
 ## Minimum Tracking Record (Per Reader)
 - Date of update

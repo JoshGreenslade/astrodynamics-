@@ -5,13 +5,14 @@
 - The reader receives frequent low-stakes practice before high-stakes self-assessment.
 - Rubrics or answer keys must accompany every exercise set.
 - Mastery is measured using both computational correctness and quality of reasoning.
+- Every published lecture must include explicit competency-domain assessment mapping; Module 01 Chapter 01 assessments must cover both C1 and C2.
 
 ## Stage-Based Assessment Plan
 
 ### Stage 1 (Foundations)
 - **Formative**: Chapter-end problem sets and short concept-check questions embedded in the text.
 - **Summative**: Closed-book self-assessment on two-body and Kepler fundamentals.
-- **Expectation**: Correct setup of equations and interpretation of orbital geometry.
+- **Expectation**: Correct setup of equations and interpretation of orbital geometry, including vector/calculus fluency for C1 and physical interpretation for C2.
 
 ### Stage 2 (Core Orbital Mechanics)
 - **Formative**: Element conversion exercises and guided analysis problems within each chapter.

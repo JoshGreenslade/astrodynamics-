@@ -23,14 +23,27 @@ Every concept is derived from foundational physical laws. No equation is present
 The learning progression relies entirely on clear competency objectives, rigorous assessment standards, and the intrinsic satisfaction of achieving measurable mastery. There are no points, badges, streaks, or motivational scaffolding beyond the material itself.
 
 ## Module Structure
-Every lecture module follows this exact canonical sequence:
+Every lecture module follows the **Lecture 01 canonical blueprint** in this exact order and heading structure:
 
-1. **System Architecture** — A high-level mental model of the physical mechanic being introduced.
-2. **First-Principles Derivation** — The rigorous mathematical and physical foundation, derived from axioms.
-3. **Scaffolded Worked Example** — A step-by-step solution to a complex problem, managing cognitive load before independent practice.
-4. **Computational Model** — A software architecture that programmatically simulates the physical system, using explicit typing and clean object-oriented design.
-5. **Tangible Application Task** — An independent engineering problem requiring the reader to construct a complete solution.
-6. **Retrieval Integration** — A brief challenge combining the new concept with a mechanic from a previous module (interleaved practice).
+1. **Learning Objectives**
+2. **Prerequisites**
+3. **Common Misconception Box**
+4. **Section 1 — System Architecture**
+5. **Section 2 — First-Principles Derivation**
+6. **Section 3 — Scaffolded Worked Examples**
+7. **Section 4 — Computational Model**
+8. **Section 5 — Tangible Application Task**
+9. **Section 6 — Retrieval Integration**
+10. **Section 7 — Supplementary Derivations and Physical Depth**
+11. **End-of-Section Exercises**
+12. **Answer Key (Selected)**
+13. **Further Exploration**
+14. **Vocabulary Reference**
+
+### Content Progression and Non-Duplication Policy
+- Each lecture must deliver a logical progression from the prior lecture, aligned to the module/lecture outline in this curriculum.
+- New lectures must not duplicate prior lecture exposition or worked examples except for brief retrieval prompts.
+- Every lecture must explicitly map its learning objectives and exercises to the listed competency domain(s).
 
 ## Competency Domains
 Reader progress is tracked across six competency domains. Every module maps to at least one primary domain:
@@ -50,8 +63,8 @@ Reader progress is tracked across six competency domains. Every module maps to a
 
 | Chapter | Lecture | Title | Primary Domain |
 |---------|---------|-------|----------------|
-| 01 | 01 | Newtonian Gravity and Two-Body Assumptions | C2 |
-| 01 | 02 | The Equation of Motion and Conservation Laws | C2 |
+| 01 | 01 | Newtonian Gravity and Two-Body Assumptions | C1, C2 |
+| 01 | 02 | The Equation of Motion and Conservation Laws | C1, C2 |
 | 02 | 01 | Conic Sections and Orbital Geometry | C3 |
 | 02 | 02 | Vis-Viva Equation and Orbital Energy | C2, C3 |
 | 03 | 01 | Kepler's Laws from First Principles | C2, C4 |
@@ -93,4 +106,5 @@ Reader progress is tracked across six competency domains. Every module maps to a
 - Exposition strictly follows: motivation and intuition precede formalism in every section.
 - Terminology is precise: **orbital motion** (revolution around a central body) is never conflated with **spacecraft attitude** (rotation of the vehicle's own hull about its center of mass).
 - All code examples use explicit type annotations, clean object-oriented design, and standard dependency management.
+- Module 01 Chapter 01 delivery must include explicit competency evidence for both **C1 (Mathematical Foundations)** and **C2 (Two-Body Dynamics)**.
 - Chapters are considered ready only when they satisfy all criteria in `lecture-readiness-standard.md`.
