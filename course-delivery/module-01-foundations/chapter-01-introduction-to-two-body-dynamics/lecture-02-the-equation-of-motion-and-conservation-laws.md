@@ -26,7 +26,7 @@ By the end of this lecture, you will be able to:
 
 Before proceeding, answer from memory:
 
-- What is the difference between `$r$` as a scalar distance and `$r_vec$` as a position vector?
+- What is the difference between `$r$` as a scalar distance and `$\vec{r}$` as a position vector?
 - Why can a force that changes with position still conserve total energy?
 - What is the geometric meaning of a cross product?
 - What does taking a time derivative of a vector quantity tell you?
@@ -39,7 +39,7 @@ If any of these are uncertain, pause and rebuild those ideas first.
 
 - **Central force**: Force directed along the line between bodies, depending only on separation.
 - **Specific mechanical energy**: Energy per unit mass, `$epsilon = v^2/2 - mu/r$` in the two-body model.
-- **Specific angular momentum**: Angular momentum per unit mass, `$h = r x v$`.
+- **Specific angular momentum**: Angular momentum per unit mass, `$h = \vec{r} \times \vec{v}$`.
 - **Invariant**: A quantity that remains constant along ideal trajectories.
 - **Conservative force**: Force derived from potential, giving path-independent work.
 - **Planar motion**: Motion confined to a fixed plane determined by angular momentum direction.
@@ -76,21 +76,21 @@ In simulation work, invariant drift is your first warning signal. If drift grows
 
 For a satellite orbiting a dominant central body:
 
-$$ \ddot{r_vec} = -(\mu / r^3) r_vec $$
+$$ \ddot{\vec{r}} = -(\mu / r^3) \vec{r} $$
 
-where `$mu = G M$`, `$r_vec$` is the position vector, and `$r = |r_vec|$` is the scalar separation.
+where `$mu = G M$`, `$\vec{r}$` is the position vector, and `$r = |\vec{r}|$` is the scalar separation.
 
 ### 2.2 Angular momentum conservation
 
 Define specific angular momentum:
 
-$$ h = r_vec \times v_vec $$
+$$ h = \vec{r} \times \vec{v} $$
 
 Differentiate with respect to time:
 
-$$ \dot{h} = v_vec \times v_vec + r_vec \times \ddot{r_vec} $$
+$$ \dot{h} = \vec{v} \times \vec{v} + \vec{r} \times \ddot{\vec{r}} $$
 
-The first term is zero. The second term is also zero because `$\ddot{r_vec}$` is always parallel to `$r_vec$` in a central force model. Therefore `$\dot{h} = 0$`, so `h` is constant.
+The first term is zero. The second term is also zero because `$\ddot{\vec{r}}$` is always parallel to `$\vec{r}$` in a central force model. Therefore `$\dot{h} = 0$`, so `h` is constant.
 
 ### 2.3 Planarity
 
@@ -100,7 +100,7 @@ A constant angular momentum direction means the orbit remains in a fixed plane.
 
 Take the dot product of equation of motion with velocity `v`:
 
-$$ v_vec \cdot \ddot{r_vec} = -(\mu / r^3) (v_vec \cdot r_vec) $$
+$$ \vec{v} \cdot \ddot{\vec{r}} = -(\mu / r^3) (\vec{v} \cdot \vec{r}) $$
 
 Left side is the time derivative of `$v^2/2$`. Right side becomes the time derivative of `$-mu/r$`. So:
 
