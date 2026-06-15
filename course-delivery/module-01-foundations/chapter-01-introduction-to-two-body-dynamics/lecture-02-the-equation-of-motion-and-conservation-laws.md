@@ -276,7 +276,7 @@ Minimum answer structure:
 
 ### Prompt 003
 
-Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(mu/r^3) r$` with symbol definitions.
+Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(\mu/r^3) r$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -324,7 +324,7 @@ Minimum answer structure:
 
 ### Prompt 007
 
-Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta \varepsilon$ and $Delta |h|$` with symbol definitions.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$\Delta \varepsilon$ and $\Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -372,7 +372,7 @@ Minimum answer structure:
 
 ### Prompt 011
 
-Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(mu/r^3) r$` with symbol definitions.
+Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(\mu/r^3) r$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -420,7 +420,7 @@ Minimum answer structure:
 
 ### Prompt 015
 
-Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta \varepsilon$ and $Delta |h|$` with symbol definitions.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$\Delta \varepsilon$ and $\Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -468,7 +468,7 @@ Minimum answer structure:
 
 ### Prompt 019
 
-Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(mu/r^3) r$` with symbol definitions.
+Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(\mu/r^3) r$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -516,7 +516,7 @@ Minimum answer structure:
 
 ### Prompt 023
 
-Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta \varepsilon$ and $Delta |h|$` with symbol definitions.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$\Delta \varepsilon$ and $\Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -564,7 +564,7 @@ Minimum answer structure:
 
 ### Prompt 027
 
-Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(mu/r^3) r$` with symbol definitions.
+Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(\mu/r^3) r$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -612,7 +612,7 @@ Minimum answer structure:
 
 ### Prompt 031
 
-Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta \varepsilon$ and $Delta |h|$` with symbol definitions.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$\Delta \varepsilon$ and $\Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -660,7 +660,7 @@ Minimum answer structure:
 
 ### Prompt 035
 
-Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(mu/r^3) r$` with symbol definitions.
+Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(\mu/r^3) r$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -708,7 +708,7 @@ Minimum answer structure:
 
 ### Prompt 039
 
-Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta \varepsilon$ and $Delta |h|$` with symbol definitions.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$\Delta \varepsilon$ and $\Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -756,7 +756,7 @@ Minimum answer structure:
 
 ### Prompt 043
 
-Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(mu/r^3) r$` with symbol definitions.
+Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(\mu/r^3) r$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -804,7 +804,7 @@ Minimum answer structure:
 
 ### Prompt 047
 
-Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta \varepsilon$ and $Delta |h|$` with symbol definitions.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$\Delta \varepsilon$ and $\Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -852,7 +852,7 @@ Minimum answer structure:
 
 ### Prompt 051
 
-Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(mu/r^3) r$` with symbol definitions.
+Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(\mu/r^3) r$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -900,7 +900,7 @@ Minimum answer structure:
 
 ### Prompt 055
 
-Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta \varepsilon$ and $Delta |h|$` with symbol definitions.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$\Delta \varepsilon$ and $\Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -948,7 +948,7 @@ Minimum answer structure:
 
 ### Prompt 059
 
-Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(mu/r^3) r$` with symbol definitions.
+Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(\mu/r^3) r$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -996,7 +996,7 @@ Minimum answer structure:
 
 ### Prompt 063
 
-Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta \varepsilon$ and $Delta |h|$` with symbol definitions.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$\Delta \varepsilon$ and $\Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1044,7 +1044,7 @@ Minimum answer structure:
 
 ### Prompt 067
 
-Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(mu/r^3) r$` with symbol definitions.
+Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(\mu/r^3) r$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1092,7 +1092,7 @@ Minimum answer structure:
 
 ### Prompt 071
 
-Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta \varepsilon$ and $Delta |h|$` with symbol definitions.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$\Delta \varepsilon$ and $\Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1140,7 +1140,7 @@ Minimum answer structure:
 
 ### Prompt 075
 
-Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(mu/r^3) r$` with symbol definitions.
+Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(\mu/r^3) r$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1188,7 +1188,7 @@ Minimum answer structure:
 
 ### Prompt 079
 
-Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta \varepsilon$ and $Delta |h|$` with symbol definitions.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$\Delta \varepsilon$ and $\Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1236,7 +1236,7 @@ Minimum answer structure:
 
 ### Prompt 083
 
-Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(mu/r^3) r$` with symbol definitions.
+Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(\mu/r^3) r$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1284,7 +1284,7 @@ Minimum answer structure:
 
 ### Prompt 087
 
-Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta \varepsilon$ and $Delta |h|$` with symbol definitions.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$\Delta \varepsilon$ and $\Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1332,7 +1332,7 @@ Minimum answer structure:
 
 ### Prompt 091
 
-Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(mu/r^3) r$` with symbol definitions.
+Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(\mu/r^3) r$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1380,7 +1380,7 @@ Minimum answer structure:
 
 ### Prompt 095
 
-Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta \varepsilon$ and $Delta |h|$` with symbol definitions.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$\Delta \varepsilon$ and $\Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1428,7 +1428,7 @@ Minimum answer structure:
 
 ### Prompt 099
 
-Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(mu/r^3) r$` with symbol definitions.
+Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(\mu/r^3) r$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1476,7 +1476,7 @@ Minimum answer structure:
 
 ### Prompt 103
 
-Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta \varepsilon$ and $Delta |h|$` with symbol definitions.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$\Delta \varepsilon$ and $\Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1524,7 +1524,7 @@ Minimum answer structure:
 
 ### Prompt 107
 
-Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(mu/r^3) r$` with symbol definitions.
+Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(\mu/r^3) r$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1572,7 +1572,7 @@ Minimum answer structure:
 
 ### Prompt 111
 
-Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta \varepsilon$ and $Delta |h|$` with symbol definitions.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$\Delta \varepsilon$ and $\Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1620,7 +1620,7 @@ Minimum answer structure:
 
 ### Prompt 115
 
-Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(mu/r^3) r$` with symbol definitions.
+Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(\mu/r^3) r$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1668,7 +1668,7 @@ Minimum answer structure:
 
 ### Prompt 119
 
-Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta \varepsilon$ and $Delta |h|$` with symbol definitions.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$\Delta \varepsilon$ and $\Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1716,7 +1716,7 @@ Minimum answer structure:
 
 ### Prompt 123
 
-Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(mu/r^3) r$` with symbol definitions.
+Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(\mu/r^3) r$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1764,7 +1764,7 @@ Minimum answer structure:
 
 ### Prompt 127
 
-Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta \varepsilon$ and $Delta |h|$` with symbol definitions.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$\Delta \varepsilon$ and $\Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1812,7 +1812,7 @@ Minimum answer structure:
 
 ### Prompt 131
 
-Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(mu/r^3) r$` with symbol definitions.
+Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(\mu/r^3) r$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1860,7 +1860,7 @@ Minimum answer structure:
 
 ### Prompt 135
 
-Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta \varepsilon$ and $Delta |h|$` with symbol definitions.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$\Delta \varepsilon$ and $\Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1908,7 +1908,7 @@ Minimum answer structure:
 
 ### Prompt 139
 
-Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(mu/r^3) r$` with symbol definitions.
+Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(\mu/r^3) r$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1956,7 +1956,7 @@ Minimum answer structure:
 
 ### Prompt 143
 
-Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta \varepsilon$ and $Delta |h|$` with symbol definitions.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$\Delta \varepsilon$ and $\Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -2004,7 +2004,7 @@ Minimum answer structure:
 
 ### Prompt 147
 
-Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(mu/r^3) r$` with symbol definitions.
+Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(\mu/r^3) r$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -2052,7 +2052,7 @@ Minimum answer structure:
 
 ### Prompt 151
 
-Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta \varepsilon$ and $Delta |h|$` with symbol definitions.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$\Delta \varepsilon$ and $\Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -2100,7 +2100,7 @@ Minimum answer structure:
 
 ### Prompt 155
 
-Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(mu/r^3) r$` with symbol definitions.
+Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(\mu/r^3) r$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -2148,7 +2148,7 @@ Minimum answer structure:
 
 ### Prompt 159
 
-Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta \varepsilon$ and $Delta |h|$` with symbol definitions.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$\Delta \varepsilon$ and $\Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
