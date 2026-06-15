@@ -206,6 +206,8 @@ class OrbitGeometry:
 
 
 class ConicClassifier:
+    ECCENTRICITY_TOLERANCE = 1e-6
+
     def __init__(self, mu: float) -> None:
         self.mu = mu
 
@@ -218,7 +220,7 @@ class ConicClassifier:
         energy = 0.5 * v_mag * v_mag - self.mu / r_mag
         ecc = sqrt(1.0 + (2.0 * energy * h_mag * h_mag) / (self.mu * self.mu))
 
-        if abs(ecc - 1.0) < 1e-6:
+        if abs(ecc - 1.0) < self.ECCENTRICITY_TOLERANCE:
             class_name = "parabolic"
         elif ecc < 1.0:
             class_name = "elliptic"
@@ -285,7 +287,21 @@ $$\varepsilon = -\frac{\mu}{2a}.$$
 This immediately implies:
 
 - Ellipse: $a>0 \Rightarrow \varepsilon<0$
-- Hyperbola: $a<0 \Rightarrow \varepsilon>0$ (sign convention in astrodynamics)
+- Hyperbola: $\varepsilon>0$ and $|a|=\frac{\mu}{2\varepsilon}$.
+
+When deriving with algebraic orbital elements, many conventions assign hyperbolas a negative signed $a$ so that
+$$\varepsilon = -\frac{\mu}{2a}$$
+remains internally consistent with hyperbolic $\varepsilon>0$.  
+When discussing geometric size, we report the positive magnitude $|a|$ instead, because physical distances are positive by definition.
+
+Practical decision rule:
+
+- Use signed $a$ in algebraic derivations that directly apply the vis-viva/energy identity.
+- Use $|a|$ when discussing geometric distances, shape scale, and plotting dimensions.
+
+Concrete example: if a hyperbolic trajectory has $\varepsilon = 8\ \text{km}^2/\text{s}^2$, then
+$$a_{\text{signed}} = -\frac{\mu}{2\varepsilon}, \qquad |a| = \frac{\mu}{2\varepsilon}.$$
+Both forms describe the same trajectory; the first preserves sign convention in energy equations, and the second reports positive geometric scale.
 
 ### B. Periapsis/apoapsis via $p$ and $e$
 
