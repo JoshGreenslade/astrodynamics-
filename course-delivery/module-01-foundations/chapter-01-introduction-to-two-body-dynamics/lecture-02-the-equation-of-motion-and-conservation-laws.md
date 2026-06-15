@@ -38,12 +38,12 @@ If any of these are uncertain, pause and rebuild those ideas first.
 ## Concept Vocabulary
 
 - **Central force**: Force directed along the line between bodies, depending only on separation.
-- **Specific mechanical energy**: Energy per unit mass, `$epsilon = v^2/2 - mu/r$` in the two-body model.
-- **Specific angular momentum**: Angular momentum per unit mass, `$h = \vec{r} \times \vec{v}$`.
+- **Specific mechanical energy**: Energy per unit mass, `$\varepsilon = v^2/2 - \mu/r$` in the two-body model.
+- **Specific angular momentum**: Angular momentum per unit mass, `$\vec{h} = \vec{r} \times \vec{v}$`.
 - **Invariant**: A quantity that remains constant along ideal trajectories.
 - **Conservative force**: Force derived from potential, giving path-independent work.
 - **Planar motion**: Motion confined to a fixed plane determined by angular momentum direction.
-- **Escape condition**: Threshold case where `$epsilon = 0$`.
+- **Escape condition**: Threshold case where `$\varepsilon = 0$`.
 
 ---
 
@@ -78,19 +78,19 @@ For a satellite orbiting a dominant central body:
 
 $$ \ddot{\vec{r}} = -(\mu / r^3) \vec{r} $$
 
-where `$mu = G M$`, `$\vec{r}$` is the position vector, and `$r = |\vec{r}|$` is the scalar separation.
+where `$\mu = G M$` is the standard gravitational parameter, `$\vec{r}$` is the position vector, and `$r = |\vec{r}|$` is the scalar separation.
 
 ### 2.2 Angular momentum conservation
 
 Define specific angular momentum:
 
-$$ h = \vec{r} \times \vec{v} $$
+$$ \vec{h} = \vec{r} \times \vec{v} $$
 
 Differentiate with respect to time:
 
-$$ \dot{h} = \vec{v} \times \vec{v} + \vec{r} \times \ddot{\vec{r}} $$
+$$ \dot{\vec{h}} = \vec{v} \times \vec{v} + \vec{r} \times \ddot{\vec{r}} $$
 
-The first term is zero. The second term is also zero because `$\ddot{\vec{r}}$` is always parallel to `$\vec{r}$` in a central force model. Therefore `$\dot{h} = 0$`, so `h` is constant.
+The first term is zero. The second term is also zero because `$\ddot{\vec{r}}$` is always parallel to `$\vec{r}$` in a central force model. Therefore `$\dot{\vec{h}} = 0$`, so `$\vec{h}$` is constant.
 
 ### 2.3 Planarity
 
@@ -102,21 +102,21 @@ Take the dot product of equation of motion with velocity `v`:
 
 $$ \vec{v} \cdot \ddot{\vec{r}} = -(\mu / r^3) (\vec{v} \cdot \vec{r}) $$
 
-Left side is the time derivative of `$v^2/2$`. Right side becomes the time derivative of `$-mu/r$`. So:
+Left side is the time derivative of `$v^2/2$`. Right side becomes the time derivative of `$-\mu/r$`. So:
 
-$$ d/dt ( v^2/2 - mu/r ) = 0 $$
+$$ d/dt ( v^2/2 - \mu/r ) = 0 $$
 
 Hence:
 
-$$ epsilon = v^2/2 - mu/r = constant $$
+$$ \varepsilon = v^2/2 - \mu/r = constant $$
 
 ### 2.5 Energy sign and orbit class
 
 | Energy sign | Meaning | Orbit class |
 |---|---|---|
-| `$epsilon < 0$` | Bound | Ellipse (circle is special case) |
-| `$epsilon = 0$` | Escape threshold | Parabola |
-| `$epsilon > 0$` | Unbound | Hyperbola |
+| `$\varepsilon < 0$` | Bound | Ellipse (circle is special case) |
+| `$\varepsilon = 0$` | Escape threshold | Parabola |
+| `$\varepsilon > 0$` | Unbound | Hyperbola |
 
 ---
 
@@ -124,36 +124,36 @@ $$ epsilon = v^2/2 - mu/r = constant $$
 
 ### Worked Example 1 — Compute invariants from state vector
 
-Given Earth `$mu = 398600.4418 km^3/s^2$`, state:
+Given Earth `$\mu = 398600.4418 km^3/s^2$`, state:
 - `$r = [7000, 0, 0] km$`
 - `$v = [0, 7.5, 1.0] km/s$`
 
 1. `$r = 7000 km$`
 2. `$v^2 = 57.25 km^2/s^2$`
-3. `$epsilon = 57.25/2 - 398600.4418/7000 = -28.3179 km^2/s^2$` (bound)
-4. `$h = r x v = [0, -7000, 52500] km^2/s$`
+3. `$\varepsilon = 57.25/2 - 398600.4418/7000 = -28.3179 km^2/s^2$` (bound)
+4. `$\vec{h} = \vec{r} \times \vec{v} = [0, -7000, 52500] km^2/s$`
 
 ### Worked Example 2 — Local escape speed
 
-At radius `$r = 9000 km$`, solve for `$v_esc$` with `$epsilon = 0$`:
+At radius `$r = 9000 km$`, solve for `$v_esc$` with `$\varepsilon = 0$`:
 
-$$ v_esc = sqrt(2 mu / r) = 9.412 km/s $$
+$$ v_esc = \sqrt{2 \mu / r} = 9.412 km/s $$
 
 ### Worked Example 3 — Diagnose numerical drift
 
 Propagation report over one orbit:
-- Initial `$epsilon = -29.1000$`, final `$epsilon = -28.4000$`
-- Initial `$|h| = 53000.0$`, final `$|h| = 52999.8$`
+- Initial `$\varepsilon = -29.1000$`, final `$\varepsilon = -28.4000$`
+- Initial `$|\vec{h}| = 53000.0$`, final `$|\vec{h}| = 52999.8$`
 
 Interpretation: large energy drift, tiny angular momentum drift. Likely time-step sensitivity in energy exchange dynamics. Reduce step size and retest.
 
 ### Worked Example 4 — Classify trajectory from telemetry
 
-Given `$r = 12000 km$`, `$v = 8.8 km/s$`, Earth `$mu = 398600.4418 km^3/s^2$`:
+Given `$r = 12000 km$`, `$v = 8.8 km/s$`, Earth `$\mu = 398600.4418 km^3/s^2$`:
 
-$$ epsilon = 8.8^2/2 - 398600.4418/12000 = 5.5033 km^2/s^2 $$
+$$ \varepsilon = 8.8^2/2 - 398600.4418/12000 = 5.5033 km^2/s^2 $$
 
-Since `$epsilon > 0$`, the Earth-relative trajectory is hyperbolic in the ideal model.
+Since `$\varepsilon > 0$`, the Earth-relative trajectory is hyperbolic in the ideal model.
 
 ---
 
@@ -252,7 +252,7 @@ The prompts intentionally cycle core conservation themes with spaced repetition 
 
 ### Prompt 001
 
-Question: Explain `energy conservation` in one paragraph, and include the equation `$epsilon = v^2/2 - mu/r$` with symbol definitions.
+Question: Explain `energy conservation` in one paragraph, and include the equation `$\varepsilon = v^2/2 - mu/r$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -288,7 +288,7 @@ Minimum answer structure:
 
 ### Prompt 004
 
-Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$epsilon < 0, =0, >0$` with symbol definitions.
+Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$\varepsilon < 0, =0, >0$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -312,7 +312,7 @@ Minimum answer structure:
 
 ### Prompt 006
 
-Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2mu/r}$` with symbol definitions.
+Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2\mu/r}$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -324,7 +324,7 @@ Minimum answer structure:
 
 ### Prompt 007
 
-Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta epsilon$ and $Delta |h|$` with symbol definitions.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta \varepsilon$ and $Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -348,7 +348,7 @@ Minimum answer structure:
 
 ### Prompt 009
 
-Question: Explain `energy conservation` in one paragraph, and include the equation `$epsilon = v^2/2 - mu/r$` with symbol definitions.
+Question: Explain `energy conservation` in one paragraph, and include the equation `$\varepsilon = v^2/2 - mu/r$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -384,7 +384,7 @@ Minimum answer structure:
 
 ### Prompt 012
 
-Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$epsilon < 0, =0, >0$` with symbol definitions.
+Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$\varepsilon < 0, =0, >0$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -408,7 +408,7 @@ Minimum answer structure:
 
 ### Prompt 014
 
-Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2mu/r}$` with symbol definitions.
+Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2\mu/r}$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -420,7 +420,7 @@ Minimum answer structure:
 
 ### Prompt 015
 
-Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta epsilon$ and $Delta |h|$` with symbol definitions.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta \varepsilon$ and $Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -444,7 +444,7 @@ Minimum answer structure:
 
 ### Prompt 017
 
-Question: Explain `energy conservation` in one paragraph, and include the equation `$epsilon = v^2/2 - mu/r$` with symbol definitions.
+Question: Explain `energy conservation` in one paragraph, and include the equation `$\varepsilon = v^2/2 - mu/r$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -480,7 +480,7 @@ Minimum answer structure:
 
 ### Prompt 020
 
-Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$epsilon < 0, =0, >0$` with symbol definitions.
+Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$\varepsilon < 0, =0, >0$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -504,7 +504,7 @@ Minimum answer structure:
 
 ### Prompt 022
 
-Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2mu/r}$` with symbol definitions.
+Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2\mu/r}$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -516,7 +516,7 @@ Minimum answer structure:
 
 ### Prompt 023
 
-Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta epsilon$ and $Delta |h|$` with symbol definitions.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta \varepsilon$ and $Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -540,7 +540,7 @@ Minimum answer structure:
 
 ### Prompt 025
 
-Question: Explain `energy conservation` in one paragraph, and include the equation `$epsilon = v^2/2 - mu/r$` with symbol definitions.
+Question: Explain `energy conservation` in one paragraph, and include the equation `$\varepsilon = v^2/2 - mu/r$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -576,7 +576,7 @@ Minimum answer structure:
 
 ### Prompt 028
 
-Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$epsilon < 0, =0, >0$` with symbol definitions.
+Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$\varepsilon < 0, =0, >0$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -600,7 +600,7 @@ Minimum answer structure:
 
 ### Prompt 030
 
-Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2mu/r}$` with symbol definitions.
+Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2\mu/r}$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -612,7 +612,7 @@ Minimum answer structure:
 
 ### Prompt 031
 
-Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta epsilon$ and $Delta |h|$` with symbol definitions.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta \varepsilon$ and $Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -636,7 +636,7 @@ Minimum answer structure:
 
 ### Prompt 033
 
-Question: Explain `energy conservation` in one paragraph, and include the equation `$epsilon = v^2/2 - mu/r$` with symbol definitions.
+Question: Explain `energy conservation` in one paragraph, and include the equation `$\varepsilon = v^2/2 - mu/r$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -672,7 +672,7 @@ Minimum answer structure:
 
 ### Prompt 036
 
-Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$epsilon < 0, =0, >0$` with symbol definitions.
+Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$\varepsilon < 0, =0, >0$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -696,7 +696,7 @@ Minimum answer structure:
 
 ### Prompt 038
 
-Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2mu/r}$` with symbol definitions.
+Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2\mu/r}$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -708,7 +708,7 @@ Minimum answer structure:
 
 ### Prompt 039
 
-Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta epsilon$ and $Delta |h|$` with symbol definitions.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta \varepsilon$ and $Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -732,7 +732,7 @@ Minimum answer structure:
 
 ### Prompt 041
 
-Question: Explain `energy conservation` in one paragraph, and include the equation `$epsilon = v^2/2 - mu/r$` with symbol definitions.
+Question: Explain `energy conservation` in one paragraph, and include the equation `$\varepsilon = v^2/2 - mu/r$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -768,7 +768,7 @@ Minimum answer structure:
 
 ### Prompt 044
 
-Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$epsilon < 0, =0, >0$` with symbol definitions.
+Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$\varepsilon < 0, =0, >0$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -792,7 +792,7 @@ Minimum answer structure:
 
 ### Prompt 046
 
-Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2mu/r}$` with symbol definitions.
+Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2\mu/r}$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -804,7 +804,7 @@ Minimum answer structure:
 
 ### Prompt 047
 
-Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta epsilon$ and $Delta |h|$` with symbol definitions.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta \varepsilon$ and $Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -828,7 +828,7 @@ Minimum answer structure:
 
 ### Prompt 049
 
-Question: Explain `energy conservation` in one paragraph, and include the equation `$epsilon = v^2/2 - mu/r$` with symbol definitions.
+Question: Explain `energy conservation` in one paragraph, and include the equation `$\varepsilon = v^2/2 - mu/r$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -864,7 +864,7 @@ Minimum answer structure:
 
 ### Prompt 052
 
-Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$epsilon < 0, =0, >0$` with symbol definitions.
+Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$\varepsilon < 0, =0, >0$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -888,7 +888,7 @@ Minimum answer structure:
 
 ### Prompt 054
 
-Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2mu/r}$` with symbol definitions.
+Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2\mu/r}$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -900,7 +900,7 @@ Minimum answer structure:
 
 ### Prompt 055
 
-Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta epsilon$ and $Delta |h|$` with symbol definitions.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta \varepsilon$ and $Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -924,7 +924,7 @@ Minimum answer structure:
 
 ### Prompt 057
 
-Question: Explain `energy conservation` in one paragraph, and include the equation `$epsilon = v^2/2 - mu/r$` with symbol definitions.
+Question: Explain `energy conservation` in one paragraph, and include the equation `$\varepsilon = v^2/2 - mu/r$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -960,7 +960,7 @@ Minimum answer structure:
 
 ### Prompt 060
 
-Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$epsilon < 0, =0, >0$` with symbol definitions.
+Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$\varepsilon < 0, =0, >0$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -984,7 +984,7 @@ Minimum answer structure:
 
 ### Prompt 062
 
-Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2mu/r}$` with symbol definitions.
+Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2\mu/r}$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -996,7 +996,7 @@ Minimum answer structure:
 
 ### Prompt 063
 
-Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta epsilon$ and $Delta |h|$` with symbol definitions.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta \varepsilon$ and $Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1020,7 +1020,7 @@ Minimum answer structure:
 
 ### Prompt 065
 
-Question: Explain `energy conservation` in one paragraph, and include the equation `$epsilon = v^2/2 - mu/r$` with symbol definitions.
+Question: Explain `energy conservation` in one paragraph, and include the equation `$\varepsilon = v^2/2 - mu/r$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1056,7 +1056,7 @@ Minimum answer structure:
 
 ### Prompt 068
 
-Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$epsilon < 0, =0, >0$` with symbol definitions.
+Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$\varepsilon < 0, =0, >0$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1080,7 +1080,7 @@ Minimum answer structure:
 
 ### Prompt 070
 
-Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2mu/r}$` with symbol definitions.
+Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2\mu/r}$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1092,7 +1092,7 @@ Minimum answer structure:
 
 ### Prompt 071
 
-Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta epsilon$ and $Delta |h|$` with symbol definitions.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta \varepsilon$ and $Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1116,7 +1116,7 @@ Minimum answer structure:
 
 ### Prompt 073
 
-Question: Explain `energy conservation` in one paragraph, and include the equation `$epsilon = v^2/2 - mu/r$` with symbol definitions.
+Question: Explain `energy conservation` in one paragraph, and include the equation `$\varepsilon = v^2/2 - mu/r$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1152,7 +1152,7 @@ Minimum answer structure:
 
 ### Prompt 076
 
-Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$epsilon < 0, =0, >0$` with symbol definitions.
+Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$\varepsilon < 0, =0, >0$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1176,7 +1176,7 @@ Minimum answer structure:
 
 ### Prompt 078
 
-Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2mu/r}$` with symbol definitions.
+Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2\mu/r}$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1188,7 +1188,7 @@ Minimum answer structure:
 
 ### Prompt 079
 
-Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta epsilon$ and $Delta |h|$` with symbol definitions.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta \varepsilon$ and $Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1212,7 +1212,7 @@ Minimum answer structure:
 
 ### Prompt 081
 
-Question: Explain `energy conservation` in one paragraph, and include the equation `$epsilon = v^2/2 - mu/r$` with symbol definitions.
+Question: Explain `energy conservation` in one paragraph, and include the equation `$\varepsilon = v^2/2 - mu/r$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1248,7 +1248,7 @@ Minimum answer structure:
 
 ### Prompt 084
 
-Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$epsilon < 0, =0, >0$` with symbol definitions.
+Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$\varepsilon < 0, =0, >0$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1272,7 +1272,7 @@ Minimum answer structure:
 
 ### Prompt 086
 
-Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2mu/r}$` with symbol definitions.
+Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2\mu/r}$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1284,7 +1284,7 @@ Minimum answer structure:
 
 ### Prompt 087
 
-Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta epsilon$ and $Delta |h|$` with symbol definitions.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta \varepsilon$ and $Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1308,7 +1308,7 @@ Minimum answer structure:
 
 ### Prompt 089
 
-Question: Explain `energy conservation` in one paragraph, and include the equation `$epsilon = v^2/2 - mu/r$` with symbol definitions.
+Question: Explain `energy conservation` in one paragraph, and include the equation `$\varepsilon = v^2/2 - mu/r$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1344,7 +1344,7 @@ Minimum answer structure:
 
 ### Prompt 092
 
-Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$epsilon < 0, =0, >0$` with symbol definitions.
+Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$\varepsilon < 0, =0, >0$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1368,7 +1368,7 @@ Minimum answer structure:
 
 ### Prompt 094
 
-Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2mu/r}$` with symbol definitions.
+Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2\mu/r}$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1380,7 +1380,7 @@ Minimum answer structure:
 
 ### Prompt 095
 
-Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta epsilon$ and $Delta |h|$` with symbol definitions.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta \varepsilon$ and $Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1404,7 +1404,7 @@ Minimum answer structure:
 
 ### Prompt 097
 
-Question: Explain `energy conservation` in one paragraph, and include the equation `$epsilon = v^2/2 - mu/r$` with symbol definitions.
+Question: Explain `energy conservation` in one paragraph, and include the equation `$\varepsilon = v^2/2 - mu/r$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1440,7 +1440,7 @@ Minimum answer structure:
 
 ### Prompt 100
 
-Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$epsilon < 0, =0, >0$` with symbol definitions.
+Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$\varepsilon < 0, =0, >0$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1464,7 +1464,7 @@ Minimum answer structure:
 
 ### Prompt 102
 
-Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2mu/r}$` with symbol definitions.
+Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2\mu/r}$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1476,7 +1476,7 @@ Minimum answer structure:
 
 ### Prompt 103
 
-Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta epsilon$ and $Delta |h|$` with symbol definitions.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta \varepsilon$ and $Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1500,7 +1500,7 @@ Minimum answer structure:
 
 ### Prompt 105
 
-Question: Explain `energy conservation` in one paragraph, and include the equation `$epsilon = v^2/2 - mu/r$` with symbol definitions.
+Question: Explain `energy conservation` in one paragraph, and include the equation `$\varepsilon = v^2/2 - mu/r$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1536,7 +1536,7 @@ Minimum answer structure:
 
 ### Prompt 108
 
-Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$epsilon < 0, =0, >0$` with symbol definitions.
+Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$\varepsilon < 0, =0, >0$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1560,7 +1560,7 @@ Minimum answer structure:
 
 ### Prompt 110
 
-Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2mu/r}$` with symbol definitions.
+Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2\mu/r}$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1572,7 +1572,7 @@ Minimum answer structure:
 
 ### Prompt 111
 
-Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta epsilon$ and $Delta |h|$` with symbol definitions.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta \varepsilon$ and $Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1596,7 +1596,7 @@ Minimum answer structure:
 
 ### Prompt 113
 
-Question: Explain `energy conservation` in one paragraph, and include the equation `$epsilon = v^2/2 - mu/r$` with symbol definitions.
+Question: Explain `energy conservation` in one paragraph, and include the equation `$\varepsilon = v^2/2 - mu/r$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1632,7 +1632,7 @@ Minimum answer structure:
 
 ### Prompt 116
 
-Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$epsilon < 0, =0, >0$` with symbol definitions.
+Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$\varepsilon < 0, =0, >0$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1656,7 +1656,7 @@ Minimum answer structure:
 
 ### Prompt 118
 
-Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2mu/r}$` with symbol definitions.
+Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2\mu/r}$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1668,7 +1668,7 @@ Minimum answer structure:
 
 ### Prompt 119
 
-Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta epsilon$ and $Delta |h|$` with symbol definitions.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta \varepsilon$ and $Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1692,7 +1692,7 @@ Minimum answer structure:
 
 ### Prompt 121
 
-Question: Explain `energy conservation` in one paragraph, and include the equation `$epsilon = v^2/2 - mu/r$` with symbol definitions.
+Question: Explain `energy conservation` in one paragraph, and include the equation `$\varepsilon = v^2/2 - mu/r$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1728,7 +1728,7 @@ Minimum answer structure:
 
 ### Prompt 124
 
-Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$epsilon < 0, =0, >0$` with symbol definitions.
+Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$\varepsilon < 0, =0, >0$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1752,7 +1752,7 @@ Minimum answer structure:
 
 ### Prompt 126
 
-Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2mu/r}$` with symbol definitions.
+Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2\mu/r}$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1764,7 +1764,7 @@ Minimum answer structure:
 
 ### Prompt 127
 
-Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta epsilon$ and $Delta |h|$` with symbol definitions.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta \varepsilon$ and $Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1788,7 +1788,7 @@ Minimum answer structure:
 
 ### Prompt 129
 
-Question: Explain `energy conservation` in one paragraph, and include the equation `$epsilon = v^2/2 - mu/r$` with symbol definitions.
+Question: Explain `energy conservation` in one paragraph, and include the equation `$\varepsilon = v^2/2 - mu/r$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1824,7 +1824,7 @@ Minimum answer structure:
 
 ### Prompt 132
 
-Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$epsilon < 0, =0, >0$` with symbol definitions.
+Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$\varepsilon < 0, =0, >0$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1848,7 +1848,7 @@ Minimum answer structure:
 
 ### Prompt 134
 
-Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2mu/r}$` with symbol definitions.
+Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2\mu/r}$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1860,7 +1860,7 @@ Minimum answer structure:
 
 ### Prompt 135
 
-Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta epsilon$ and $Delta |h|$` with symbol definitions.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta \varepsilon$ and $Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1884,7 +1884,7 @@ Minimum answer structure:
 
 ### Prompt 137
 
-Question: Explain `energy conservation` in one paragraph, and include the equation `$epsilon = v^2/2 - mu/r$` with symbol definitions.
+Question: Explain `energy conservation` in one paragraph, and include the equation `$\varepsilon = v^2/2 - mu/r$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1920,7 +1920,7 @@ Minimum answer structure:
 
 ### Prompt 140
 
-Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$epsilon < 0, =0, >0$` with symbol definitions.
+Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$\varepsilon < 0, =0, >0$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1944,7 +1944,7 @@ Minimum answer structure:
 
 ### Prompt 142
 
-Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2mu/r}$` with symbol definitions.
+Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2\mu/r}$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1956,7 +1956,7 @@ Minimum answer structure:
 
 ### Prompt 143
 
-Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta epsilon$ and $Delta |h|$` with symbol definitions.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta \varepsilon$ and $Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -1980,7 +1980,7 @@ Minimum answer structure:
 
 ### Prompt 145
 
-Question: Explain `energy conservation` in one paragraph, and include the equation `$epsilon = v^2/2 - mu/r$` with symbol definitions.
+Question: Explain `energy conservation` in one paragraph, and include the equation `$\varepsilon = v^2/2 - mu/r$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -2016,7 +2016,7 @@ Minimum answer structure:
 
 ### Prompt 148
 
-Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$epsilon < 0, =0, >0$` with symbol definitions.
+Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$\varepsilon < 0, =0, >0$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -2040,7 +2040,7 @@ Minimum answer structure:
 
 ### Prompt 150
 
-Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2mu/r}$` with symbol definitions.
+Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2\mu/r}$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -2052,7 +2052,7 @@ Minimum answer structure:
 
 ### Prompt 151
 
-Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta epsilon$ and $Delta |h|$` with symbol definitions.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta \varepsilon$ and $Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -2076,7 +2076,7 @@ Minimum answer structure:
 
 ### Prompt 153
 
-Question: Explain `energy conservation` in one paragraph, and include the equation `$epsilon = v^2/2 - mu/r$` with symbol definitions.
+Question: Explain `energy conservation` in one paragraph, and include the equation `$\varepsilon = v^2/2 - mu/r$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -2112,7 +2112,7 @@ Minimum answer structure:
 
 ### Prompt 156
 
-Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$epsilon < 0, =0, >0$` with symbol definitions.
+Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$\varepsilon < 0, =0, >0$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -2136,7 +2136,7 @@ Minimum answer structure:
 
 ### Prompt 158
 
-Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2mu/r}$` with symbol definitions.
+Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2\mu/r}$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -2148,7 +2148,7 @@ Minimum answer structure:
 
 ### Prompt 159
 
-Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta epsilon$ and $Delta |h|$` with symbol definitions.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta \varepsilon$ and $Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
 - Statement of principle
@@ -2175,7 +2175,7 @@ Minimum answer structure:
 
 ### Exercise 01
 
-Given `$mu$`, `$r$`, and `$v$`, compute `$epsilon$` and classify orbit type.
+Given `$\\mu$`, `$r$`, and `$v$`, compute `$\var\varepsilon$` and classify orbit type.
 
 Answer scaffold: setup, equations, interpretation, common pitfall.
 
@@ -2193,7 +2193,7 @@ Answer scaffold: setup, equations, interpretation, common pitfall.
 
 ### Exercise 04
 
-Given `$mu$`, `$r$`, and `$v$`, compute `$epsilon$` and classify orbit type.
+Given `$\\mu$`, `$r$`, and `$v$`, compute `$\var\varepsilon$` and classify orbit type.
 
 Answer scaffold: setup, equations, interpretation, common pitfall.
 
@@ -2211,7 +2211,7 @@ Answer scaffold: setup, equations, interpretation, common pitfall.
 
 ### Exercise 07
 
-Given `$mu$`, `$r$`, and `$v$`, compute `$epsilon$` and classify orbit type.
+Given `$\\mu$`, `$r$`, and `$v$`, compute `$\var\varepsilon$` and classify orbit type.
 
 Answer scaffold: setup, equations, interpretation, common pitfall.
 
@@ -2229,7 +2229,7 @@ Answer scaffold: setup, equations, interpretation, common pitfall.
 
 ### Exercise 10
 
-Given `$mu$`, `$r$`, and `$v$`, compute `$epsilon$` and classify orbit type.
+Given `$\\mu$`, `$r$`, and `$v$`, compute `$\var\varepsilon$` and classify orbit type.
 
 Answer scaffold: setup, equations, interpretation, common pitfall.
 
@@ -2247,7 +2247,7 @@ Answer scaffold: setup, equations, interpretation, common pitfall.
 
 ### Exercise 13
 
-Given `$mu$`, `$r$`, and `$v$`, compute `$epsilon$` and classify orbit type.
+Given `$\\mu$`, `$r$`, and `$v$`, compute `$\var\varepsilon$` and classify orbit type.
 
 Answer scaffold: setup, equations, interpretation, common pitfall.
 
@@ -2265,7 +2265,7 @@ Answer scaffold: setup, equations, interpretation, common pitfall.
 
 ### Exercise 16
 
-Given `$mu$`, `$r$`, and `$v$`, compute `$epsilon$` and classify orbit type.
+Given `$\\mu$`, `$r$`, and `$v$`, compute `$\var\varepsilon$` and classify orbit type.
 
 Answer scaffold: setup, equations, interpretation, common pitfall.
 
@@ -2283,7 +2283,7 @@ Answer scaffold: setup, equations, interpretation, common pitfall.
 
 ### Exercise 19
 
-Given `$mu$`, `$r$`, and `$v$`, compute `$epsilon$` and classify orbit type.
+Given `$\\mu$`, `$r$`, and `$v$`, compute `$\var\varepsilon$` and classify orbit type.
 
 Answer scaffold: setup, equations, interpretation, common pitfall.
 
@@ -2301,7 +2301,7 @@ Answer scaffold: setup, equations, interpretation, common pitfall.
 
 ### Exercise 22
 
-Given `$mu$`, `$r$`, and `$v$`, compute `$epsilon$` and classify orbit type.
+Given `$\\mu$`, `$r$`, and `$v$`, compute `$\var\varepsilon$` and classify orbit type.
 
 Answer scaffold: setup, equations, interpretation, common pitfall.
 
@@ -2319,7 +2319,7 @@ Answer scaffold: setup, equations, interpretation, common pitfall.
 
 ### Exercise 25
 
-Given `$mu$`, `$r$`, and `$v$`, compute `$epsilon$` and classify orbit type.
+Given `$\\mu$`, `$r$`, and `$v$`, compute `$\var\varepsilon$` and classify orbit type.
 
 Answer scaffold: setup, equations, interpretation, common pitfall.
 
@@ -2337,7 +2337,7 @@ Answer scaffold: setup, equations, interpretation, common pitfall.
 
 ### Exercise 28
 
-Given `$mu$`, `$r$`, and `$v$`, compute `$epsilon$` and classify orbit type.
+Given `$\\mu$`, `$r$`, and `$v$`, compute `$\var\varepsilon$` and classify orbit type.
 
 Answer scaffold: setup, equations, interpretation, common pitfall.
 
@@ -2355,7 +2355,7 @@ Answer scaffold: setup, equations, interpretation, common pitfall.
 
 ### Exercise 31
 
-Given `$mu$`, `$r$`, and `$v$`, compute `$epsilon$` and classify orbit type.
+Given `$\\mu$`, `$r$`, and `$v$`, compute `$\var\varepsilon$` and classify orbit type.
 
 Answer scaffold: setup, equations, interpretation, common pitfall.
 
@@ -2373,7 +2373,7 @@ Answer scaffold: setup, equations, interpretation, common pitfall.
 
 ### Exercise 34
 
-Given `$mu$`, `$r$`, and `$v$`, compute `$epsilon$` and classify orbit type.
+Given `$\\mu$`, `$r$`, and `$v$`, compute `$\var\varepsilon$` and classify orbit type.
 
 Answer scaffold: setup, equations, interpretation, common pitfall.
 
@@ -2391,7 +2391,7 @@ Answer scaffold: setup, equations, interpretation, common pitfall.
 
 ### Exercise 37
 
-Given `$mu$`, `$r$`, and `$v$`, compute `$epsilon$` and classify orbit type.
+Given `$\\mu$`, `$r$`, and `$v$`, compute `$\var\varepsilon$` and classify orbit type.
 
 Answer scaffold: setup, equations, interpretation, common pitfall.
 
@@ -2409,7 +2409,7 @@ Answer scaffold: setup, equations, interpretation, common pitfall.
 
 ### Exercise 40
 
-Given `$mu$`, `$r$`, and `$v$`, compute `$epsilon$` and classify orbit type.
+Given `$\\mu$`, `$r$`, and `$v$`, compute `$\var\varepsilon$` and classify orbit type.
 
 Answer scaffold: setup, equations, interpretation, common pitfall.
 
@@ -2427,7 +2427,7 @@ Answer scaffold: setup, equations, interpretation, common pitfall.
 
 ### Exercise 43
 
-Given `$mu$`, `$r$`, and `$v$`, compute `$epsilon$` and classify orbit type.
+Given `$\\mu$`, `$r$`, and `$v$`, compute `$\var\varepsilon$` and classify orbit type.
 
 Answer scaffold: setup, equations, interpretation, common pitfall.
 
@@ -2445,7 +2445,7 @@ Answer scaffold: setup, equations, interpretation, common pitfall.
 
 ### Exercise 46
 
-Given `$mu$`, `$r$`, and `$v$`, compute `$epsilon$` and classify orbit type.
+Given `$\\mu$`, `$r$`, and `$v$`, compute `$\var\varepsilon$` and classify orbit type.
 
 Answer scaffold: setup, equations, interpretation, common pitfall.
 
@@ -2463,7 +2463,7 @@ Answer scaffold: setup, equations, interpretation, common pitfall.
 
 ### Exercise 49
 
-Given `$mu$`, `$r$`, and `$v$`, compute `$epsilon$` and classify orbit type.
+Given `$\\mu$`, `$r$`, and `$v$`, compute `$\var\varepsilon$` and classify orbit type.
 
 Answer scaffold: setup, equations, interpretation, common pitfall.
 
@@ -2481,7 +2481,7 @@ Answer scaffold: setup, equations, interpretation, common pitfall.
 
 ### Exercise 52
 
-Given `$mu$`, `$r$`, and `$v$`, compute `$epsilon$` and classify orbit type.
+Given `$\\mu$`, `$r$`, and `$v$`, compute `$\var\varepsilon$` and classify orbit type.
 
 Answer scaffold: setup, equations, interpretation, common pitfall.
 
@@ -2499,7 +2499,7 @@ Answer scaffold: setup, equations, interpretation, common pitfall.
 
 ### Exercise 55
 
-Given `$mu$`, `$r$`, and `$v$`, compute `$epsilon$` and classify orbit type.
+Given `$\\mu$`, `$r$`, and `$v$`, compute `$\var\varepsilon$` and classify orbit type.
 
 Answer scaffold: setup, equations, interpretation, common pitfall.
 
@@ -2517,7 +2517,7 @@ Answer scaffold: setup, equations, interpretation, common pitfall.
 
 ### Exercise 58
 
-Given `$mu$`, `$r$`, and `$v$`, compute `$epsilon$` and classify orbit type.
+Given `$\\mu$`, `$r$`, and `$v$`, compute `$\var\varepsilon$` and classify orbit type.
 
 Answer scaffold: setup, equations, interpretation, common pitfall.
 
