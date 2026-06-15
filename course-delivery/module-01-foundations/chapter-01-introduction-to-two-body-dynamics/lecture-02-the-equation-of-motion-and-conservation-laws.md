@@ -76,7 +76,7 @@ In simulation work, invariant drift is your first warning signal. If drift grows
 
 For a satellite orbiting a dominant central body:
 
-$$ r_ddot = -(mu / r^3) r $$
+$$ \ddot{r} = -(\mu / r^3) r $$
 
 where `$mu = G M$` and `$r = |r|$`.
 
@@ -84,13 +84,13 @@ where `$mu = G M$` and `$r = |r|$`.
 
 Define specific angular momentum:
 
-$$ h = r x v $$
+$$ h = r \times v $$
 
 Differentiate with respect to time:
 
-$$ h_dot = v x v + r x r_ddot $$
+$$ \dot{h} = v \times v + r \times \ddot{r} $$
 
-The first term is zero. The second term is also zero because `$r_ddot$` is always parallel to `r` in a central force model. Therefore `$h_dot = 0$`, so `h` is constant.
+The first term is zero. The second term is also zero because `$\ddot{r}$` is always parallel to `r` in a central force model. Therefore `$\dot{h} = 0$`, so `h` is constant.
 
 ### 2.3 Planarity
 
@@ -100,7 +100,7 @@ A constant angular momentum direction means the orbit remains in a fixed plane.
 
 Take the dot product of equation of motion with velocity `v`:
 
-$$ v dot r_ddot = -(mu / r^3) (v dot r) $$
+$$ v \cdot \ddot{r} = -(\mu / r^3) (v \cdot r) $$
 
 Left side is the time derivative of `$v^2/2$`. Right side becomes the time derivative of `$-mu/r$`. So:
 
@@ -250,1763 +250,1924 @@ Use this bank for spaced retrieval over multiple sessions.
 
 ### Prompt 001
 
-Question: State one conservation-law principle 1 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `energy conservation` in one paragraph, and include the equation `$epsilon = v^2/2 - mu/r$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 002
 
-Question: State one conservation-law principle 2 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `angular momentum conservation` in one paragraph, and include the equation `$h = r \times v$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 003
 
-Question: State one conservation-law principle 3 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(mu/r^3) r$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 004
 
-Question: State one conservation-law principle 4 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$epsilon < 0, =0, >0$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 005
 
-Question: State one conservation-law principle 5 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `planar motion implication` in one paragraph, and include the equation `$h$ direction is constant` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 006
 
-Question: State one conservation-law principle 6 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2mu/r}$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 007
 
-Question: State one conservation-law principle 7 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta epsilon$ and $Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 008
 
-Question: State one conservation-law principle 8 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `numerical step-size sensitivity` in one paragraph, and include the equation `$dt \downarrow$ gives lower drift` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 009
 
-Question: State one conservation-law principle 9 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `energy conservation` in one paragraph, and include the equation `$epsilon = v^2/2 - mu/r$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 010
 
-Question: State one conservation-law principle 10 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `angular momentum conservation` in one paragraph, and include the equation `$h = r \times v$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 011
 
-Question: State one conservation-law principle 11 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(mu/r^3) r$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 012
 
-Question: State one conservation-law principle 12 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$epsilon < 0, =0, >0$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 013
 
-Question: State one conservation-law principle 13 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `planar motion implication` in one paragraph, and include the equation `$h$ direction is constant` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 014
 
-Question: State one conservation-law principle 14 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2mu/r}$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 015
 
-Question: State one conservation-law principle 15 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta epsilon$ and $Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 016
 
-Question: State one conservation-law principle 16 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `numerical step-size sensitivity` in one paragraph, and include the equation `$dt \downarrow$ gives lower drift` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 017
 
-Question: State one conservation-law principle 17 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `energy conservation` in one paragraph, and include the equation `$epsilon = v^2/2 - mu/r$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 018
 
-Question: State one conservation-law principle 18 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `angular momentum conservation` in one paragraph, and include the equation `$h = r \times v$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 019
 
-Question: State one conservation-law principle 19 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(mu/r^3) r$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 020
 
-Question: State one conservation-law principle 20 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$epsilon < 0, =0, >0$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 021
 
-Question: State one conservation-law principle 21 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `planar motion implication` in one paragraph, and include the equation `$h$ direction is constant` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 022
 
-Question: State one conservation-law principle 22 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2mu/r}$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 023
 
-Question: State one conservation-law principle 23 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta epsilon$ and $Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 024
 
-Question: State one conservation-law principle 24 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `numerical step-size sensitivity` in one paragraph, and include the equation `$dt \downarrow$ gives lower drift` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 025
 
-Question: State one conservation-law principle 25 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `energy conservation` in one paragraph, and include the equation `$epsilon = v^2/2 - mu/r$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 026
 
-Question: State one conservation-law principle 26 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `angular momentum conservation` in one paragraph, and include the equation `$h = r \times v$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 027
 
-Question: State one conservation-law principle 27 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(mu/r^3) r$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 028
 
-Question: State one conservation-law principle 28 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$epsilon < 0, =0, >0$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 029
 
-Question: State one conservation-law principle 29 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `planar motion implication` in one paragraph, and include the equation `$h$ direction is constant` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 030
 
-Question: State one conservation-law principle 30 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2mu/r}$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 031
 
-Question: State one conservation-law principle 31 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta epsilon$ and $Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 032
 
-Question: State one conservation-law principle 32 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `numerical step-size sensitivity` in one paragraph, and include the equation `$dt \downarrow$ gives lower drift` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 033
 
-Question: State one conservation-law principle 33 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `energy conservation` in one paragraph, and include the equation `$epsilon = v^2/2 - mu/r$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 034
 
-Question: State one conservation-law principle 34 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `angular momentum conservation` in one paragraph, and include the equation `$h = r \times v$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 035
 
-Question: State one conservation-law principle 35 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(mu/r^3) r$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 036
 
-Question: State one conservation-law principle 36 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$epsilon < 0, =0, >0$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 037
 
-Question: State one conservation-law principle 37 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `planar motion implication` in one paragraph, and include the equation `$h$ direction is constant` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 038
 
-Question: State one conservation-law principle 38 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2mu/r}$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 039
 
-Question: State one conservation-law principle 39 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta epsilon$ and $Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 040
 
-Question: State one conservation-law principle 40 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `numerical step-size sensitivity` in one paragraph, and include the equation `$dt \downarrow$ gives lower drift` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 041
 
-Question: State one conservation-law principle 41 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `energy conservation` in one paragraph, and include the equation `$epsilon = v^2/2 - mu/r$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 042
 
-Question: State one conservation-law principle 42 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `angular momentum conservation` in one paragraph, and include the equation `$h = r \times v$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 043
 
-Question: State one conservation-law principle 43 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(mu/r^3) r$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 044
 
-Question: State one conservation-law principle 44 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$epsilon < 0, =0, >0$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 045
 
-Question: State one conservation-law principle 45 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `planar motion implication` in one paragraph, and include the equation `$h$ direction is constant` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 046
 
-Question: State one conservation-law principle 46 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2mu/r}$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 047
 
-Question: State one conservation-law principle 47 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta epsilon$ and $Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 048
 
-Question: State one conservation-law principle 48 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `numerical step-size sensitivity` in one paragraph, and include the equation `$dt \downarrow$ gives lower drift` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 049
 
-Question: State one conservation-law principle 49 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `energy conservation` in one paragraph, and include the equation `$epsilon = v^2/2 - mu/r$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 050
 
-Question: State one conservation-law principle 50 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `angular momentum conservation` in one paragraph, and include the equation `$h = r \times v$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 051
 
-Question: State one conservation-law principle 51 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(mu/r^3) r$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 052
 
-Question: State one conservation-law principle 52 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$epsilon < 0, =0, >0$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 053
 
-Question: State one conservation-law principle 53 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `planar motion implication` in one paragraph, and include the equation `$h$ direction is constant` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 054
 
-Question: State one conservation-law principle 54 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2mu/r}$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 055
 
-Question: State one conservation-law principle 55 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta epsilon$ and $Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 056
 
-Question: State one conservation-law principle 56 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `numerical step-size sensitivity` in one paragraph, and include the equation `$dt \downarrow$ gives lower drift` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 057
 
-Question: State one conservation-law principle 57 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `energy conservation` in one paragraph, and include the equation `$epsilon = v^2/2 - mu/r$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 058
 
-Question: State one conservation-law principle 58 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `angular momentum conservation` in one paragraph, and include the equation `$h = r \times v$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 059
 
-Question: State one conservation-law principle 59 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(mu/r^3) r$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 060
 
-Question: State one conservation-law principle 60 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$epsilon < 0, =0, >0$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 061
 
-Question: State one conservation-law principle 61 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `planar motion implication` in one paragraph, and include the equation `$h$ direction is constant` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 062
 
-Question: State one conservation-law principle 62 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2mu/r}$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 063
 
-Question: State one conservation-law principle 63 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta epsilon$ and $Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 064
 
-Question: State one conservation-law principle 64 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `numerical step-size sensitivity` in one paragraph, and include the equation `$dt \downarrow$ gives lower drift` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 065
 
-Question: State one conservation-law principle 65 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `energy conservation` in one paragraph, and include the equation `$epsilon = v^2/2 - mu/r$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 066
 
-Question: State one conservation-law principle 66 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `angular momentum conservation` in one paragraph, and include the equation `$h = r \times v$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 067
 
-Question: State one conservation-law principle 67 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(mu/r^3) r$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 068
 
-Question: State one conservation-law principle 68 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$epsilon < 0, =0, >0$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 069
 
-Question: State one conservation-law principle 69 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `planar motion implication` in one paragraph, and include the equation `$h$ direction is constant` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 070
 
-Question: State one conservation-law principle 70 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2mu/r}$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 071
 
-Question: State one conservation-law principle 71 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta epsilon$ and $Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 072
 
-Question: State one conservation-law principle 72 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `numerical step-size sensitivity` in one paragraph, and include the equation `$dt \downarrow$ gives lower drift` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 073
 
-Question: State one conservation-law principle 73 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `energy conservation` in one paragraph, and include the equation `$epsilon = v^2/2 - mu/r$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 074
 
-Question: State one conservation-law principle 74 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `angular momentum conservation` in one paragraph, and include the equation `$h = r \times v$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 075
 
-Question: State one conservation-law principle 75 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(mu/r^3) r$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 076
 
-Question: State one conservation-law principle 76 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$epsilon < 0, =0, >0$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 077
 
-Question: State one conservation-law principle 77 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `planar motion implication` in one paragraph, and include the equation `$h$ direction is constant` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 078
 
-Question: State one conservation-law principle 78 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2mu/r}$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 079
 
-Question: State one conservation-law principle 79 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta epsilon$ and $Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 080
 
-Question: State one conservation-law principle 80 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `numerical step-size sensitivity` in one paragraph, and include the equation `$dt \downarrow$ gives lower drift` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 081
 
-Question: State one conservation-law principle 81 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `energy conservation` in one paragraph, and include the equation `$epsilon = v^2/2 - mu/r$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 082
 
-Question: State one conservation-law principle 82 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `angular momentum conservation` in one paragraph, and include the equation `$h = r \times v$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 083
 
-Question: State one conservation-law principle 83 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(mu/r^3) r$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 084
 
-Question: State one conservation-law principle 84 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$epsilon < 0, =0, >0$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 085
 
-Question: State one conservation-law principle 85 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `planar motion implication` in one paragraph, and include the equation `$h$ direction is constant` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 086
 
-Question: State one conservation-law principle 86 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2mu/r}$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 087
 
-Question: State one conservation-law principle 87 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta epsilon$ and $Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 088
 
-Question: State one conservation-law principle 88 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `numerical step-size sensitivity` in one paragraph, and include the equation `$dt \downarrow$ gives lower drift` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 089
 
-Question: State one conservation-law principle 89 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `energy conservation` in one paragraph, and include the equation `$epsilon = v^2/2 - mu/r$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 090
 
-Question: State one conservation-law principle 90 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `angular momentum conservation` in one paragraph, and include the equation `$h = r \times v$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 091
 
-Question: State one conservation-law principle 91 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(mu/r^3) r$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 092
 
-Question: State one conservation-law principle 92 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$epsilon < 0, =0, >0$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 093
 
-Question: State one conservation-law principle 93 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `planar motion implication` in one paragraph, and include the equation `$h$ direction is constant` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 094
 
-Question: State one conservation-law principle 94 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2mu/r}$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 095
 
-Question: State one conservation-law principle 95 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta epsilon$ and $Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 096
 
-Question: State one conservation-law principle 96 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `numerical step-size sensitivity` in one paragraph, and include the equation `$dt \downarrow$ gives lower drift` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 097
 
-Question: State one conservation-law principle 97 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `energy conservation` in one paragraph, and include the equation `$epsilon = v^2/2 - mu/r$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 098
 
-Question: State one conservation-law principle 98 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `angular momentum conservation` in one paragraph, and include the equation `$h = r \times v$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 099
 
-Question: State one conservation-law principle 99 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(mu/r^3) r$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 100
 
-Question: State one conservation-law principle 100 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$epsilon < 0, =0, >0$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 101
 
-Question: State one conservation-law principle 101 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `planar motion implication` in one paragraph, and include the equation `$h$ direction is constant` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 102
 
-Question: State one conservation-law principle 102 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2mu/r}$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 103
 
-Question: State one conservation-law principle 103 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta epsilon$ and $Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 104
 
-Question: State one conservation-law principle 104 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `numerical step-size sensitivity` in one paragraph, and include the equation `$dt \downarrow$ gives lower drift` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 105
 
-Question: State one conservation-law principle 105 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `energy conservation` in one paragraph, and include the equation `$epsilon = v^2/2 - mu/r$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 106
 
-Question: State one conservation-law principle 106 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `angular momentum conservation` in one paragraph, and include the equation `$h = r \times v$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 107
 
-Question: State one conservation-law principle 107 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(mu/r^3) r$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 108
 
-Question: State one conservation-law principle 108 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$epsilon < 0, =0, >0$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 109
 
-Question: State one conservation-law principle 109 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `planar motion implication` in one paragraph, and include the equation `$h$ direction is constant` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 110
 
-Question: State one conservation-law principle 110 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2mu/r}$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 111
 
-Question: State one conservation-law principle 111 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta epsilon$ and $Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 112
 
-Question: State one conservation-law principle 112 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `numerical step-size sensitivity` in one paragraph, and include the equation `$dt \downarrow$ gives lower drift` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 113
 
-Question: State one conservation-law principle 113 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `energy conservation` in one paragraph, and include the equation `$epsilon = v^2/2 - mu/r$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 114
 
-Question: State one conservation-law principle 114 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `angular momentum conservation` in one paragraph, and include the equation `$h = r \times v$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 115
 
-Question: State one conservation-law principle 115 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(mu/r^3) r$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 116
 
-Question: State one conservation-law principle 116 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$epsilon < 0, =0, >0$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 117
 
-Question: State one conservation-law principle 117 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `planar motion implication` in one paragraph, and include the equation `$h$ direction is constant` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 118
 
-Question: State one conservation-law principle 118 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2mu/r}$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 119
 
-Question: State one conservation-law principle 119 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta epsilon$ and $Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 120
 
-Question: State one conservation-law principle 120 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `numerical step-size sensitivity` in one paragraph, and include the equation `$dt \downarrow$ gives lower drift` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 121
 
-Question: State one conservation-law principle 121 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `energy conservation` in one paragraph, and include the equation `$epsilon = v^2/2 - mu/r$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 122
 
-Question: State one conservation-law principle 122 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `angular momentum conservation` in one paragraph, and include the equation `$h = r \times v$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 123
 
-Question: State one conservation-law principle 123 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(mu/r^3) r$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 124
 
-Question: State one conservation-law principle 124 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$epsilon < 0, =0, >0$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 125
 
-Question: State one conservation-law principle 125 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `planar motion implication` in one paragraph, and include the equation `$h$ direction is constant` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 126
 
-Question: State one conservation-law principle 126 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2mu/r}$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 127
 
-Question: State one conservation-law principle 127 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta epsilon$ and $Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 128
 
-Question: State one conservation-law principle 128 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `numerical step-size sensitivity` in one paragraph, and include the equation `$dt \downarrow$ gives lower drift` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 129
 
-Question: State one conservation-law principle 129 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `energy conservation` in one paragraph, and include the equation `$epsilon = v^2/2 - mu/r$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 130
 
-Question: State one conservation-law principle 130 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `angular momentum conservation` in one paragraph, and include the equation `$h = r \times v$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 131
 
-Question: State one conservation-law principle 131 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(mu/r^3) r$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 132
 
-Question: State one conservation-law principle 132 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$epsilon < 0, =0, >0$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 133
 
-Question: State one conservation-law principle 133 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `planar motion implication` in one paragraph, and include the equation `$h$ direction is constant` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 134
 
-Question: State one conservation-law principle 134 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2mu/r}$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 135
 
-Question: State one conservation-law principle 135 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta epsilon$ and $Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 136
 
-Question: State one conservation-law principle 136 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `numerical step-size sensitivity` in one paragraph, and include the equation `$dt \downarrow$ gives lower drift` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 137
 
-Question: State one conservation-law principle 137 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `energy conservation` in one paragraph, and include the equation `$epsilon = v^2/2 - mu/r$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 138
 
-Question: State one conservation-law principle 138 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `angular momentum conservation` in one paragraph, and include the equation `$h = r \times v$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 139
 
-Question: State one conservation-law principle 139 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(mu/r^3) r$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 140
 
-Question: State one conservation-law principle 140 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$epsilon < 0, =0, >0$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 141
 
-Question: State one conservation-law principle 141 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `planar motion implication` in one paragraph, and include the equation `$h$ direction is constant` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 142
 
-Question: State one conservation-law principle 142 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2mu/r}$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 143
 
-Question: State one conservation-law principle 143 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta epsilon$ and $Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 144
 
-Question: State one conservation-law principle 144 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `numerical step-size sensitivity` in one paragraph, and include the equation `$dt \downarrow$ gives lower drift` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 145
 
-Question: State one conservation-law principle 145 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `energy conservation` in one paragraph, and include the equation `$epsilon = v^2/2 - mu/r$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 146
 
-Question: State one conservation-law principle 146 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `angular momentum conservation` in one paragraph, and include the equation `$h = r \times v$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 147
 
-Question: State one conservation-law principle 147 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(mu/r^3) r$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 148
 
-Question: State one conservation-law principle 148 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$epsilon < 0, =0, >0$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 149
 
-Question: State one conservation-law principle 149 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `planar motion implication` in one paragraph, and include the equation `$h$ direction is constant` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 150
 
-Question: State one conservation-law principle 150 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2mu/r}$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 151
 
-Question: State one conservation-law principle 151 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta epsilon$ and $Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 152
 
-Question: State one conservation-law principle 152 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `numerical step-size sensitivity` in one paragraph, and include the equation `$dt \downarrow$ gives lower drift` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 153
 
-Question: State one conservation-law principle 153 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `energy conservation` in one paragraph, and include the equation `$epsilon = v^2/2 - mu/r$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 154
 
-Question: State one conservation-law principle 154 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `angular momentum conservation` in one paragraph, and include the equation `$h = r \times v$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 155
 
-Question: State one conservation-law principle 155 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `central-force directionality` in one paragraph, and include the equation `$\ddot{r} = -(mu/r^3) r$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 156
 
-Question: State one conservation-law principle 156 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `orbit classification by energy sign` in one paragraph, and include the equation `$epsilon < 0, =0, >0$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 157
 
-Question: State one conservation-law principle 157 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `planar motion implication` in one paragraph, and include the equation `$h$ direction is constant` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 158
 
-Question: State one conservation-law principle 158 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `escape-speed reasoning` in one paragraph, and include the equation `$v_{esc} = \sqrt{2mu/r}$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 159
 
-Question: State one conservation-law principle 159 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `invariant drift diagnostics` in one paragraph, and include the equation `$Delta epsilon$ and $Delta |h|$` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
 
 ### Prompt 160
 
-Question: State one conservation-law principle 160 in the two-body model and write one equation using `$...$` delimiters.
+Question: Explain `numerical step-size sensitivity` in one paragraph, and include the equation `$dt \downarrow$ gives lower drift` with symbol definitions.
 
 Minimum answer structure:
-- Statement
-- Equation
-- Physical meaning
+- Statement of principle
+- Equation and symbol meanings
+- One engineering interpretation
+- One failure mode when assumptions break
 
 ---
+
 
 ## Extended Practice Set
 
