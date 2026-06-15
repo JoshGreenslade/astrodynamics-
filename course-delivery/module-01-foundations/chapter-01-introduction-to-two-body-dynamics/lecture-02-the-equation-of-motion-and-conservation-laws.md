@@ -98,7 +98,7 @@ A constant angular momentum direction means the orbit remains in a fixed plane.
 
 ### 2.4 Energy conservation
 
-Take the dot product of equation of motion with velocity `v`:
+Take the dot product of equation of motion with velocity `$\vec{v}$`:
 
 $$ \vec{v} \cdot \ddot{\vec{r}} = -(\mu / r^3) (\vec{v} \cdot \vec{r}) $$
 
@@ -2175,7 +2175,7 @@ Minimum answer structure:
 
 ### Exercise 01
 
-Given `$\\mu$`, `$r$`, and `$v$`, compute `$\var\varepsilon$` and classify orbit type.
+Given `$\mu$`, `$r$`, and `$v$`, compute `$\varepsilon$` and classify orbit type.
 
 Answer scaffold: setup, equations, interpretation, common pitfall.
 
@@ -2193,7 +2193,7 @@ Answer scaffold: setup, equations, interpretation, common pitfall.
 
 ### Exercise 04
 
-Given `$\\mu$`, `$r$`, and `$v$`, compute `$\var\varepsilon$` and classify orbit type.
+Given `$\mu$`, `$r$`, and `$v$`, compute `$\varepsilon$` and classify orbit type.
 
 Answer scaffold: setup, equations, interpretation, common pitfall.
 
@@ -2211,7 +2211,7 @@ Answer scaffold: setup, equations, interpretation, common pitfall.
 
 ### Exercise 07
 
-Given `$\\mu$`, `$r$`, and `$v$`, compute `$\var\varepsilon$` and classify orbit type.
+Given `$\mu$`, `$r$`, and `$v$`, compute `$\varepsilon$` and classify orbit type.
 
 Answer scaffold: setup, equations, interpretation, common pitfall.
 
@@ -2229,7 +2229,7 @@ Answer scaffold: setup, equations, interpretation, common pitfall.
 
 ### Exercise 10
 
-Given `$\\mu$`, `$r$`, and `$v$`, compute `$\var\varepsilon$` and classify orbit type.
+Given `$\mu$`, `$r$`, and `$v$`, compute `$\varepsilon$` and classify orbit type.
 
 Answer scaffold: setup, equations, interpretation, common pitfall.
 
@@ -2247,7 +2247,7 @@ Answer scaffold: setup, equations, interpretation, common pitfall.
 
 ### Exercise 13
 
-Given `$\\mu$`, `$r$`, and `$v$`, compute `$\var\varepsilon$` and classify orbit type.
+Given `$\mu$`, `$r$`, and `$v$`, compute `$\varepsilon$` and classify orbit type.
 
 Answer scaffold: setup, equations, interpretation, common pitfall.
 
@@ -2265,7 +2265,7 @@ Answer scaffold: setup, equations, interpretation, common pitfall.
 
 ### Exercise 16
 
-Given `$\\mu$`, `$r$`, and `$v$`, compute `$\var\varepsilon$` and classify orbit type.
+Given `$\mu$`, `$r$`, and `$v$`, compute `$\varepsilon$` and classify orbit type.
 
 Answer scaffold: setup, equations, interpretation, common pitfall.
 
@@ -2283,7 +2283,7 @@ Answer scaffold: setup, equations, interpretation, common pitfall.
 
 ### Exercise 19
 
-Given `$\\mu$`, `$r$`, and `$v$`, compute `$\var\varepsilon$` and classify orbit type.
+Given `$\mu$`, `$r$`, and `$v$`, compute `$\varepsilon$` and classify orbit type.
 
 Answer scaffold: setup, equations, interpretation, common pitfall.
 
@@ -2301,7 +2301,7 @@ Answer scaffold: setup, equations, interpretation, common pitfall.
 
 ### Exercise 22
 
-Given `$\\mu$`, `$r$`, and `$v$`, compute `$\var\varepsilon$` and classify orbit type.
+Given `$\mu$`, `$r$`, and `$v$`, compute `$\varepsilon$` and classify orbit type.
 
 Answer scaffold: setup, equations, interpretation, common pitfall.
 
@@ -2319,7 +2319,7 @@ Answer scaffold: setup, equations, interpretation, common pitfall.
 
 ### Exercise 25
 
-Given `$\\mu$`, `$r$`, and `$v$`, compute `$\var\varepsilon$` and classify orbit type.
+Given `$\mu$`, `$r$`, and `$v$`, compute `$\varepsilon$` and classify orbit type.
 
 Answer scaffold: setup, equations, interpretation, common pitfall.
 
@@ -2337,7 +2337,7 @@ Answer scaffold: setup, equations, interpretation, common pitfall.
 
 ### Exercise 28
 
-Given `$\\mu$`, `$r$`, and `$v$`, compute `$\var\varepsilon$` and classify orbit type.
+Given `$\mu$`, `$r$`, and `$v$`, compute `$\varepsilon$` and classify orbit type.
 
 Answer scaffold: setup, equations, interpretation, common pitfall.
 
@@ -2355,7 +2355,7 @@ Answer scaffold: setup, equations, interpretation, common pitfall.
 
 ### Exercise 31
 
-Given `$\\mu$`, `$r$`, and `$v$`, compute `$\var\varepsilon$` and classify orbit type.
+Given `$\mu$`, `$r$`, and `$v$`, compute `$\varepsilon$` and classify orbit type.
 
 Answer scaffold: setup, equations, interpretation, common pitfall.
 
@@ -2373,7 +2373,7 @@ Answer scaffold: setup, equations, interpretation, common pitfall.
 
 ### Exercise 34
 
-Given `$\\mu$`, `$r$`, and `$v$`, compute `$\var\varepsilon$` and classify orbit type.
+Given `$\mu$`, `$r$`, and `$v$`, compute `$\varepsilon$` and classify orbit type.
 
 Answer scaffold: setup, equations, interpretation, common pitfall.
 
@@ -2391,7 +2391,7 @@ Answer scaffold: setup, equations, interpretation, common pitfall.
 
 ### Exercise 37
 
-Given `$\\mu$`, `$r$`, and `$v$`, compute `$\var\varepsilon$` and classify orbit type.
+Given `$\mu$`, `$r$`, and `$v$`, compute `$\varepsilon$` and classify orbit type.
 
 Answer scaffold: setup, equations, interpretation, common pitfall.
 
@@ -2409,7 +2409,7 @@ Answer scaffold: setup, equations, interpretation, common pitfall.
 
 ### Exercise 40
 
-Given `$\\mu$`, `$r$`, and `$v$`, compute `$\var\varepsilon$` and classify orbit type.
+Given `$\mu$`, `$r$`, and `$v$`, compute `$\varepsilon$` and classify orbit type.
 
 Answer scaffold: setup, equations, interpretation, common pitfall.
 
@@ -2427,7 +2427,7 @@ Answer scaffold: setup, equations, interpretation, common pitfall.
 
 ### Exercise 43
 
-Given `$\\mu$`, `$r$`, and `$v$`, compute `$\var\varepsilon$` and classify orbit type.
+Given `$\mu$`, `$r$`, and `$v$`, compute `$\varepsilon$` and classify orbit type.
 
 Answer scaffold: setup, equations, interpretation, common pitfall.
 
@@ -2445,7 +2445,7 @@ Answer scaffold: setup, equations, interpretation, common pitfall.
 
 ### Exercise 46
 
-Given `$\\mu$`, `$r$`, and `$v$`, compute `$\var\varepsilon$` and classify orbit type.
+Given `$\mu$`, `$r$`, and `$v$`, compute `$\varepsilon$` and classify orbit type.
 
 Answer scaffold: setup, equations, interpretation, common pitfall.
 
@@ -2463,7 +2463,7 @@ Answer scaffold: setup, equations, interpretation, common pitfall.
 
 ### Exercise 49
 
-Given `$\\mu$`, `$r$`, and `$v$`, compute `$\var\varepsilon$` and classify orbit type.
+Given `$\mu$`, `$r$`, and `$v$`, compute `$\varepsilon$` and classify orbit type.
 
 Answer scaffold: setup, equations, interpretation, common pitfall.
 
@@ -2481,7 +2481,7 @@ Answer scaffold: setup, equations, interpretation, common pitfall.
 
 ### Exercise 52
 
-Given `$\\mu$`, `$r$`, and `$v$`, compute `$\var\varepsilon$` and classify orbit type.
+Given `$\mu$`, `$r$`, and `$v$`, compute `$\varepsilon$` and classify orbit type.
 
 Answer scaffold: setup, equations, interpretation, common pitfall.
 
@@ -2499,7 +2499,7 @@ Answer scaffold: setup, equations, interpretation, common pitfall.
 
 ### Exercise 55
 
-Given `$\\mu$`, `$r$`, and `$v$`, compute `$\var\varepsilon$` and classify orbit type.
+Given `$\mu$`, `$r$`, and `$v$`, compute `$\varepsilon$` and classify orbit type.
 
 Answer scaffold: setup, equations, interpretation, common pitfall.
 
@@ -2517,7 +2517,7 @@ Answer scaffold: setup, equations, interpretation, common pitfall.
 
 ### Exercise 58
 
-Given `$\\mu$`, `$r$`, and `$v$`, compute `$\var\varepsilon$` and classify orbit type.
+Given `$\mu$`, `$r$`, and `$v$`, compute `$\varepsilon$` and classify orbit type.
 
 Answer scaffold: setup, equations, interpretation, common pitfall.
 
