@@ -2,8 +2,9 @@
 
 These instructions are mandatory for all future lecture-authoring work in this repository.
 
-1. **Use Lecture 01 as the canonical structure template.**
-   - New lecture files must follow the same heading sequence and section order required by `course-policies/course-curriculum.md`.
+1. **Use Lecture 01 as the canonical quality template.**
+   - New lecture files must match Lecture 01's mix of tone, technical depth, explanation quality, and examination/retrieval rigor.
+   - Do not force identical heading names or identical section ordering when topic-specific flow benefits from variation.
 
 2. **Enforce curriculum progression.**
    - Each lecture must be a logical next step in the module/lecture outline in `course-policies/course-curriculum.md`.

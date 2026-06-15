@@ -10,7 +10,7 @@ This document defines when a textbook chapter is considered ready for publicatio
 - Prerequisite knowledge explicitly listed; a short activation problem or recall prompt provided.
 - Spaced retrieval prompts and interleaved practice opportunities embedded throughout the chapter.
 - Each major concept followed by a "Check Your Understanding" question before the next concept is introduced.
-- Heading and section order strictly follow the Lecture 01 canonical blueprint defined in `course-curriculum.md`.
+- The chapter reflects Lecture 01's pedagogical mix (tone, depth, explanation, and examination) while allowing topic-appropriate variation in heading names and section order.
 
 ### 2) Technical Accuracy
 - All equations, symbols, and units verified and consistently typeset.

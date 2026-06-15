@@ -23,22 +23,17 @@ Every concept is derived from foundational physical laws. No equation is present
 The learning progression relies entirely on clear competency objectives, rigorous assessment standards, and the intrinsic satisfaction of achieving measurable mastery. There are no points, badges, streaks, or motivational scaffolding beyond the material itself.
 
 ## Module Structure
-Every lecture module follows the **canonical lecture blueprint** in this exact order and heading structure:
+Every lecture module follows the **canonical lecture quality mix** demonstrated in Lecture 01: strong explanatory tone, first-principles technical depth, scaffolded examples, and explicit examination/retrieval opportunities. The exact heading names and section ordering may vary by topic.
 
-1. **Learning Objectives**
-2. **Prerequisites**
-3. **Common Misconception Box**
-4. **Section 1 — System Architecture**
-5. **Section 2 — First-Principles Derivation**
-6. **Section 3 — Scaffolded Worked Examples**
-7. **Section 4 — Computational Model**
-8. **Section 5 — Tangible Application Task**
-9. **Section 6 — Retrieval Integration**
-10. **Section 7 — Supplementary Derivations and Physical Depth**
-11. **End-of-Section Exercises**
-12. **Answer Key (Selected)**
-13. **Further Exploration**
-14. **Vocabulary Reference**
+Each lecture must still include all of the following components:
+
+1. **Objectives and prerequisites**
+2. **At least one misconception correction**
+3. **System architecture and first-principles derivation**
+4. **Scaffolded worked examples**
+5. **Computational modeling component**
+6. **Application task and retrieval integration**
+7. **Assessment set with answer support and vocabulary reinforcement**
 
 ### Content Progression and Non-Duplication Policy
 - Each lecture must deliver a logical progression from the prior lecture, aligned to the module/lecture outline in this curriculum.
